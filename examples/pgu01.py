@@ -1,8 +1,8 @@
 from pgu import gui
-import os
 
 widget = gui.Button("Testing")
 
 app = gui.App(theme = gui.Theme('clean'))
-app.init(widget=widget)
-app.run()
+app.connect(gui.QUIT, app.quit, None)
+
+app.run(widget=widget)
