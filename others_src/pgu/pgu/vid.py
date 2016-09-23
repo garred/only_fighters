@@ -194,9 +194,9 @@ class Vid:
             v -- value
 
         """
-        if self.tlayer[pos[1]][pos[0]] == v: return
-        self.tlayer[pos[1]][pos[0]] = v
-        self.alayer[pos[1]][pos[0]] = 1
+        if self.tlayer[int(pos[1])][int(pos[0])] == v: return
+        self.tlayer[int(pos[1])][int(pos[0])] = v
+        self.alayer[int(pos[1])][int(pos[0])] = 1
         self.updates.append(pos)
         
     def get(self,pos):
@@ -327,8 +327,8 @@ class Vid:
         x1,y1,w,h = rect
         clayer = self.clayer
         t = Tile()
-        for y in range(y1,y1+h):
-            for x in range(x1,x1+w):
+        for y in range(y1,int(y1+h)):
+            for x in range(int(x1),int(x1+w)):
                 n = clayer[y][x]
                 if n in cdata:
                     fnc,value = cdata[n]
@@ -426,7 +426,7 @@ class Vid:
                     yy = y/th
                     while x < cr:
                         xx = x/tw
-                        t = tiles[layer[yy][xx]]
+                        t = tiles[int(layer[int(yy)][int(xx)])]
                         if (s.groups & t.agroups)!=0:
                             #self.hit(xx,yy,t,s)
                             d = math.hypot(rect.centerx-(xx*tw+tw/2),
@@ -456,7 +456,7 @@ class Vid:
                     yy = y/th
                     while x < cr:
                         xx = x/tw
-                        t = tiles[layer[yy][xx]]
+                        t = tiles[layer[int(yy)][int(xx)]]
                         if (s.groups & t.agroups)!=0:
                             d = math.hypot(rect.centerx-(xx*tw+tw/2),
                                 rect.centery-(yy*th+th/2))

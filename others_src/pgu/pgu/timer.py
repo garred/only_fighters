@@ -87,7 +87,7 @@ class Timer:
         """Wait correct amount of time each frame.  Call this once per frame."""
         self.ct = pygame.time.get_ticks()
         if self.ct < self.nt:
-            pygame.time.wait(self.nt-self.ct)
+            pygame.time.wait(int(self.nt-self.ct))
             self.nt+=self.wait
         else: 
             self.nt = pygame.time.get_ticks()+self.wait
