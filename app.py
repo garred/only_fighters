@@ -8,13 +8,13 @@ from pygame.constants import QUIT, K_ESCAPE
 
 # Global settings
 
-FPS = 60
+fps = 60
 '''Frames per second of the application.'''
-SCREEN_WIDTH = 800
+screen_width = 800
 '''Screen width.'''
-SCREEN_HEIGHT = 600
+screen_height = 600
 '''Screen height.'''
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+screen = pygame.display.set_mode((screen_width, screen_height))
 '''Main display where things are drawn.'''
 clock = pygame.time.Clock()
 '''A clock to control the framerate.'''
@@ -25,7 +25,6 @@ running = True
 
 from menu import menu
 import game
-import graphics
 
 
 def run():
@@ -42,11 +41,11 @@ def run():
         if menu.active: menu.update()
 
         # Drawing everything
-        graphics.draw()
+        game.draw()
         if menu.active: menu.draw()
 
         # Waiting to mainting fps.
-        clock.tick(FPS)
+        clock.tick(fps)
         pygame.display.flip()
 
 
