@@ -15,7 +15,7 @@ from pgu import gui
 from gui7 import ColorDialog
 
 # The maximum frame-rate
-FPS = 30
+FPS = 60
 WIDTH,HEIGHT = 640,480
 
 ##You can initialize the screen yourself.

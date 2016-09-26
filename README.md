@@ -1,6 +1,6 @@
 # README
 
-A simple game made in Pygame for the subject _TDDD23 Design and Programming of Computer Games_
+A simple game made in Pygame for the subject _TDDD23 Design and Programming of Computer Games_.
 
 
 ## TDDD23 Game Project Plan "Only fighters"
