@@ -8,14 +8,14 @@ import app
 
 class Menu(gui.App):
     def __init__(self):
-        super(Menu, self).__init__(theme=gui.Theme('data/clean'))
+        super(Menu, self).__init__(theme=gui.Theme('data/themes/clean'))
 
         self.active = True
         self.veil = pygame.Surface((1000, 750), pygame.SRCALPHA)
-        self.veil.fill((255, 255, 255, 128))
+        self.veil.fill((0, 0, 0, 128))
 
         # Some basic elements
-        label_title = gui.Label('Title', cls='h1', color=(255, 255, 255))
+        label_title = gui.Label('Only fighters', cls='h1', color=(255, 255, 255))
         button_hi = gui.Button('Hi world')
         button_quit = gui.Button('Quit')
 
@@ -32,8 +32,9 @@ class Menu(gui.App):
         menu.tr(); menu.td(button_hi)
         menu.tr(); menu.td(button_quit)
 
-
+        # Initializes the object
         self.init(widget=menu)
+
 
     def draw(self):
         app.screen.blit(self.veil, (0, 0))

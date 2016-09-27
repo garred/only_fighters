@@ -37,11 +37,11 @@ def run():
         handle_events()
 
         # Processing next step
-        game.update()
+        if game.active: game.update()
         if menu.active: menu.update()
 
         # Drawing everything
-        game.draw()
+        if game.visible: game.draw()
         if menu.active: menu.draw()
 
         # Waiting to mainting fps.
@@ -59,39 +59,16 @@ def handle_events():
             running = False
         elif e.type is pygame.KEYUP and e.key is K_ESCAPE:
             menu.active = 1 - menu.active
+            game.active = 1 - game.active
         else:
             menu.event(e)
 
     # Handling keyboard and mouse
     keys_pressed = pygame.key.get_pressed()
-    game.process_inputs(keys_pressed)
+    if game.active: game.process_inputs(keys_pressed)
 
 
 
 def quit(*args):
     global running
     running = False
-
-
-class MyGraphics():
-    def __init__(self, screen):
-        self.screen = screen
-        self.i = 0
-
-    def draw(self):
-        self.screen.fill((0, 0, 0))
-        self.i += 0.5
-        i = int(self.i)
-        pygame.draw.circle(self.screen,
-                           (255,0,0),
-                           ((i//10)*100, (i%10)*100),
-                           100)
-        if self.i > 100: self.i = 0
-
-
-class MyGame():
-    def update(self):
-        pass
-
-    def process_inputs(self, keys):
-        pass
