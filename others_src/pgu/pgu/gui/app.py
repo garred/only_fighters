@@ -154,8 +154,8 @@ class App(container.Container):
 
         if (self.appArea and hasattr(ev, "pos")):
             # Translate into subsurface coordinates
-            pos = (ev.pos[0]-self.appArea.x,
-                   ev.pos[1]-self.appArea.y)
+            pos = (ev.position[0] - self.appArea.x,
+                   ev.position[1] - self.appArea.y)
             args = {"pos" : pos}
             # Copy over other misc mouse parameters
             for name in ("buttons", "rel", "button"):

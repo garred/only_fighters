@@ -381,17 +381,17 @@ class Theme(object):
                 return func(e)
 
             if e.type == MOUSEBUTTONUP or e.type == MOUSEBUTTONDOWN:
-                sub = pygame.event.Event(e.type,{
+                sub = pygame.event.Event(e.type, {
                     'button':e.button,
-                    'pos':(e.pos[0]-rect.x,e.pos[1]-rect.y)})
+                    'pos':(e.position[0] - rect.x, e.position[1] - rect.y)})
             elif e.type == CLICK:
-                sub = pygame.event.Event(e.type,{
+                sub = pygame.event.Event(e.type, {
                     'button':e.button,
-                    'pos':(e.pos[0]-rect.x,e.pos[1]-rect.y)})
+                    'pos':(e.position[0] - rect.x, e.position[1] - rect.y)})
             elif e.type == MOUSEMOTION:
                 sub = pygame.event.Event(e.type,{
                     'buttons':e.buttons,
-                    'pos':(e.pos[0]-rect.x,e.pos[1]-rect.y),
+                    'pos':(e.position[0] - rect.x, e.position[1] - rect.y),
                     'rel':e.rel})
             else:
                 sub = e

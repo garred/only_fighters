@@ -4,9 +4,69 @@ import pygame
 from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN
 import pytmx
 import pyscroll
-import others_src.pyganim.pyganim as pyganim
+
+import random
 
 import app
+
+
+
+def update(keys):
+    '''Makes the game seems alive and responsive.'''
+
+    # Processing inputs
+    if keys[K_LEFT]:
+        player.move(-10,0)
+    if keys[K_RIGHT]:
+        player.move(10,0)
+    if keys[K_UP]:
+        player.move(0,-10)
+    if keys[K_DOWN]:
+        player.move(0,10)
+
+    # Updating the relative position of the entities to the camera.
+    render_group.update()
+
+    # Updating animated entities
+    for o in animated_objects:
+        o.update_animation()
+
+    # Updating collisions between characters
+    update_collisions_between_sprites()
+
+
+
+def update_collisions_between_sprites():
+    for a in collisionable_sprites:
+        for b in collisionable_sprites:
+            if a is b: continue
+            quadratic_sum_radius = a.radius + b.radius
+            quadratic_sum_radius *= quadratic_sum_radius
+            va = np.array(a.feet_rect.center)
+            vb = np.array(b.feet_rect.center)
+            dif = vb - va
+            dis = dif.dot(dif)
+            if dis == 0:
+                a.move(random.uniform(-1, 1),random.uniform(-1, 1))
+                b.move(random.uniform(-1, 1), random.uniform(-1, 1))
+            elif dis < quadratic_sum_radius:
+                dif = 5.0*(dif / np.sqrt(dis))
+                a.move(-dif[0],-dif[1])
+                b.move(dif[0], dif[1])
+
+
+def draw():
+    '''Draws all the entities and the background.'''
+
+    global player
+    app.screen.fill((0, 0, 0))
+
+    # center the map/screen on our Hero
+    render_group.center(player.rect.center)
+
+    # draw the map and all sprites
+    render_group._spritelist.sort(key=lambda x: x.feet_rect.centery)
+    render_group.draw(app.screen)
 
 
 active = False
@@ -18,95 +78,32 @@ visible = True
 map = pytmx.util_pygame.load_pygame('data/map/grasslands.tmx')
 '''Main map.'''
 
+
 renderer = pyscroll.BufferedRenderer(
     pyscroll.data.TiledMapData(map),
     app.screen.get_size())
 '''"Camera" of the game: it renders objects.'''
 renderer.zoom = 1
 
+
 render_group = pyscroll.group.PyscrollGroup(
     map_layer=renderer,
     default_layer=2)
 '''This defines the group of renderizable sprites.'''
 
-
-standing_anim = pyganim.PygAnimation(
-    [('data/standing/standin_000.png', 0.1),
-     ('data/standing/standin_001.png', 0.1),
-     ('data/standing/standin_002.png', 0.1),
-     ('data/standing/standin_003.png', 0.1),
-     ('data/standing/standin_004.png', 0.1),
-     ('data/standing/standin_005.png', 0.1)]
-)
-'''An animation of a standing character.'''
-standing_anim.play()
-
-
-class DummyCharacter(pygame.sprite.Sprite):
-    def __init__(self):
-        super(DummyCharacter, self).__init__()
-
-        self.image = pygame.Surface((100,100)).convert_alpha()
-        self.image.fill((0,0,0,0))
-
-        self.rect = self.image.get_rect()
-        self.rect[0], self.rect[1] = renderer.map_rect.center
-
-        self.animation = standing_anim
-        self.animation.blit(self.image, (0,0))
-
-        render_group.add(self)
-
-    def update_animation(self):
-        self.image.fill((0,0,0,0))
-        self.animation.blit(self.image, (0,0))
-
 animated_objects = list()
-
-character = DummyCharacter()
-animated_objects.append(character)
-
-i = 0
+'''Holds everything that needs to be updated by PygAnim.'''
 
 
-def update(keys):
-    # Processing inputs
-    if keys[K_LEFT]:
-        character.rect[0] -= 10
-    if keys[K_RIGHT]:
-        character.rect[0] += 10
-    if keys[K_UP]:
-        character.rect[1] -= 10
-    if keys[K_DOWN]:
-        character.rect[1] += 10
-
-    # Updating the relative position of the entities to the camera.
-    render_group.update()
-
-    # Updating animated entities
-    for o in animated_objects:
-        o.update_animation()
+map_rect = (0, 0, map.width*map.tilewidth, map.height*map.tileheight)
+'''Rectangle of the map.'''
 
 
+collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.objects]
+'''This contains the walls of the map'''
 
-def draw():
-    global i, character
-    app.screen.fill((0, 0, 0))
-
-    i += 0.05
-    x = int(i/10)*100
-    y = int(i%10)*100
-
-    # Draws the map
-    # center the map/screen on our Hero
-    render_group.center(character.rect.center)
-    # draw the map and all sprites
-    render_group.draw(app.screen)
+collisionable_sprites = []
 
 
-    # Draws a big moving dot
-    pygame.draw.circle(app.screen,
-                       (255,0,0),
-                       (x, y), 10)
-    if i > 100: i = 0
-
+# Importing characters used in the game.
+from characters import *

@@ -57,7 +57,7 @@ while True:
             sys.exit()
         if event.type == MOUSEBUTTONDOWN:
             for button in buttons:
-                if buttonDict[button][1].collidepoint(event.pos):
+                if buttonDict[button][1].collidepoint(event.position):
                     if button == 'Play':
                         boltAnim.play()
                     elif button == 'Pause':

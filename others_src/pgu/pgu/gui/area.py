@@ -118,7 +118,7 @@ class SlideBox(container.Container):
     
     def event(self, e):
         if e.type in [MOUSEBUTTONDOWN, MOUSEBUTTONUP, MOUSEMOTION]:
-            pos = (e.pos[0] + self.offset[0], e.pos[1] + self.offset[1])
+            pos = (e.position[0] + self.offset[0], e.position[1] + self.offset[1])
             if self.max_rect.collidepoint(pos):
                 e_params = {'pos': pos }
                 if e.type == MOUSEMOTION: 

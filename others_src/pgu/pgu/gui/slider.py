@@ -42,11 +42,11 @@ class _slider(widget.Widget):
         if e.type == ENTER: self.repaint()
         elif e.type == EXIT: self.repaint()
         elif e.type == MOUSEBUTTONDOWN:
-            if self.bar.collidepoint(e.pos):
-                self.grab = e.pos[0],e.pos[1]
+            if self.bar.collidepoint(e.position):
+                self.grab = e.position[0], e.position[1]
                 self.grab_value = self.value
             else:
-                x,y,adj = e.pos[0],e.pos[1],1
+                x,y,adj = e.position[0], e.position[1], 1
                 self.grab = None
             self.repaint()
         elif e.type == MOUSEBUTTONUP:
@@ -55,7 +55,7 @@ class _slider(widget.Widget):
         elif e.type == MOUSEMOTION:
             if 1 in e.buttons and self.container.myfocus is self:
                 if self.grab != None:
-                    rel = e.pos[0]-self.grab[0],e.pos[1]-self.grab[1]
+                    rel = e.position[0] - self.grab[0], e.position[1] - self.grab[1]
                     if self.orient == _SLIDER_HORIZONTAL:
                         d = (r.w - self.size)
                         if d != 0: self.value = self.grab_value + ((self.max-self.min) * rel[0] / d)
@@ -63,7 +63,7 @@ class _slider(widget.Widget):
                         d = (r.h - self.size)
                         if d != 0: self.value = self.grab_value + ((self.max-self.min) * rel[1] / d)
                 else:
-                    x,y,adj = e.pos[0],e.pos[1],1
+                    x,y,adj = e.position[0], e.position[1], 1
                     
         elif e.type is KEYDOWN:
             if self.orient == _SLIDER_HORIZONTAL and e.key == K_LEFT:

@@ -351,7 +351,7 @@ class tpicker(gui.Widget):
     def event(self,e):
         if (e.type is MOUSEBUTTONDOWN and e.button == 1) or (e.type is MOUSEMOTION and e.buttons[0] == 1 and self.container.myfocus == self):
             w = app.tiles_w/app.tile_w
-            x,y = e.pos[0]/app.tile_w,e.pos[1]/app.tile_h
+            x,y = e.position[0] / app.tile_w, e.position[1] / app.tile_h
             n = x+y*w
             self.set(n)
             if app.mode not in ('tile','bkgr'):
@@ -379,7 +379,7 @@ class cpicker(gui.Widget):
     def event(self,e):
         if (e.type is MOUSEBUTTONDOWN and e.button == 1) or (e.type is MOUSEMOTION and e.buttons[0] == 1 and self.container.myfocus == self):
             w = app.codes_w/app.tile_w
-            x,y = e.pos[0]/app.tile_w,e.pos[1]/app.tile_h
+            x,y = e.position[0] / app.tile_w, e.position[1] / app.tile_h
             n = x+y*w
             self.set(n)
             app.tools['code'].click()
@@ -545,11 +545,11 @@ class vdraw(gui.Widget):
     #move
     def move_down(self,e):
         self.moff = app.level.view.x,app.level.view.y
-        self.m1 = e.pos
+        self.m1 = e.position
         
     def move_drag(self,e):
         m1 = self.m1
-        m2 = e.pos
+        m2 = e.position
         #app.view = app.level.subsurface((x,y,app.view_w,app.view_h))
         app.level.view.x,app.level.view.y = self.moff[0] + m1[0]-m2[0], self.moff[1]+m1[1]-m2[1]
         self.repaint()
@@ -637,7 +637,7 @@ class vdraw(gui.Widget):
         self.repaint()
         
     def getpos(self,e):
-        tx,ty = app.level.screen_to_tile(e.pos)
+        tx,ty = app.level.screen_to_tile(e.position)
         
         if tx < 0 or ty < 0 or tx >= app.level.size[0] or ty >= app.level.size[1]: return None
         
@@ -646,19 +646,19 @@ class vdraw(gui.Widget):
             self.repaint()
         return tx,ty
         
-        x,y = e.pos[0]/app.tile_w,e.pos[1]/app.tile_h
+        x,y = e.position[0] / app.tile_w, e.position[1] / app.tile_h
         x = min(max(0,x),app.view_w-1)
         y = min(max(0,y),app.view_h-1)
         return x,y
     
     def getpos2(self,e):
-        tx,ty = app.level.screen_to_tile(e.pos)
+        tx,ty = app.level.screen_to_tile(e.position)
         
         return tx+1,ty+1
         
         w = app.tile_w
         h = app.tile_h
-        x,y = (e.pos[0]+w/2)/app.tile_w,(e.pos[1]+h/2)/app.tile_h
+        x,y = (e.position[0] + w / 2) / app.tile_w, (e.position[1] + h / 2) / app.tile_h
         x = min(max(0,x),app.view_w)
         y = min(max(0,y),app.view_h)
         return x,y

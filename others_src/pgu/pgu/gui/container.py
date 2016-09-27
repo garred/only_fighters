@@ -157,9 +157,9 @@ class Container(widget.Widget):
         if self.mywindow and e.type == MOUSEBUTTONDOWN:
             w = self.mywindow
             if self.myfocus is w:
-                if not w.collidepoint(e.pos): self.blur(w)
+                if not w.collidepoint(e.position): self.blur(w)
             if not self.myfocus:
-                if w.collidepoint(e.pos): self.focus(w)
+                if w.collidepoint(e.position): self.focus(w)
         
         if not self.mywindow:
             #### by Gal Koren
@@ -177,7 +177,7 @@ class Container(widget.Widget):
                 for w in self.widgets:
                     if not w.disabled: 
                         # Focusable not considered, since that is only for tabs
-                        if w.collidepoint(e.pos):
+                        if w.collidepoint(e.position):
                             h = w
                             if self.myfocus is not w: self.focus(w)
                 if not h and self.myfocus:
@@ -190,7 +190,7 @@ class Container(widget.Widget):
                 
                 h = None
                 for w in ws:
-                    if w.collidepoint(e.pos):
+                    if w.collidepoint(e.position):
                         h = w
                         if self.myhover is not w: 
                             self.enter(w)
@@ -202,24 +202,24 @@ class Container(widget.Widget):
                 if w and w is not self.myfocus:
                     sub = pygame.event.Event(e.type,{
                         'buttons':e.buttons,
-                        'pos':(e.pos[0]-w.rect.x,e.pos[1]-w.rect.y),
+                        'pos':(e.position[0] - w.rect.x, e.position[1] - w.rect.y),
                         'rel':e.rel})
                     used = w._event(sub)
         
         w = self.myfocus
         if w:
             if e.type == MOUSEBUTTONUP or e.type == MOUSEBUTTONDOWN:
-                sub = pygame.event.Event(e.type,{
+                sub = pygame.event.Event(e.type, {
                     'button':e.button,
-                    'pos':(e.pos[0]-w.rect.x,e.pos[1]-w.rect.y)})
+                    'pos':(e.position[0] - w.rect.x, e.position[1] - w.rect.y)})
             elif e.type == CLICK and self.myhover is w:
-                sub = pygame.event.Event(e.type,{
+                sub = pygame.event.Event(e.type, {
                     'button':e.button,
-                    'pos':(e.pos[0]-w.rect.x,e.pos[1]-w.rect.y)})
+                    'pos':(e.position[0] - w.rect.x, e.position[1] - w.rect.y)})
             elif e.type == MOUSEMOTION:
                 sub = pygame.event.Event(e.type,{
                     'buttons':e.buttons,
-                    'pos':(e.pos[0]-w.rect.x,e.pos[1]-w.rect.y),
+                    'pos':(e.position[0] - w.rect.x, e.position[1] - w.rect.y),
                     'rel':e.rel})
             elif (e.type == KEYDOWN or e.type == KEYUP):
                 sub = e

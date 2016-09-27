@@ -163,12 +163,12 @@ class Painter(gui.Widget):
                             
     def draw_down(self,e):
         self.state = 1
-        self.pos = e.pos
+        self.pos = e.position
         self.draw_motion(e)
     def draw_motion(self,e):
         if self.state == 0: return
-        pygame.draw.line(self.surface,app.color.value,self.pos,e.pos,2)
-        self.pos = e.pos
+        pygame.draw.line(self.surface, app.color.value, self.pos, e.position, 2)
+        self.pos = e.position
         self.repaint()
     def draw_up(self,e):
         self.state = 0
@@ -180,7 +180,7 @@ class Painter(gui.Widget):
         if self.state == 0: return
         img = self.cuzco
         self.overlay.fill((0,0,0,0))
-        self.overlay.blit(img,(e.pos[0]-img.get_width()/2,e.pos[1]-img.get_height()/2))
+        self.overlay.blit(img, (e.position[0] - img.get_width() / 2, e.position[1] - img.get_height() / 2))
         self.repaint()
     def cuzco_up(self,e):
         self.state = 0
@@ -190,12 +190,12 @@ class Painter(gui.Widget):
         
     def box_down(self,e):
         self.state = 1
-        self.pos = e.pos
+        self.pos = e.position
         self.box_motion(e)
     def box_motion(self,e):
         if self.state == 0: return
         self.overlay.fill((0,0,0,0))
-        pygame.draw.rect(self.overlay,app.color.value,(self.pos[0],self.pos[1],e.pos[0]-self.pos[0],e.pos[1]-self.pos[1]))
+        pygame.draw.rect(self.overlay, app.color.value, (self.pos[0], self.pos[1], e.position[0] - self.pos[0], e.position[1] - self.pos[1]))
         self.repaint()
     def box_up(self,e):
         self.state = 0
@@ -206,12 +206,12 @@ class Painter(gui.Widget):
     
     def circle_down(self,e):
         self.state = 1
-        self.pos = e.pos
+        self.pos = e.position
         self.circle_motion(e)
     def circle_motion(self,e):
         if self.state == 0: return
         self.overlay.fill((0,0,0,0))
-        r = pygame.Rect(self.pos[0],self.pos[1],e.pos[0]-self.pos[0],e.pos[1]-self.pos[1])
+        r = pygame.Rect(self.pos[0], self.pos[1], e.position[0] - self.pos[0], e.position[1] - self.pos[1])
         r.x -= r.w
         r.w *= 2
         r.y -= r.h

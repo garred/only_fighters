@@ -16,7 +16,7 @@ class QuadTree(object):
         right - the x coordinate of the right edge of the item's bounding box.
         bottom - the y coordinate of the bottom edge of the item's bounding box.
 
-        where left &lt; right and top &lt; bottom
+        where left < right and top < bottom
 
     ...and they must be hashable.
 

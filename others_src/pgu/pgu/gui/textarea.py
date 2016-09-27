@@ -262,7 +262,7 @@ class TextArea(widget.Widget):
                     pass
             self.repaint()
         elif self.editable and e.type == MOUSEBUTTONDOWN:
-            self.setCursorByXY(e.pos)
+            self.setCursorByXY(e.position)
             self.repaint()
             
         elif e.type == FOCUS:

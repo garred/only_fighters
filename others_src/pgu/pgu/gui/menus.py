@@ -15,7 +15,7 @@ class _Menu_Options(table.Table):
         arect = self.get_abs_rect()
         
         if e.type == MOUSEMOTION:
-            abspos = e.pos[0]+arect.x,e.pos[1]+arect.y
+            abspos = e.position[0] + arect.x, e.position[1] + arect.y
             for w in self.menu.container.widgets:
                 if not w is self.menu:
                     mrect = w.get_abs_rect()
