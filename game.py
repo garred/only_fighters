@@ -10,7 +10,7 @@ import app
 
 
 active = False
-'''The game is updating.'''
+'''The game mechanics is updating.'''
 visible = True
 '''The game graphics are visible.'''
 
@@ -21,13 +21,13 @@ map = pytmx.util_pygame.load_pygame('data/map/grasslands.tmx')
 renderer = pyscroll.BufferedRenderer(
     pyscroll.data.TiledMapData(map),
     app.screen.get_size())
-'''"Camera" of the game: render objects.'''
+'''"Camera" of the game: it renders objects.'''
 renderer.zoom = 1
 
 render_group = pyscroll.group.PyscrollGroup(
     map_layer=renderer,
     default_layer=2)
-'''This defines the group of renderizable objects.'''
+'''This defines the group of renderizable sprites.'''
 
 
 standing_anim = pyganim.PygAnimation(
@@ -69,16 +69,8 @@ animated_objects.append(character)
 i = 0
 
 
-def update():
-    # Updating the relative position of the entities.
-    render_group.update()
-
-    # Updating animated entities
-    for o in animated_objects:
-        o.update_animation()
-
-
-def process_inputs(keys):
+def update(keys):
+    # Processing inputs
     if keys[K_LEFT]:
         character.rect[0] -= 10
     if keys[K_RIGHT]:
@@ -87,6 +79,14 @@ def process_inputs(keys):
         character.rect[1] -= 10
     if keys[K_DOWN]:
         character.rect[1] += 10
+
+    # Updating the relative position of the entities to the camera.
+    render_group.update()
+
+    # Updating animated entities
+    for o in animated_objects:
+        o.update_animation()
+
 
 
 def draw():

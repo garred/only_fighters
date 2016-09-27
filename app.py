@@ -27,17 +27,16 @@ from menu import menu
 import game
 
 
+
 def run():
     '''Holds the main loop.'''
 
-    global screen
-
     while running:
         # Reading inputs
-        handle_events()
+        keys_pressed = handle_events()
 
         # Processing next step
-        if game.active: game.update()
+        if game.active: game.update(keys_pressed)
         if menu.active: menu.update()
 
         # Drawing everything
@@ -64,8 +63,7 @@ def handle_events():
             menu.event(e)
 
     # Handling keyboard and mouse
-    keys_pressed = pygame.key.get_pressed()
-    if game.active: game.process_inputs(keys_pressed)
+    return pygame.key.get_pressed()
 
 
 
