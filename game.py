@@ -3,7 +3,7 @@
 import numpy as np
 import random
 import pygame
-from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_LSHIFT, K_SPACE
+from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_LSHIFT, K_SPACE, K_a, K_z
 import pytmx
 import pyscroll
 import app
@@ -30,6 +30,11 @@ def update(keys):
 
 
 def process_inputs(keys):
+    if keys[K_a]:
+        renderer.zoom *= 1.05
+    if keys[K_z]:
+        renderer.zoom /= 1.05
+
     dir = [0,0]
     if keys[K_LEFT]:
         dir[0] -= 1
@@ -128,7 +133,7 @@ from characters import DummyCharacter, NinjaCharacter, NinjaEnemy
 
 
 # Creating some characters
-DummyCharacter()
+#DummyCharacter()
 player = NinjaCharacter()
 
 for i in range(10):
