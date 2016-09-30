@@ -44,7 +44,7 @@ def run():
         if game.visible: game.draw()
         if menu.active: menu.draw()
 
-        # Waiting to mainting fps.
+        # Waiting in order to mainting fps.
         clock.tick(fps)
         pygame.display.flip()
 
@@ -69,5 +69,6 @@ def handle_events():
 
 
 def quit(*args):
+    '''Close the app'''
     global running
     running = False

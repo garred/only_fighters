@@ -2,7 +2,6 @@
 
 import pygame
 from pgu import gui
-
 import app
 
 

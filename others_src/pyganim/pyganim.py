@@ -442,6 +442,7 @@ class PygAnimation(object):
         self._makeTransformedSurfacesIfNeeded()
         for i in range(len(self._images)):
             self._transformedImages[i] = pygame.transform.flip(self.getFrame(i), xbool, ybool)
+        return self
 
 
     def scale(self, width_height):
