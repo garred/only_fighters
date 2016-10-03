@@ -6,6 +6,8 @@ import game
 import random
 import numpy as np
 
+from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x
+
 
 # Loading all the animation files
 
@@ -148,8 +150,10 @@ class NinjaEnemy(NinjaCharacter):
     def update_ai(self):
         self.thinking_time -= 1
 
-        if self.distance_to(game.player) < 50:
-            self.dir = np.sign(self.direction_to(game.player))
+        tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
+
+        if self.distance_to(tarjet) < 50:
+            self.dir = np.sign(self.direction_to(tarjet))
             self.hit(self.dir)
 
         elif self.state == 'waiting':
@@ -177,3 +181,32 @@ class NinjaEnemy(NinjaCharacter):
         else:
             self.stand()
 
+
+class NinjaPlayer(NinjaCharacter):
+    def __init__(self, keymap):
+        super(NinjaPlayer, self).__init__()
+        self.keymap = keymap
+
+    def process_inputs(self, keys):
+        dir = [0, 0]
+        if keys[self.keymap['left']]:
+            dir[0] -= 1
+        if keys[self.keymap['right']]:
+            dir[0] += 1
+        if keys[self.keymap['up']]:
+            dir[1] -= 1
+        if keys[self.keymap['down']]:
+            dir[1] += 1
+
+        if keys[self.keymap['hit']]:
+            self.hit(dir)
+        elif keys[self.keymap['left']] or keys[self.keymap['right']] or keys[self.keymap['up']] or keys[self.keymap['down']]:
+            if keys[self.keymap['run']]:
+                self.run(dir)
+            else:
+                self.walk(dir)
+        else:
+            self.stand()
+
+keymap1 = {'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN, 'hit': K_n, 'run': K_m}
+keymap2 = {'left': K_a, 'right': K_d, 'up': K_w, 'down': K_s, 'hit': K_z, 'run': K_x}

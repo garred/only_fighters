@@ -3,17 +3,19 @@
 import numpy as np
 import random
 import pygame
-from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_LSHIFT, K_SPACE, K_a, K_z
 import pytmx
 import pyscroll
 import app
-
+from pygame.constants import K_1, K_2
 
 def update(keys):
     '''Makes the game seems alive and responsive.'''
 
-    # Processing inputs to control the player
+    # Processing inputs to change things in the game
     process_inputs(keys)
+    # Processing inputs to control the player
+    for p in players:
+        p.process_inputs(keys)
 
     # Updating the relative position of the entities to the camera.
     render_group.update()
@@ -30,30 +32,10 @@ def update(keys):
 
 
 def process_inputs(keys):
-    if keys[K_a]:
+    if keys[K_1]:
         renderer.zoom *= 1.05
-    if keys[K_z]:
+    if keys[K_2]:
         renderer.zoom /= 1.05
-
-    dir = [0,0]
-    if keys[K_LEFT]:
-        dir[0] -= 1
-    if keys[K_RIGHT]:
-        dir[0] += 1
-    if keys[K_UP]:
-        dir[1] -= 1
-    if keys[K_DOWN]:
-        dir[1] += 1
-
-    if keys[K_SPACE]:
-        player.hit(dir)
-    elif keys[K_LEFT] or keys[K_RIGHT] or keys[K_UP] or keys[K_DOWN]:
-        if keys[K_LSHIFT]:
-            player.run(dir)
-        else:
-            player.walk(dir)
-    else:
-        player.stand()
 
 
 def update_collisions_between_sprites():
@@ -82,7 +64,7 @@ def draw():
     app.screen.fill((0, 0, 0))
 
     # center the map/screen on our Hero
-    render_group.center(player.rect.center)
+    render_group.center(players[0].rect.center)
 
     # draw the map and all sprites
     render_group._spritelist.sort(key=lambda x: x.feet_rect.centery)
@@ -129,12 +111,14 @@ ai_objects = list()
 
 
 # Importing characters used in the game.
-from characters import DummyCharacter, NinjaCharacter, NinjaEnemy
+from characters import DummyCharacter, NinjaCharacter, NinjaEnemy, NinjaPlayer, keymap1, keymap2
 
 
 # Creating some characters
 #DummyCharacter()
-player = NinjaCharacter()
+player1 = NinjaPlayer(keymap1)
+player2 = NinjaPlayer(keymap2)
+players = [player1, player2]
 
 for i in range(10):
     n = NinjaEnemy()
