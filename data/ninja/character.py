@@ -42,7 +42,6 @@ for name, animation in ninja_animations.items():
 
 # Ninja class
 
-
 class NinjaCharacter(Character):
 
     def __init__(self):
@@ -63,15 +62,22 @@ class NinjaCharacter(Character):
         if self.hitting and not self.animation.state==pyganim.STOPPED: return
         self.hitting = False
 
+        if dir[0]==0 and dir[1]==0: dir = self.last_dir
+        if dir[0]==0 and dir[1]==0: dir = [0,-1]
+        self.last_dir = dir
+
         # Choosing animation
-        if dir[1] > 0:
+        if self.is_looking_down():
             self.animation = self.animations['walking_front']
-        elif dir[1] < 0:
+        elif self.is_looking_up():
             self.animation = self.animations['walking_back']
-        elif dir[0] > 0:
+        elif self.is_looking_right():
             self.animation = self.animations['walking_right']
-        elif dir[0] < 0:
+        elif self.is_looking_left():
             self.animation = self.animations['walking_left']
+        else:
+            self.animation = self.animations['walking_front']
+
         self.animation.play()
 
         # Moving character
@@ -83,15 +89,22 @@ class NinjaCharacter(Character):
         if self.hitting and not self.animation.state==pyganim.STOPPED: return
         self.hitting = False
 
+        if dir[0]==0 and dir[1]==0: dir = self.last_dir
+        if dir[0]==0 and dir[1]==0: dir = [0,-1]
+        self.last_dir = dir
+
         # Choosing animation
-        if dir[1] > 0:
+        if self.is_looking_down():
             self.animation = self.animations['running_front']
-        elif dir[1] < 0:
+        elif self.is_looking_up():
             self.animation = self.animations['running_back']
-        elif dir[0] > 0:
+        elif self.is_looking_right():
             self.animation = self.animations['running_right']
-        elif dir[0] < 0:
+        elif self.is_looking_left():
             self.animation = self.animations['running_left']
+        else:
+            self.animation = self.animations['running_front']
+
         self.animation.play()
 
         # Moving character
@@ -104,16 +117,20 @@ class NinjaCharacter(Character):
         self.hitting = True
 
         if dir[0]==0 and dir[1]==0: dir = self.last_dir
+        if dir[0]==0 and dir[1]==0: dir = [0,-1]
+        self.last_dir = dir
 
         # Choosing animation
-        if dir[1] > 0:
+        if self.is_looking_down():
             self.animation = self.animations['hitting_front']
-        elif dir[1] < 0:
+        elif self.is_looking_up():
             self.animation = self.animations['hitting_back']
-        elif dir[0] > 0:
+        elif self.is_looking_right():
             self.animation = self.animations['hitting_right']
-        elif dir[0] < 0:
+        elif self.is_looking_left():
             self.animation = self.animations['hitting_left']
+        else:
+            self.animation = self.animations['hitting_front']
         self.animation.play()
 
 
@@ -122,14 +139,16 @@ class NinjaCharacter(Character):
         if self.hitting and not self.animation.state==pyganim.STOPPED: return
         self.hitting = False
 
+        if self.last_dir[0]==0 and self.last_dir[1]==0: self.last_dir = [0,-1]
+
         # Choosing animation
-        if self.last_dir[1] > 0:
+        if self.is_looking_down():
             self.animation = self.animations['standing_front']
-        elif self.last_dir[1] < 0:
+        elif self.is_looking_up():
             self.animation = self.animations['standing_back']
-        elif self.last_dir[0] > 0:
+        elif self.is_looking_right():
             self.animation = self.animations['standing_right']
-        elif self.last_dir[0] < 0:
+        elif self.is_looking_left():
             self.animation = self.animations['standing_left']
         else:
             self.animation = self.animations['standing_front']
@@ -153,7 +172,7 @@ class NinjaEnemy(NinjaCharacter):
         tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
 
         if self.distance_to(tarjet) < 50:
-            self.dir = np.sign(self.direction_to(tarjet))
+            self.dir = self.direction_to(tarjet)#np.sign(self.diference_to(tarjet))
             self.hit(self.dir)
 
         elif self.state == 'waiting':

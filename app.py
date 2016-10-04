@@ -33,8 +33,9 @@ def run():
     '''Holds the main loop.'''
 
     while running:
-        # Reading inputs
-        keys_pressed = handle_events()
+        # Reading inputs from the user
+        handle_events()
+        keys_pressed = pygame.key.get_pressed() # Needed to handling keyboard and mouse events
 
         # Processing next step
         if game.active: game.update(keys_pressed)
@@ -62,9 +63,6 @@ def handle_events():
             game.active = 1 - game.active
         else:
             menu.event(e)
-
-    # Handling keyboard and mouse
-    return pygame.key.get_pressed()
 
 
 

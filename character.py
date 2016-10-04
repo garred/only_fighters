@@ -14,6 +14,7 @@ class Character(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.feet_rect = pygame.Rect(0,0,10,10)
         self.position = game.renderer.map_rect.center
+        self.last_dir = [0,-1]
 
         # Here you should put your animations
         self.animations = {}
@@ -104,11 +105,30 @@ class Character(pygame.sprite.Sprite):
         other.position = new_pos
 
 
-    def direction_to(self, other):
+    def diference_to(self, other):
         a = np.array([self.feet_rect[0], self.feet_rect[1]])
         b = np.array([other.feet_rect[0], other.feet_rect[1]])
         return b-a
 
+
     def distance_to(self, other):
-        dir = self.direction_to(other)
+        dir = self.diference_to(other)
         return np.sqrt(dir.dot(dir))
+
+
+    def direction_to(self, other):
+        return self.diference_to(other) / self.distance_to(other)
+
+
+    def is_looking_right(self):
+        return self.last_dir[0] - abs(self.last_dir[1]) >= 0
+
+    def is_looking_down(self):
+        return self.last_dir[1] - abs(self.last_dir[0]) >= 0
+
+    def is_looking_left(self):
+        return abs(self.last_dir[1]) + self.last_dir[0] <= 0
+
+    def is_looking_up(self):
+        return abs(self.last_dir[0]) + self.last_dir[1] <= 0
+

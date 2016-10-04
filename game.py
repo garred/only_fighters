@@ -14,15 +14,11 @@ def update(keys):
     # Processing inputs to change things in the game
     process_inputs(keys)
     # Processing inputs to control the player
-    for p in players:
-        p.process_inputs(keys)
+    for player in players:
+        player.process_inputs(keys)
 
     # Updating the relative position of the entities to the camera.
     render_group.update()
-
-    # Updating animated entities
-    for o in animated_objects:
-        o.update_animation()
 
     # Updating collisions between characters
     update_collisions_between_sprites()
@@ -30,8 +26,15 @@ def update(keys):
     # Updating AI
     update_ai()
 
+    # Updating animated entities
+    for o in animated_objects:
+        o.update_animation()
+
+
 
 def process_inputs(keys):
+    '''Input processing related to the game as a whole.'''
+
     if keys[K_1]:
         renderer.zoom *= 1.05
     if keys[K_2]:
@@ -39,6 +42,8 @@ def process_inputs(keys):
 
 
 def update_collisions_between_sprites():
+    '''Updates collisions between sprites, in a completly unefficient way.'''
+
     for a in collisionable_sprites:
         for b in collisionable_sprites:
             if a is b: continue
@@ -67,7 +72,7 @@ def draw():
     render_group.center(players[0].rect.center)
 
     # draw the map and all sprites
-    render_group._spritelist.sort(key=lambda x: x.feet_rect.centery)
+    render_group._spritelist.sort(key=lambda x: x.feet_rect.centery) #Sorting sprites by depth.
     render_group.draw(app.screen)
 
 
