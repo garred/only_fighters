@@ -1,6 +1,7 @@
 import pygame
 import game
 import numpy as np
+import random
 
 
 class Character(pygame.sprite.Sprite):
@@ -26,7 +27,7 @@ class Character(pygame.sprite.Sprite):
         game.collisionable_sprites.append(self)
 
         # How much this character must bounce when colliding
-        self.bounceness = 1
+        self.bounceness = 2
 
 
     def kill(self):
@@ -65,7 +66,7 @@ class Character(pygame.sprite.Sprite):
 
     @property
     def radius(self):
-        return self.feet_rect[3] * 0.5
+        return self.feet_rect[3] * 1
 
 
     def move(self, dir):
@@ -96,13 +97,22 @@ class Character(pygame.sprite.Sprite):
         a = np.array(self.feet_rect.center)
         b = np.array(other.feet_rect.center)
         dir = a - b
-        dir = dir / np.sqrt(dir.dot(dir))
+        dis = np.sqrt(dir.dot(dir))
+        if dis == 0:
+            mov = random.choice([[0,1],[1,0],[1,1]])
 
-        new_pos = (self.rect[0] + dir[0]*self.bounceness, self.rect[1] + dir[1]*self.bounceness)
-        self.position = new_pos
+            new_pos = (self.rect[0] + mov[0], self.rect[1] + mov[1])
+            self.position = new_pos
+            new_pos = (other.rect[0] - mov[0], other.rect[1] - mov[1])
+            other.position = new_pos
+        elif dis < (self.radius + other.radius):
+            dir = dir / dis
 
-        new_pos = (other.rect[0] - dir[0] * other.bounceness, other.rect[1] - dir[1] * other.bounceness)
-        other.position = new_pos
+            new_pos = (self.rect[0] + dir[0]*self.bounceness, self.rect[1] + dir[1]*self.bounceness)
+            self.position = new_pos
+
+            new_pos = (other.rect[0] - dir[0] * other.bounceness, other.rect[1] - dir[1] * other.bounceness)
+            other.position = new_pos
 
 
     def diference_to(self, other):

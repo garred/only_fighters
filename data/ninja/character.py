@@ -6,16 +6,20 @@ import game
 import random
 import numpy as np
 
-from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x
+from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x, K_SPACE, K_LSHIFT
 
 
 # Loading all the animation files
 
 
 # Choosing files to load.
+
 animation_names = ['_'.join(i) for i in itertools.product(
-    ['standing', 'walking', 'running', 'hitting'],
-    ['front', 'right', 'back'])]
+    ['standing', 'walking', 'running', 'hitting', 'jumping', 'shooting', 'throwing'],
+    ['front', 'right', 'back'],
+    ['unarmed', 'knife', 'sword', 'axe'])]
+animation_names = animation_names + ['_'.join(i) for i in itertools.product(
+    ['slash'], ['front', 'right', 'back'], ['knife', 'sword', 'axe'])]
 
 # Loading animations
 ninja_animations = {
@@ -24,7 +28,7 @@ ninja_animations = {
     }
 
 # Copying right animations and fliping them to create left animations
-animation_names_right = ['_'.join(i) for i in itertools.product(['standing', 'walking', 'running', 'hitting'], ['right'])]
+animation_names_right = [name for name in animation_names if 'right' in name]
 __ninja_animations_left = {
     name.replace('right', 'left'):
         pyganim.PygAnimation([(file, 0.1) for file in sorted(glob('data/ninja/maps/' + name + '*.png'))]).flip(True,False)
@@ -36,7 +40,7 @@ ninja_animations = {**ninja_animations, **__ninja_animations_left}
 
 # Setting hitting animations to non-loop animations
 for name, animation in ninja_animations.items():
-    animation.loop = False if 'hitting' in name else True
+    animation.loop = False if 'hitting' in name or 'slash' in name else True
 
 
 
@@ -50,11 +54,34 @@ class NinjaCharacter(Character):
         # Things about ninja behaviour
         self.last_dir = [0,1]   #Direction of the last movement
         self.hitting = False    #Are you hitting?
+        self.weapon = 'unarmed'
 
         # Creating animations (well, copying them from a centralized source)
         self.animations = {name: animation.getCopy() for name, animation in ninja_animations.items()}
-        self.animation = self.animations['standing_front']
+        self.animation = self.animations['standing_front_unarmed']
         self.animation.play()
+
+
+    def get_direction_name(self):
+        if self.is_looking_down():
+            return 'front_'
+        elif self.is_looking_up():
+            return 'back_'
+        elif self.is_looking_right():
+            return 'right_'
+        elif self.is_looking_left():
+            return 'left_'
+        else:
+            return 'front_'
+
+
+    def update_direction(self, dir):
+        if dir==None:
+            if self.last_dir[0] == 0 and self.last_dir[1] == 0: self.last_dir = [0, -1]
+        else:
+            if dir[0]==0 and dir[1]==0: dir = self.last_dir
+            if dir[0]==0 and dir[1]==0: dir = [0,-1]
+            self.last_dir = dir
 
 
     def walk(self, dir):
@@ -62,22 +89,11 @@ class NinjaCharacter(Character):
         if self.hitting and not self.animation.state==pyganim.STOPPED: return
         self.hitting = False
 
-        if dir[0]==0 and dir[1]==0: dir = self.last_dir
-        if dir[0]==0 and dir[1]==0: dir = [0,-1]
-        self.last_dir = dir
+        self.update_direction(dir)
 
         # Choosing animation
-        if self.is_looking_down():
-            self.animation = self.animations['walking_front']
-        elif self.is_looking_up():
-            self.animation = self.animations['walking_back']
-        elif self.is_looking_right():
-            self.animation = self.animations['walking_right']
-        elif self.is_looking_left():
-            self.animation = self.animations['walking_left']
-        else:
-            self.animation = self.animations['walking_front']
-
+        animation_name = 'walking_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[animation_name]
         self.animation.play()
 
         # Moving character
@@ -89,26 +105,28 @@ class NinjaCharacter(Character):
         if self.hitting and not self.animation.state==pyganim.STOPPED: return
         self.hitting = False
 
-        if dir[0]==0 and dir[1]==0: dir = self.last_dir
-        if dir[0]==0 and dir[1]==0: dir = [0,-1]
-        self.last_dir = dir
+        self.update_direction(dir)
 
         # Choosing animation
-        if self.is_looking_down():
-            self.animation = self.animations['running_front']
-        elif self.is_looking_up():
-            self.animation = self.animations['running_back']
-        elif self.is_looking_right():
-            self.animation = self.animations['running_right']
-        elif self.is_looking_left():
-            self.animation = self.animations['running_left']
-        else:
-            self.animation = self.animations['running_front']
-
+        animation_name = 'running_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[animation_name]
         self.animation.play()
 
         # Moving character
         self.move((dir[0]*2, dir[1]*2))
+
+
+    def stand(self, dir):
+        # You can't move if you are hitting
+        if self.hitting and not self.animation.state==pyganim.STOPPED: return
+        self.hitting = False
+
+        self.update_direction(dir)
+
+        # Choosing animation
+        animation_name = 'standing_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[animation_name]
+        self.animation.play()
 
 
     def hit(self, dir):
@@ -116,44 +134,29 @@ class NinjaCharacter(Character):
         if self.hitting and not self.animation.state==pyganim.STOPPED: return
         self.hitting = True
 
-        if dir[0]==0 and dir[1]==0: dir = self.last_dir
-        if dir[0]==0 and dir[1]==0: dir = [0,-1]
-        self.last_dir = dir
+        self.update_direction(dir)
 
         # Choosing animation
-        if self.is_looking_down():
-            self.animation = self.animations['hitting_front']
-        elif self.is_looking_up():
-            self.animation = self.animations['hitting_back']
-        elif self.is_looking_right():
-            self.animation = self.animations['hitting_right']
-        elif self.is_looking_left():
-            self.animation = self.animations['hitting_left']
-        else:
-            self.animation = self.animations['hitting_front']
+        animation_name = 'hitting_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[animation_name]
         self.animation.play()
 
 
-    def stand(self):
+    def slash(self, dir):
+        if self.weapon == 'unarmed':
+            self.hit(dir)
+            return
+
         # You can't move if you are hitting
-        if self.hitting and not self.animation.state==pyganim.STOPPED: return
-        self.hitting = False
+        if self.hitting and not self.animation.state == pyganim.STOPPED: return
+        self.hitting = True
 
-        if self.last_dir[0]==0 and self.last_dir[1]==0: self.last_dir = [0,-1]
+        self.update_direction(dir)
 
         # Choosing animation
-        if self.is_looking_down():
-            self.animation = self.animations['standing_front']
-        elif self.is_looking_up():
-            self.animation = self.animations['standing_back']
-        elif self.is_looking_right():
-            self.animation = self.animations['standing_right']
-        elif self.is_looking_left():
-            self.animation = self.animations['standing_left']
-        else:
-            self.animation = self.animations['standing_front']
+        animation_name = 'slash_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[animation_name]
         self.animation.play()
-
 
 
 class NinjaEnemy(NinjaCharacter):
@@ -171,13 +174,25 @@ class NinjaEnemy(NinjaCharacter):
 
         tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
 
-        if self.distance_to(tarjet) < 50:
+        if self.distance_to(tarjet) < 25:
             self.dir = self.direction_to(tarjet)#np.sign(self.diference_to(tarjet))
-            self.hit(self.dir)
+            if self.thinking_time > 0:
+                self.stand(self.dir)
+            else:
+                self.hit(self.dir)
+                self.thinking_time = random.randint(10,40)
+
+        elif self.distance_to(tarjet) < 50:
+            self.dir = self.direction_to(tarjet)#np.sign(self.diference_to(tarjet))
+            if self.thinking_time > 0:
+                self.stand(self.dir)
+            else:
+                self.slash(self.dir)
+                self.thinking_time = random.randint(10, 100)
 
         elif self.state == 'waiting':
             if self.thinking_time > 0:
-                self.stand()
+                self.stand(self.dir)
             else:
                 self.state = random.choice(['searching walking', 'searching running'])
                 self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
@@ -198,7 +213,7 @@ class NinjaEnemy(NinjaCharacter):
                 self.thinking_time = random.randint(10, 200)
 
         else:
-            self.stand()
+            self.stand(self.dir)
 
 
 class NinjaPlayer(NinjaCharacter):
@@ -208,24 +223,28 @@ class NinjaPlayer(NinjaCharacter):
 
     def process_inputs(self, keys):
         dir = [0, 0]
-        if keys[self.keymap['left']]:
+        keymap = self.keymap
+
+        if keys[keymap['left']]:
             dir[0] -= 1
-        if keys[self.keymap['right']]:
+        if keys[keymap['right']]:
             dir[0] += 1
-        if keys[self.keymap['up']]:
+        if keys[keymap['up']]:
             dir[1] -= 1
-        if keys[self.keymap['down']]:
+        if keys[keymap['down']]:
             dir[1] += 1
 
-        if keys[self.keymap['hit']]:
+        if keys[keymap['hit']]:
             self.hit(dir)
-        elif keys[self.keymap['left']] or keys[self.keymap['right']] or keys[self.keymap['up']] or keys[self.keymap['down']]:
-            if keys[self.keymap['run']]:
+        elif keys[keymap['slash']]:
+            self.slash(dir)
+        elif keys[keymap['left']] or keys[keymap['right']] or keys[keymap['up']] or keys[keymap['down']]:
+            if keys[keymap['run']]:
                 self.run(dir)
             else:
                 self.walk(dir)
         else:
-            self.stand()
+            self.stand(dir)
 
-keymap1 = {'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN, 'hit': K_n, 'run': K_m}
-keymap2 = {'left': K_a, 'right': K_d, 'up': K_w, 'down': K_s, 'hit': K_z, 'run': K_x}
+keymap1 = {'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN, 'hit': K_n, 'run': K_SPACE, 'slash': K_m}
+keymap2 = {'left': K_a, 'right': K_d, 'up': K_w, 'down': K_s, 'hit': K_z, 'run': K_LSHIFT, 'slash': K_x}

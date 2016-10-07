@@ -47,19 +47,8 @@ def update_collisions_between_sprites():
     for a in collisionable_sprites:
         for b in collisionable_sprites:
             if a is b: continue
-            quadratic_sum_radius = a.radius + b.radius
-            quadratic_sum_radius *= quadratic_sum_radius
-            va = np.array(a.feet_rect.center)
-            vb = np.array(b.feet_rect.center)
-            dif = vb - va
-            dis = dif.dot(dif)
-            if dis == 0:
-                a.move((random.uniform(-1, 1),random.uniform(-1, 1)))
-                b.move((random.uniform(-1, 1), random.uniform(-1, 1)))
-            elif dis < quadratic_sum_radius:
-                dif = (dif / np.sqrt(dis))
-                a.move((-dif[0]*a.bounceness,-dif[1]*a.bounceness))
-                b.move((dif[0]*b.bounceness, dif[1]*b.bounceness))
+            a.bounce(b)
+            b.bounce(a)
 
 
 def draw():
@@ -122,9 +111,12 @@ from characters import DummyCharacter, NinjaCharacter, NinjaEnemy, NinjaPlayer, 
 # Creating some characters
 #DummyCharacter()
 player1 = NinjaPlayer(keymap1)
+player1.weapon = 'sword'
 player2 = NinjaPlayer(keymap2)
+player2.weapon = 'axe'
 players = [player1, player2]
 
 for i in range(10):
     n = NinjaEnemy()
     n.move((random.randint(-100,100), random.randint(-100,100)))
+    n.weapon = random.choice(['unarmed', 'knife', 'sword', 'axe'])

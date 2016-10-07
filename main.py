@@ -29,6 +29,3 @@ if __name__ == '__main__':
 
 # Sounds
 # TODO: basic sounds for action
-
-
-
