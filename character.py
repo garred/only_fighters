@@ -1,6 +1,7 @@
 import pygame
 import game
 import numpy as np
+import math
 import random
 
 
@@ -69,9 +70,9 @@ class Character(pygame.sprite.Sprite):
         return self.feet_rect[3] * 1
 
 
-    def move(self, dir):
-        self.__move_single_axis((dir[0], 0))
-        self.__move_single_axis((0, dir[1]))
+    def move(self, dir, distance=1):
+        self.__move_single_axis((dir[0]*distance, 0))
+        self.__move_single_axis((0, dir[1]*distance))
         self.last_dir = dir
 
 

@@ -6,7 +6,7 @@ import game
 import random
 import numpy as np
 
-from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x, K_SPACE, K_LSHIFT
+from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x, K_SPACE, K_LSHIFT, K_COMMA, K_c
 
 
 # Loading all the animation files
@@ -40,7 +40,8 @@ ninja_animations = {**ninja_animations, **__ninja_animations_left}
 
 # Setting hitting animations to non-loop animations
 for name, animation in ninja_animations.items():
-    animation.loop = False if 'hitting' in name or 'slash' in name else True
+    if 'hitting' in name or 'slash' in name or 'jumping' in name:
+        animation.loop = False
 
 
 
@@ -53,12 +54,13 @@ class NinjaCharacter(Character):
 
         # Things about ninja behaviour
         self.last_dir = [0,1]   #Direction of the last movement
-        self.hitting = False    #Are you hitting?
+        self.action_locked = False    #Are you hitting, jumping or slashing?
         self.weapon = 'unarmed'
+        self.animation_name = 'standing_front_unarmed'
 
         # Creating animations (well, copying them from a centralized source)
         self.animations = {name: animation.getCopy() for name, animation in ninja_animations.items()}
-        self.animation = self.animations['standing_front_unarmed']
+        self.animation = self.animations[self.animation_name]
         self.animation.play()
 
 
@@ -86,14 +88,14 @@ class NinjaCharacter(Character):
 
     def walk(self, dir):
         # You can't move if you are hitting
-        if self.hitting and not self.animation.state==pyganim.STOPPED: return
-        self.hitting = False
+        if self.action_locked and not self.animation.state==pyganim.STOPPED: return
+        self.action_locked = False
 
         self.update_direction(dir)
 
         # Choosing animation
-        animation_name = 'walking_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[animation_name]
+        self.animation_name = 'walking_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
         self.animation.play()
 
         # Moving character
@@ -102,43 +104,43 @@ class NinjaCharacter(Character):
 
     def run(self, dir):
         # You can't move if you are hitting
-        if self.hitting and not self.animation.state==pyganim.STOPPED: return
-        self.hitting = False
+        if self.action_locked and not self.animation.state==pyganim.STOPPED: return
+        self.action_locked = False
 
         self.update_direction(dir)
 
         # Choosing animation
-        animation_name = 'running_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[animation_name]
+        self.animation_name = 'running_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
         self.animation.play()
 
         # Moving character
-        self.move((dir[0]*2, dir[1]*2))
+        self.move(dir, 2)
 
 
     def stand(self, dir):
         # You can't move if you are hitting
-        if self.hitting and not self.animation.state==pyganim.STOPPED: return
-        self.hitting = False
+        if self.action_locked and not self.animation.state==pyganim.STOPPED: return
+        self.action_locked = False
 
         self.update_direction(dir)
 
         # Choosing animation
-        animation_name = 'standing_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[animation_name]
+        self.animation_name = 'standing_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
         self.animation.play()
 
 
     def hit(self, dir):
         # You can't move if you are hitting
-        if self.hitting and not self.animation.state==pyganim.STOPPED: return
-        self.hitting = True
+        if self.action_locked and not self.animation.state==pyganim.STOPPED: return
+        self.action_locked = True
 
         self.update_direction(dir)
 
         # Choosing animation
-        animation_name = 'hitting_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[animation_name]
+        self.animation_name = 'hitting_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
         self.animation.play()
 
 
@@ -148,15 +150,35 @@ class NinjaCharacter(Character):
             return
 
         # You can't move if you are hitting
-        if self.hitting and not self.animation.state == pyganim.STOPPED: return
-        self.hitting = True
+        if self.action_locked and not self.animation.state == pyganim.STOPPED: return
+        self.action_locked = True
 
         self.update_direction(dir)
 
         # Choosing animation
-        animation_name = 'slash_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[animation_name]
+        self.animation_name = 'slash_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
         self.animation.play()
+
+
+    def jump(self, dir):
+        # You can't move if you are hitting
+        if self.action_locked and not self.animation.state == pyganim.STOPPED: return
+        self.action_locked = True
+
+        self.update_direction(dir)
+
+        # Choosing animation
+        self.animation_name = 'jumping_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
+        self.animation.play()
+
+
+    def update_animation(self):
+        super(NinjaCharacter, self).update_animation()
+        if 'jumping' in self.animation_name:
+            self.move(self.last_dir, 2)
+
 
 
 class NinjaEnemy(NinjaCharacter):
@@ -238,6 +260,8 @@ class NinjaPlayer(NinjaCharacter):
             self.hit(dir)
         elif keys[keymap['slash']]:
             self.slash(dir)
+        elif keys[keymap['jump']]:
+            self.jump(dir)
         elif keys[keymap['left']] or keys[keymap['right']] or keys[keymap['up']] or keys[keymap['down']]:
             if keys[keymap['run']]:
                 self.run(dir)
@@ -246,5 +270,9 @@ class NinjaPlayer(NinjaCharacter):
         else:
             self.stand(dir)
 
-keymap1 = {'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN, 'hit': K_n, 'run': K_SPACE, 'slash': K_m}
-keymap2 = {'left': K_a, 'right': K_d, 'up': K_w, 'down': K_s, 'hit': K_z, 'run': K_LSHIFT, 'slash': K_x}
+keymap1 = {
+    'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN,
+    'hit': K_n, 'run': K_SPACE, 'slash': K_m, 'jump': K_COMMA}
+keymap2 = {
+    'left': K_a, 'right': K_d, 'up': K_w, 'down': K_s,
+    'hit': K_z, 'run': K_LSHIFT, 'slash': K_x, 'jump': K_c}
