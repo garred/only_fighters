@@ -9,46 +9,48 @@ import app
 from pygame.constants import K_1, K_2
 from character import Hitbox
 
+keys_pressed = {}
 
-def update(keys):
+
+def update():
     '''Makes the game seems alive and responsive.'''
+    global keys_pressed
+
+    keys_pressed = pygame.key.get_pressed() # Needed to handling keyboard and mouse events
 
     # Processing inputs
-    process_inputs(keys)
-    for player in players:
-        player.process_inputs(keys)
+    process_inputs()
 
     # Updating things in the game
     render_group.update() #Updating the relative position of the entities to the camera.
     update_collisions_between_sprites()
-    update_ai()
-    update_animations()
+    update_objects()
     update_hitboxes()
 
 
 def update_hitboxes():
-    global hitboxes
+    global hitboxes, animated_objects
     for h in hitboxes:
-        tarjet_list = ai_objects if h.tarjet==Hitbox.ENEMIES else players
-        for o in tarjet_list:
+        for o in animated_objects:
             if h.colliderect(o.feet_rect):
                 o.hitted(h)
 
     #hitboxes = list()
 
 
-def update_animations():
+def update_objects():
     for o in animated_objects:
-        o.update_animation()
+        o.update()
 
 
 
-def process_inputs(keys):
+def process_inputs():
     '''Input processing related to the game as a whole.'''
+    global keys_pressed
 
-    if keys[K_1]:
+    if keys_pressed[K_1]:
         renderer.zoom *= 1.05
-    if keys[K_2]:
+    if keys_pressed[K_2]:
         renderer.zoom /= 1.05
 
 
@@ -86,16 +88,10 @@ def draw():
         pygame.draw.rect(app.screen, (255, 0, 0), rect)
     hitboxes = list()
 
-    for e in ai_objects:
+    for e in animated_objects:
         rect = (e.feet_rect[0]+camx, e.feet_rect[1]+camy, e.feet_rect[2], e.feet_rect[3])
         pygame.draw.rect(app.screen, (0, 255, 0), rect)
 
-
-
-def update_ai():
-    '''Updates all the objects with artificial intelligence.'''
-    for o in ai_objects:
-        o.update_ai()
 
 
 # Global objects
@@ -126,9 +122,6 @@ collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.objec
 
 # Sprites that can collide between them
 collisionable_sprites = list()
-
-# Artificial intelligence objects
-ai_objects = list()
 
 # Hitbox objects
 hitboxes = list()

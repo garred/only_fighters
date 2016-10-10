@@ -156,12 +156,12 @@ class NinjaCharacter(Character):
         self.animation.play()
 
 
-    def update_animation(self):
+    def update(self):
         '''
         Updates various things related with the animation and the mechanics of the game, like animation-related movement
         (when jumping for example) and hitting zones mechanics.
         '''
-        super(NinjaCharacter, self).update_animation()
+        super(NinjaCharacter, self).update()
 
         # Jumping movement
         if 'jumping' in self.animation_name:
@@ -196,11 +196,14 @@ class NinjaEnemy(NinjaCharacter):
         self.state = 'waiting'
         self.dir = [0,-1]
         self.thinking_time = random.randint(10,200)
-        game.ai_objects.append(self)
         self.tarjet = Hitbox.PLAYER
 
 
-    def update_ai(self):
+    def update(self):
+        '''Updates the character with artificial intelligence.'''
+
+        super(NinjaEnemy, self).update()
+
         self.thinking_time -= 1
 
         tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
@@ -245,17 +248,28 @@ class NinjaEnemy(NinjaCharacter):
         else:
             self.stand()
 
+    def hitted(self, hitbox):
+        if hitbox.tarjet==Hitbox.ENEMIES or hitbox.tarjet==Hitbox.ALL:
+            self.being_hitted = 10
+            self.being_hitted_direction = hitbox.direction
+            self.kill()
+
 
 class NinjaPlayer(NinjaCharacter):
 
     def __init__(self, keymap):
         super(NinjaPlayer, self).__init__()
         self.keymap = keymap
-        self.tarjet = Hitbox.ENEMIES
+        self.tarjet = Hitbox.ALL
 
-    def process_inputs(self, keys):
+    def update(self):
+        '''Makes this character playable.'''
+
+        super(NinjaPlayer, self).update()
+
         dir = [0, 0]
         keymap = self.keymap
+        keys = game.keys_pressed
 
         if keys[keymap['left']]:
             dir[0] -= 1
@@ -281,6 +295,13 @@ class NinjaPlayer(NinjaCharacter):
                 self.walk()
         else:
             self.stand()
+
+
+    def hitted(self, hitbox):
+        if hitbox.tarjet == Hitbox.PLAYER or hitbox.tarjet == Hitbox.ALL:
+            self.being_hitted = 10
+            self.being_hitted_direction = hitbox.direction
+
 
 keymap1 = {
     'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN,

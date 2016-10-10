@@ -35,6 +35,8 @@ class Character(pygame.sprite.Sprite):
         self.being_hitted = 0
         self.being_hitted_direction = (0,0)
 
+        self.life = -1
+
 
     def kill(self):
         game.render_group.remove(self)
@@ -43,7 +45,7 @@ class Character(pygame.sprite.Sprite):
         self.animation.stop()
 
 
-    def update_animation(self):
+    def update(self):
         '''Updates the animation mechanics and draws the rect.'''
 
         # Updates the hitted animation
@@ -157,7 +159,7 @@ class Character(pygame.sprite.Sprite):
         return abs(self.dir[0]) + self.dir[1] <= 0
 
     def hitted(self, hitbox):
-        self.being_hitted = 10
+        self.being_hitted = 20
         self.being_hitted_direction = hitbox.direction
 
 

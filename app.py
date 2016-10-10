@@ -35,10 +35,9 @@ def run():
     while running:
         # Reading inputs from the user
         handle_events()
-        keys_pressed = pygame.key.get_pressed() # Needed to handling keyboard and mouse events
 
         # Processing next step
-        if game.active: game.update(keys_pressed)
+        if game.active: game.update()
         if menu.active: menu.update()
 
         # Drawing everything
@@ -63,7 +62,6 @@ def handle_events():
             game.active = 1 - game.active
         else:
             menu.event(e)
-
 
 
 def quit(*args):
