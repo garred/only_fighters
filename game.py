@@ -7,26 +7,37 @@ import pytmx
 import pyscroll
 import app
 from pygame.constants import K_1, K_2
+from character import Hitbox
+
 
 def update(keys):
     '''Makes the game seems alive and responsive.'''
 
-    # Processing inputs to change things in the game
+    # Processing inputs
     process_inputs(keys)
-    # Processing inputs to control the player
     for player in players:
         player.process_inputs(keys)
 
-    # Updating the relative position of the entities to the camera.
-    render_group.update()
-
-    # Updating collisions between characters
+    # Updating things in the game
+    render_group.update() #Updating the relative position of the entities to the camera.
     update_collisions_between_sprites()
-
-    # Updating AI
     update_ai()
+    update_animations()
+    update_hitboxes()
 
-    # Updating animated entities
+
+def update_hitboxes():
+    global hitboxes
+    for h in hitboxes:
+        tarjet_list = ai_objects if h.tarjet==Hitbox.ENEMIES else players
+        for o in tarjet_list:
+            if h.colliderect(o.feet_rect):
+                o.hitted(h)
+
+    #hitboxes = list()
+
+
+def update_animations():
     for o in animated_objects:
         o.update_animation()
 
@@ -54,7 +65,7 @@ def update_collisions_between_sprites():
 def draw():
     '''Draws all the entities and the background.'''
 
-    global player
+    global player, hitboxes
     app.screen.fill((0, 0, 0))
 
     # center the map/screen on our Hero
@@ -63,6 +74,22 @@ def draw():
     # draw the map and all sprites
     render_group._spritelist.sort(key=lambda x: x.feet_rect.centery) #Sorting sprites by depth.
     render_group.draw(app.screen)
+
+
+    # TODO: CLEAN THIS CODE
+    # Raw way of rendering things for debuging
+    camx = -player1.rect.centerx+app.screen_width*0.5
+    camy = -player1.rect.centery+app.screen_height*0.5
+
+    for h in hitboxes:
+        rect = (h.rect[0]+camx, h.rect[1]+camy, h.rect[2], h.rect[3])
+        pygame.draw.rect(app.screen, (255, 0, 0), rect)
+    hitboxes = list()
+
+    for e in ai_objects:
+        rect = (e.feet_rect[0]+camx, e.feet_rect[1]+camy, e.feet_rect[2], e.feet_rect[3])
+        pygame.draw.rect(app.screen, (0, 255, 0), rect)
+
 
 
 def update_ai():
@@ -102,6 +129,9 @@ collisionable_sprites = list()
 
 # Artificial intelligence objects
 ai_objects = list()
+
+# Hitbox objects
+hitboxes = list()
 
 
 # Importing characters used in the game.

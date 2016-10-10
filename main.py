@@ -9,9 +9,9 @@ if __name__ == '__main__':
 # Basic engine:
 #
 # Character mechanics 1: walking, running.
-# TODO: Character mechanics 2: jumping.
+# Character mechanics 2: jumping.
 # Character mechanics 3: hitting.
-# TODO: Character mechanics 4: Define 'hitting zones'.
+# Character mechanics 4: Define 'hitting zones'.
 # Easy load of character animations, preferibly loading characters as a whole (not as different animations).
 # TODO: BUG: Dissapearing characters after hit.
 

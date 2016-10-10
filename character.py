@@ -3,6 +3,7 @@ import game
 import numpy as np
 import math
 import random
+import app
 
 
 class Character(pygame.sprite.Sprite):
@@ -16,7 +17,7 @@ class Character(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.feet_rect = pygame.Rect(0,0,10,10)
         self.position = game.renderer.map_rect.center
-        self.last_dir = [0,-1]
+        self.dir = [0, -1]
 
         # Here you should put your animations
         self.animations = {}
@@ -30,6 +31,10 @@ class Character(pygame.sprite.Sprite):
         # How much this character must bounce when colliding
         self.bounceness = 2
 
+        # Attributes to control the effect of being hitted. If being_hitted>0, then it moves in the direction of the hit.
+        self.being_hitted = 0
+        self.being_hitted_direction = (0,0)
+
 
     def kill(self):
         game.render_group.remove(self)
@@ -39,10 +44,19 @@ class Character(pygame.sprite.Sprite):
 
 
     def update_animation(self):
+        '''Updates the animation mechanics and draws the rect.'''
+
+        # Updates the hitted animation
+        if self.being_hitted > 0:
+            self.move(self.being_hitted_direction, distance=2)
+            self.being_hitted -= 1
+
+        # Draws the character in his rect
         self.image.fill((0,0,0,0))
         centerx = self.rect.width*0.5 - self.animation.getRect().centerx
         centery = self.rect.height*0.5 - self.animation.getRect().centery
         self.animation.blit(self.image, (centerx, centery))
+
 
 
     @property
@@ -73,7 +87,6 @@ class Character(pygame.sprite.Sprite):
     def move(self, dir, distance=1):
         self.__move_single_axis((dir[0]*distance, 0))
         self.__move_single_axis((0, dir[1]*distance))
-        self.last_dir = dir
 
 
     def __move_single_axis(self, dir):
@@ -132,14 +145,34 @@ class Character(pygame.sprite.Sprite):
 
 
     def is_looking_right(self):
-        return self.last_dir[0] - abs(self.last_dir[1]) >= 0
+        return self.dir[0] - abs(self.dir[1]) >= 0
 
     def is_looking_down(self):
-        return self.last_dir[1] - abs(self.last_dir[0]) >= 0
+        return self.dir[1] - abs(self.dir[0]) >= 0
 
     def is_looking_left(self):
-        return abs(self.last_dir[1]) + self.last_dir[0] <= 0
+        return abs(self.dir[1]) + self.dir[0] <= 0
 
     def is_looking_up(self):
-        return abs(self.last_dir[0]) + self.last_dir[1] <= 0
+        return abs(self.dir[0]) + self.dir[1] <= 0
+
+    def hitted(self, hitbox):
+        self.being_hitted = 10
+        self.being_hitted_direction = hitbox.direction
+
+
+class Hitbox(pygame.Rect):
+    ALL, PLAYER, ENEMIES = range(3)
+
+    def __init__(self, pos, size, dir, distance, tarjet=ALL, strength=1):
+        pos = (pos[0] + dir[0]*distance, pos[1] + dir[1]*distance)
+        self.rect = (pos[0]-size*0.5, pos[1]-size*0.5, size, size)
+        super(Hitbox, self).__init__(self.rect)
+        self.tarjet = tarjet
+        self.strength = strength
+        self.direction = dir
+
+        game.hitboxes.append(self)
+
+
 

@@ -1,10 +1,11 @@
 import itertools
 from glob import glob
 import others_src.pyganim.pyganim as pyganim
-from character import Character
+from character import Character, Hitbox
 import game
 import random
 import numpy as np
+
 
 from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x, K_SPACE, K_LSHIFT, K_COMMA, K_c
 
@@ -53,10 +54,12 @@ class NinjaCharacter(Character):
         super(NinjaCharacter, self).__init__()
 
         # Things about ninja behaviour
-        self.last_dir = [0,1]   #Direction of the last movement
+        self.dir = [0,1]
         self.action_locked = False    #Are you hitting, jumping or slashing?
         self.weapon = 'unarmed'
         self.animation_name = 'standing_front_unarmed'
+        self.attacked = False   #Record if the current attack action has been done (with a hitbox)
+        self.tarjet = Hitbox.ALL
 
         # Creating animations (well, copying them from a centralized source)
         self.animations = {name: animation.getCopy() for name, animation in ninja_animations.items()}
@@ -77,21 +80,10 @@ class NinjaCharacter(Character):
             return 'front_'
 
 
-    def update_direction(self, dir):
-        if dir==None:
-            if self.last_dir[0] == 0 and self.last_dir[1] == 0: self.last_dir = [0, -1]
-        else:
-            if dir[0]==0 and dir[1]==0: dir = self.last_dir
-            if dir[0]==0 and dir[1]==0: dir = [0,-1]
-            self.last_dir = dir
-
-
-    def walk(self, dir):
+    def walk(self):
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state==pyganim.STOPPED: return
         self.action_locked = False
-
-        self.update_direction(dir)
 
         # Choosing animation
         self.animation_name = 'walking_' + self.get_direction_name() + self.weapon
@@ -99,15 +91,13 @@ class NinjaCharacter(Character):
         self.animation.play()
 
         # Moving character
-        self.move(dir)
+        self.move(self.dir)
 
 
-    def run(self, dir):
+    def run(self):
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state==pyganim.STOPPED: return
         self.action_locked = False
-
-        self.update_direction(dir)
 
         # Choosing animation
         self.animation_name = 'running_' + self.get_direction_name() + self.weapon
@@ -115,15 +105,13 @@ class NinjaCharacter(Character):
         self.animation.play()
 
         # Moving character
-        self.move(dir, 2)
+        self.move(self.dir, 2)
 
 
-    def stand(self, dir):
+    def stand(self):
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state==pyganim.STOPPED: return
         self.action_locked = False
-
-        self.update_direction(dir)
 
         # Choosing animation
         self.animation_name = 'standing_' + self.get_direction_name() + self.weapon
@@ -131,12 +119,10 @@ class NinjaCharacter(Character):
         self.animation.play()
 
 
-    def hit(self, dir):
+    def hit(self):
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state==pyganim.STOPPED: return
         self.action_locked = True
-
-        self.update_direction(dir)
 
         # Choosing animation
         self.animation_name = 'hitting_' + self.get_direction_name() + self.weapon
@@ -144,16 +130,14 @@ class NinjaCharacter(Character):
         self.animation.play()
 
 
-    def slash(self, dir):
+    def slash(self):
         if self.weapon == 'unarmed':
-            self.hit(dir)
+            self.hit()
             return
 
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state == pyganim.STOPPED: return
         self.action_locked = True
-
-        self.update_direction(dir)
 
         # Choosing animation
         self.animation_name = 'slash_' + self.get_direction_name() + self.weapon
@@ -161,12 +145,10 @@ class NinjaCharacter(Character):
         self.animation.play()
 
 
-    def jump(self, dir):
+    def jump(self):
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state == pyganim.STOPPED: return
         self.action_locked = True
-
-        self.update_direction(dir)
 
         # Choosing animation
         self.animation_name = 'jumping_' + self.get_direction_name() + self.weapon
@@ -175,9 +157,35 @@ class NinjaCharacter(Character):
 
 
     def update_animation(self):
+        '''
+        Updates various things related with the animation and the mechanics of the game, like animation-related movement
+        (when jumping for example) and hitting zones mechanics.
+        '''
         super(NinjaCharacter, self).update_animation()
+
+        # Jumping movement
         if 'jumping' in self.animation_name:
-            self.move(self.last_dir, 2)
+            self.move(self.dir, 2)
+
+        # Hitting zones
+        if self.animation.currentFrameNum > (self.animation.numFrames // 3):
+            if self.attacked == False:
+                if 'hit' in self.animation_name:
+                    self.attacked = True
+
+                if 'slash' in self.animation_name:
+                    self.attacked = True
+                    if self.weapon == 'knife':
+                        Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
+                               strength=1)
+                    elif self.weapon == 'sword':
+                        Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=20, tarjet=self.tarjet,
+                               strength=4)
+                    elif self.weapon == 'axe':
+                        Hitbox(pos=self.feet_rect.center, size=40, dir=self.dir, distance=30, tarjet=self.tarjet,
+                               strength=10)
+        else:
+            self.attacked = False
 
 
 
@@ -186,9 +194,10 @@ class NinjaEnemy(NinjaCharacter):
     def __init__(self):
         super(NinjaEnemy, self).__init__()
         self.state = 'waiting'
-        self.dir = [0,0]
+        self.dir = [0,-1]
         self.thinking_time = random.randint(10,200)
         game.ai_objects.append(self)
+        self.tarjet = Hitbox.PLAYER
 
 
     def update_ai(self):
@@ -196,25 +205,24 @@ class NinjaEnemy(NinjaCharacter):
 
         tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
 
-        if self.distance_to(tarjet) < 25:
-            self.dir = self.direction_to(tarjet)#np.sign(self.diference_to(tarjet))
-            if self.thinking_time > 0:
-                self.stand(self.dir)
-            else:
-                self.hit(self.dir)
-                self.thinking_time = random.randint(10,40)
+        if self.distance_to(tarjet) < 40:
 
-        elif self.distance_to(tarjet) < 50:
-            self.dir = self.direction_to(tarjet)#np.sign(self.diference_to(tarjet))
+            if self.action_locked==False:
+                self.dir = self.direction_to(tarjet)  # np.sign(self.diference_to(tarjet))
+
             if self.thinking_time > 0:
-                self.stand(self.dir)
+                self.stand()
             else:
-                self.slash(self.dir)
-                self.thinking_time = random.randint(10, 100)
+                if random.randint(0,4)==0:
+                    self.hit()
+                    self.thinking_time = 100
+                else:
+                    self.slash()
+                    self.thinking_time = 0#random.randint(100, 200)
 
         elif self.state == 'waiting':
             if self.thinking_time > 0:
-                self.stand(self.dir)
+                self.stand()
             else:
                 self.state = random.choice(['searching walking', 'searching running'])
                 self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
@@ -222,26 +230,28 @@ class NinjaEnemy(NinjaCharacter):
 
         elif self.state == 'searching walking':
             if self.thinking_time > 0:
-                self.walk(self.dir)
+                self.walk()
             else:
                 self.state = 'waiting'
                 self.thinking_time = random.randint(10,200)
 
         elif self.state == 'searching running':
             if self.thinking_time > 0:
-                self.run(self.dir)
+                self.run()
             else:
                 self.state = 'waiting'
                 self.thinking_time = random.randint(10, 200)
 
         else:
-            self.stand(self.dir)
+            self.stand()
 
 
 class NinjaPlayer(NinjaCharacter):
+
     def __init__(self, keymap):
         super(NinjaPlayer, self).__init__()
         self.keymap = keymap
+        self.tarjet = Hitbox.ENEMIES
 
     def process_inputs(self, keys):
         dir = [0, 0]
@@ -255,20 +265,22 @@ class NinjaPlayer(NinjaCharacter):
             dir[1] -= 1
         if keys[keymap['down']]:
             dir[1] += 1
+        if np.sum(np.abs(dir))==0: dir = self.dir
+        self.dir = dir
 
         if keys[keymap['hit']]:
-            self.hit(dir)
+            self.hit()
         elif keys[keymap['slash']]:
-            self.slash(dir)
+            self.slash()
         elif keys[keymap['jump']]:
-            self.jump(dir)
+            self.jump()
         elif keys[keymap['left']] or keys[keymap['right']] or keys[keymap['up']] or keys[keymap['down']]:
             if keys[keymap['run']]:
-                self.run(dir)
+                self.run()
             else:
-                self.walk(dir)
+                self.walk()
         else:
-            self.stand(dir)
+            self.stand()
 
 keymap1 = {
     'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN,
