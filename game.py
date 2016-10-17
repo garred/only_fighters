@@ -34,8 +34,8 @@ def update_hitboxes():
         for o in animated_objects:
             if h.colliderect(o.feet_rect):
                 o.hitted(h)
-
-    #hitboxes = list()
+    # TODO: Restore this
+    hitboxes = list()
 
 
 def update_objects():
@@ -78,19 +78,19 @@ def draw():
     render_group.draw(app.screen)
 
 
-    # TODO: CLEAN THIS CODE
-    # Raw way of rendering things for debuging
-    camx = -player1.rect.centerx+app.screen_width*0.5
-    camy = -player1.rect.centery+app.screen_height*0.5
-
-    for h in hitboxes:
-        rect = (h.rect[0]+camx, h.rect[1]+camy, h.rect[2], h.rect[3])
-        pygame.draw.rect(app.screen, (255, 0, 0), rect)
-    hitboxes = list()
-
-    for e in animated_objects:
-        rect = (e.feet_rect[0]+camx, e.feet_rect[1]+camy, e.feet_rect[2], e.feet_rect[3])
-        pygame.draw.rect(app.screen, (0, 255, 0), rect)
+    # # TODO: CLEAN THIS CODE
+    # # Raw way of rendering things for debuging
+    # camx = -player1.rect.centerx+app.screen_width*0.5
+    # camy = -player1.rect.centery+app.screen_height*0.5
+    #
+    # for h in hitboxes:
+    #     rect = (h.rect[0]+camx, h.rect[1]+camy, h.rect[2], h.rect[3])
+    #     pygame.draw.rect(app.screen, (255, 0, 0), rect)
+    # hitboxes = list()
+    #
+    # for e in animated_objects:
+    #     rect = (e.feet_rect[0]+camx, e.feet_rect[1]+camy, e.feet_rect[2], e.feet_rect[3])
+    #     pygame.draw.rect(app.screen, (0, 255, 0), rect)
 
 
 
@@ -118,7 +118,7 @@ animated_objects = list()
 map_rect = (0, 0, map.width*map.tilewidth, map.height*map.tileheight)
 
 # This contains the walls of the map
-collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.objects]
+collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layernames['walls']]
 
 # Sprites that can collide between them
 collisionable_sprites = list()
@@ -128,18 +128,17 @@ hitboxes = list()
 
 
 # Importing characters used in the game.
-from characters import DummyCharacter, NinjaCharacter, NinjaEnemy, NinjaPlayer, keymap1, keymap2
+from characters import NinjaPlayer, ArcherPlayer, BanditEnemy, keymap1, keymap2
 
 
 # Creating some characters
-#DummyCharacter()
 player1 = NinjaPlayer(keymap1)
 player1.weapon = 'sword'
-player2 = NinjaPlayer(keymap2)
+player2 = ArcherPlayer(keymap2)
 player2.weapon = 'axe'
 players = [player1, player2]
 
 for i in range(10):
-    n = NinjaEnemy()
+    n = BanditEnemy()
     n.move((random.randint(-100,100), random.randint(-100,100)))
     n.weapon = random.choice(['unarmed', 'knife', 'sword', 'axe'])

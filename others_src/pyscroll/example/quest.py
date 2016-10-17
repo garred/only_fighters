@@ -112,6 +112,7 @@ class QuestGame(object):
         # setup level geometry with simple pygame rects, loaded from pytmx
         self.walls = list()
         for object in tmx_data.objects:
+            print(object)
             self.walls.append(pygame.Rect(
                 object.x, object.y,
                 object.width, object.height))

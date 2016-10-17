@@ -23,24 +23,24 @@ animation_names = animation_names + ['_'.join(i) for i in itertools.product(
     ['slash'], ['front', 'right', 'back'], ['knife', 'sword', 'axe'])]
 
 # Loading animations
-ninja_animations = {
-    name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob('data/ninja/maps/' + name + '*.png'))])
+animations = {
+    name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob('data/ninja/maps/*' + name + '*.png'))])
     for name in animation_names
     }
 
 # Copying right animations and fliping them to create left animations
 animation_names_right = [name for name in animation_names if 'right' in name]
-__ninja_animations_left = {
+__animations_left = {
     name.replace('right', 'left'):
-        pyganim.PygAnimation([(file, 0.1) for file in sorted(glob('data/ninja/maps/' + name + '*.png'))]).flip(True,False)
+        pyganim.PygAnimation([(file, 0.1) for file in sorted(glob('data/ninja/maps/*' + name + '*.png'))]).flip(True,False)
     for name in animation_names_right
     }
 
 # Merging all animations
-ninja_animations = {**ninja_animations, **__ninja_animations_left}
+animations = {**animations, **__animations_left}
 
 # Setting hitting animations to non-loop animations
-for name, animation in ninja_animations.items():
+for name, animation in animations.items():
     if 'hitting' in name or 'slash' in name or 'jumping' in name:
         animation.loop = False
 
@@ -62,7 +62,7 @@ class NinjaCharacter(Character):
         self.tarjet = Hitbox.ALL
 
         # Creating animations (well, copying them from a centralized source)
-        self.animations = {name: animation.getCopy() for name, animation in ninja_animations.items()}
+        self.animations = {name: animation.getCopy() for name, animation in animations.items()}
         self.animation = self.animations[self.animation_name]
         self.animation.play()
 
@@ -165,7 +165,7 @@ class NinjaCharacter(Character):
 
         # Jumping movement
         if 'jumping' in self.animation_name:
-            self.move(self.dir, 2)
+            self.move(self.dir, 1)
 
         # Hitting zones
         if self.animation.currentFrameNum > (self.animation.numFrames // 3):
@@ -267,10 +267,10 @@ class NinjaPlayer(NinjaCharacter):
 
         super(NinjaPlayer, self).update()
 
-        dir = [0, 0]
         keymap = self.keymap
         keys = game.keys_pressed
 
+        dir = [0, 0]
         if keys[keymap['left']]:
             dir[0] -= 1
         if keys[keymap['right']]:
@@ -280,7 +280,8 @@ class NinjaPlayer(NinjaCharacter):
         if keys[keymap['down']]:
             dir[1] += 1
         if np.sum(np.abs(dir))==0: dir = self.dir
-        self.dir = dir
+
+        if not self.action_locked: self.dir = dir
 
         if keys[keymap['hit']]:
             self.hit()
