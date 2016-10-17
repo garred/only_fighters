@@ -54,7 +54,6 @@ class NinjaCharacter(Character):
         super(NinjaCharacter, self).__init__()
 
         # Things about ninja behaviour
-        self.dir = [0,1]
         self.action_locked = False    #Are you hitting, jumping or slashing?
         self.weapon = 'unarmed'
         self.animation_name = 'standing_front_unarmed'
@@ -91,7 +90,7 @@ class NinjaCharacter(Character):
         self.animation.play()
 
         # Moving character
-        self.move(self.dir)
+        self.move(self.dir, 0.5)
 
 
     def run(self):
@@ -105,7 +104,7 @@ class NinjaCharacter(Character):
         self.animation.play()
 
         # Moving character
-        self.move(self.dir, 2)
+        self.move(self.dir, 1)
 
 
     def stand(self):
@@ -194,7 +193,6 @@ class NinjaEnemy(NinjaCharacter):
     def __init__(self):
         super(NinjaEnemy, self).__init__()
         self.state = 'waiting'
-        self.dir = [0,-1]
         self.thinking_time = random.randint(10,200)
         self.tarjet = Hitbox.PLAYER
 

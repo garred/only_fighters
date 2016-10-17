@@ -1,14 +1,7 @@
 import itertools
 from glob import glob
 import others_src.pyganim.pyganim as pyganim
-from data.ninja.character import NinjaCharacter
-from character import Hitbox
-import game
-import random
-import numpy as np
-
-
-from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x, K_SPACE, K_LSHIFT, K_COMMA, K_c
+from data.ninja.character import NinjaCharacter, NinjaEnemy, NinjaPlayer
 
 
 # Loading all the animation files
@@ -56,125 +49,15 @@ class ArcherCharacter(NinjaCharacter):
         self.animations = {name: animation.getCopy() for name, animation in animations.items()}
 
 
-
-class ArcherEnemy(ArcherCharacter):
+class ArcherEnemy(NinjaEnemy):
 
     def __init__(self):
         super(ArcherEnemy, self).__init__()
-        self.state = 'waiting'
-        self.dir = [0,-1]
-        self.thinking_time = random.randint(10,200)
-        self.tarjet = Hitbox.PLAYER
+        self.animations = {name: animation.getCopy() for name, animation in animations.items()}
 
 
-    def update(self):
-        '''Updates the character with artificial intelligence.'''
-
-        super(ArcherEnemy, self).update()
-
-        self.thinking_time -= 1
-
-        tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
-
-        if self.distance_to(tarjet) < 40:
-
-            if self.action_locked==False:
-                self.dir = self.direction_to(tarjet)  # np.sign(self.diference_to(tarjet))
-
-            if self.thinking_time > 0:
-                self.stand()
-            else:
-                if random.randint(0,4)==0:
-                    self.hit()
-                    self.thinking_time = 100
-                else:
-                    self.slash()
-                    self.thinking_time = 0#random.randint(100, 200)
-
-        elif self.state == 'waiting':
-            if self.thinking_time > 0:
-                self.stand()
-            else:
-                self.state = random.choice(['searching walking', 'searching running'])
-                self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
-                self.thinking_time = random.randint(10, 200)
-
-        elif self.state == 'searching walking':
-            if self.thinking_time > 0:
-                self.walk()
-            else:
-                self.state = 'waiting'
-                self.thinking_time = random.randint(10,200)
-
-        elif self.state == 'searching running':
-            if self.thinking_time > 0:
-                self.run()
-            else:
-                self.state = 'waiting'
-                self.thinking_time = random.randint(10, 200)
-
-        else:
-            self.stand()
-
-    def hitted(self, hitbox):
-        if hitbox.tarjet==Hitbox.ENEMIES or hitbox.tarjet==Hitbox.ALL:
-            self.being_hitted = 10
-            self.being_hitted_direction = hitbox.direction
-            self.kill()
-
-
-class ArcherPlayer(ArcherCharacter):
+class ArcherPlayer(NinjaPlayer):
 
     def __init__(self, keymap):
-        super(ArcherPlayer, self).__init__()
-        self.keymap = keymap
-        self.tarjet = Hitbox.ALL
-
-    def update(self):
-        '''Makes this character playable.'''
-
-        super(ArcherPlayer, self).update()
-
-        keymap = self.keymap
-        keys = game.keys_pressed
-
-        dir = [0, 0]
-        if keys[keymap['left']]:
-            dir[0] -= 1
-        if keys[keymap['right']]:
-            dir[0] += 1
-        if keys[keymap['up']]:
-            dir[1] -= 1
-        if keys[keymap['down']]:
-            dir[1] += 1
-        if np.sum(np.abs(dir))==0: dir = self.dir
-
-        if not self.action_locked: self.dir = dir
-
-        if keys[keymap['hit']]:
-            self.hit()
-        elif keys[keymap['slash']]:
-            self.slash()
-        elif keys[keymap['jump']]:
-            self.jump()
-        elif keys[keymap['left']] or keys[keymap['right']] or keys[keymap['up']] or keys[keymap['down']]:
-            if keys[keymap['run']]:
-                self.run()
-            else:
-                self.walk()
-        else:
-            self.stand()
-
-
-    def hitted(self, hitbox):
-        if hitbox.tarjet == Hitbox.PLAYER or hitbox.tarjet == Hitbox.ALL:
-            self.being_hitted = 10
-            self.being_hitted_direction = hitbox.direction
-
-
-keymap1 = {
-    'left': K_LEFT, 'right': K_RIGHT, 'up': K_UP, 'down': K_DOWN,
-    'hit': K_n, 'run': K_SPACE, 'slash': K_m, 'jump': K_COMMA}
-keymap2 = {
-    'left': K_a, 'right': K_d, 'up': K_w, 'down': K_s,
-    'hit': K_z, 'run': K_LSHIFT, 'slash': K_x, 'jump': K_c}
+        super(ArcherPlayer, self).__init__(keymap)
+        self.animations = {name: animation.getCopy() for name, animation in animations.items()}

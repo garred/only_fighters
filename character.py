@@ -16,8 +16,9 @@ class Character(pygame.sprite.Sprite):
 
         self.rect = self.image.get_rect()
         self.feet_rect = pygame.Rect(0,0,10,10)
+        self._position = [0.0, 0.0]
         self.position = game.renderer.map_rect.center
-        self.dir = [0, -1]
+        self.dir = [0,1]
 
         # Here you should put your animations
         self.animations = {}
@@ -63,13 +64,15 @@ class Character(pygame.sprite.Sprite):
 
     @property
     def position(self):
-        return (self.rect[0], self.rect[1])
+        return (self._position[0], self._position[1])
 
 
     @position.setter
     def position(self, new_pos):
-        self.rect[0] = new_pos[0]
-        self.rect[1] = new_pos[1]
+        self._position[0] = new_pos[0]
+        self._position[1] = new_pos[1]
+        self.rect[0] = self._position[0]
+        self.rect[1] = self._position[1]
         self.put_feet_in_rect()
 
 
@@ -83,7 +86,7 @@ class Character(pygame.sprite.Sprite):
 
     @property
     def radius(self):
-        return self.feet_rect[3] * 1
+        return self.feet_rect[3]
 
 
     def move(self, dir, distance=1):
@@ -92,21 +95,28 @@ class Character(pygame.sprite.Sprite):
 
 
     def __move_single_axis(self, dir):
-        self.position = (self.position[0] + dir[0], self.position[1] + dir[1])
+        self.position = (self._position[0] + dir[0], self._position[1] + dir[1])
 
         # We set a maximum number of collision checkings
         for wall_rect in game.collisionable_walls:
             if self.feet_rect.colliderect(wall_rect):
                 if dir[0] > 0:  # Moving right; Hit the left side of the wall
                     self.feet_rect.right = wall_rect.left
+                    self.put_rect_in_feet()
+                    self._position[0] = self.rect[0]
                 if dir[0] < 0:  # Moving left; Hit the right side of the wall
                     self.feet_rect.left = wall_rect.right
+                    self.put_rect_in_feet()
+                    self._position[0] = self.rect[0]
                 if dir[1] > 0:  # Moving down; Hit the top side of the wall
                     self.feet_rect.bottom = wall_rect.top
+                    self.put_rect_in_feet()
+                    self._position[1] = self.rect[1]
                 if dir[1] < 0:  # Moving up; Hit the bottom side of the wall
                     self.feet_rect.top = wall_rect.bottom
+                    self.put_rect_in_feet()
+                    self._position[1] = self.rect[1]
 
-        self.put_rect_in_feet()
 
 
     def bounce(self, other):
