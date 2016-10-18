@@ -2,709 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="053d321e-55ba-45d5-90cc-0902ec1d03a1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_hitting_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_back_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_front_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_jumping_right_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_running_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_axe_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_knife_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_sword_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_back_unarmed_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_axe_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_knife_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_sword_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_front_unarmed_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_axe_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_knife_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_sword_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_shooting_right_unarmed_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_axe_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_back_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_axe_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_front_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_axe_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_slash_right_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_back_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_front_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_standing_right_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_throwing_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_back_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_front_unarmed_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_axe_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_knife_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_sword_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja_red_walking_right_unarmed_007.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/character.py" afterPath="$PROJECT_DIR$/data/characters/archer/character.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/character.py" afterPath="$PROJECT_DIR$/data/characters/bandit/character.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/character.py" afterPath="$PROJECT_DIR$/data/characters/ninja/character.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.py" afterPath="$PROJECT_DIR$/game.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <ignored path="only_fighters.iws" />
@@ -730,7 +32,7 @@
     <SUITE FILE_PATH="coverage/only_fighters$gui15.coverage" NAME="gui15 Coverage Results" MODIFIED="1474643308454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pgu/examples" />
     <SUITE FILE_PATH="coverage/only_fighters$tilevid5.coverage" NAME="tilevid5 Coverage Results" MODIFIED="1474644181084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pgu/examples" />
     <SUITE FILE_PATH="coverage/only_fighters$quest.coverage" NAME="quest Coverage Results" MODIFIED="1476656337791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pyscroll/example" />
-    <SUITE FILE_PATH="coverage/only_fighters$main.coverage" NAME="main Coverage Results" MODIFIED="1476813641790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/only_fighters$main.coverage" NAME="main Coverage Results" MODIFIED="1476824535839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/only_fighters$test3_pyganim.coverage" NAME="test3_pyganim Coverage Results" MODIFIED="1476821735097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pyganim" />
     <SUITE FILE_PATH="coverage/only_fighters$gui17.coverage" NAME="gui17 Coverage Results" MODIFIED="1474643320163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pgu/examples" />
     <SUITE FILE_PATH="coverage/only_fighters$pgu02.coverage" NAME="pgu02 Coverage Results" MODIFIED="1474913187397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
@@ -775,21 +77,9 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state relative-caret-position="111">
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/characters/bandit/character.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -806,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menu.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -821,8 +111,8 @@
       <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
+            <state relative-caret-position="306">
+              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
               <folding>
                 <element signature="e#35#53#0" expanded="true" />
               </folding>
@@ -833,33 +123,11 @@
       <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state relative-caret-position="137">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="characters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/characters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="e#74#119#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="character.py" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -913,22 +181,23 @@
         <option value="$PROJECT_DIR$/examples/swampy_visualization.py" />
         <option value="$PROJECT_DIR$/examples/lumpy_visualization.py" />
         <option value="$PROJECT_DIR$/marta01.py" />
-        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/game.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/others_src/pyscroll/example/quest.py" />
         <option value="$PROJECT_DIR$/data/bandit/character.py" />
         <option value="$PROJECT_DIR$/data/archer/character.py" />
-        <option value="$PROJECT_DIR$/character.py" />
         <option value="$PROJECT_DIR$/data/ninja/character.py" />
-        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py" />
         <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/data/ninja/character.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/game.py" />
-        <option value="$PROJECT_DIR$/data/characters/archer/character.py" />
-        <option value="$PROJECT_DIR$/data/characters/bandit/character.py" />
-        <option value="$PROJECT_DIR$/data/characters/ninja/character.py" />
         <option value="$PROJECT_DIR$/characters.py" />
+        <option value="$PROJECT_DIR$/game.py" />
+        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py" />
+        <option value="$PROJECT_DIR$/data/characters/bandit/character.py" />
+        <option value="$PROJECT_DIR$/data/characters/archer/character.py" />
+        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/game.py" />
+        <option value="$PROJECT_DIR$/data/characters/ninja/character.py" />
+        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/data/characters/ninja/character.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/character.py" />
       </list>
     </option>
   </component>
@@ -1015,7 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="others_src" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1029,11 +298,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="others_src" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pyganim" />
+              <option name="myItemId" value="characters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="only_fighters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="only_fighters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="characters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bandit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="only_fighters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="only_fighters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="characters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="archer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1053,7 +366,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test3_pyganim">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1380,8 +693,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test3_pyganim" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test3_pyganim" />
         <item index="2" class="java.lang.String" itemvalue="Python.game" />
         <item index="3" class="java.lang.String" itemvalue="Python.quest" />
         <item index="4" class="java.lang.String" itemvalue="Python.marta01" />
@@ -1433,14 +746,14 @@
     <frame x="1" y="24" width="1599" height="852" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32237267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19664733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35034484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13604127" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35034484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19084461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45655173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1514,28 +827,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://Python/#/home/alvaro/Dropbox/Proyectos/only_fighters/menu.py">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#/home/alvaro/Dropbox/Proyectos/only_fighters/menu.py</OriginalElement>
-          <nodes>
-            <node x="" y="">pgu.gui.widget.Widget</node>
-            <node x="" y="">_collections_abc.Hashable</node>
-            <node x="" y="">pgu.gui.app.App</node>
-            <node x="" y="">object</node>
-            <node x="" y="">menu.Menu</node>
-            <node x="" y="">pgu.gui.container.Container</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="115.0" y="219.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/properties01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1607,20 +898,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/dummy/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/lib/python3.5/site-packages/pygame/sprite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="451" column="8" selection-start-line="451" selection-start-column="8" selection-end-line="451" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dummy/character.py" />
     <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-2138126739/pygame/time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1673,13 +951,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/marta01.py" />
-    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/miniconda3/lib/python3.5/site-packages/pytmx/util_pygame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1698,7 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1725,26 +995,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/archer/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/archer/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/archer/character.py" />
+    <entry file="file://$PROJECT_DIR$/data/archer/character.py" />
     <entry file="file://$PROJECT_DIR$/others_src/pgu/build/lib/pgu/html.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1756,59 +1012,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ninja/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/bandit/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/ninja/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ninja/character.py" />
+    <entry file="file://$PROJECT_DIR$/data/bandit/character.py" />
+    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/ninja/character.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="1480">
             <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/characters/ninja/character.py">
+    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test1_pyganim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="-189">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/characters/archer/character.py">
+    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test2_pyganim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1854">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test3_pyganim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="169" column="19" selection-start-line="169" selection-start-column="19" selection-end-line="169" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test4_pyganim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/others_src/pyganim/pyganim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="782" column="29" selection-start-line="782" selection-start-column="24" selection-end-line="782" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1817,28 +1069,40 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#74#119#0" expanded="true" />
+            <element signature="e#74#119#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.py">
+    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
-          <folding>
-            <element signature="e#35#53#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="117">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.py">
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.5/site-packages/pygame/sprite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="e#44#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="451" column="8" selection-start-line="451" selection-start-column="8" selection-end-line="451" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/characters/ninja/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="286" column="41" selection-start-line="286" selection-start-column="41" selection-end-line="286" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1852,81 +1116,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test1_pyganim.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="111">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test2_pyganim.py">
+    <entry file="file://$PROJECT_DIR$/data/characters/archer/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1854">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test3_pyganim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2475">
-          <caret line="169" column="19" selection-start-line="169" selection-start-column="19" selection-end-line="169" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/others_src/pyganim/pyganim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="109" column="38" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/others_src/pyganim/test4_pyganim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="e#626#639#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/characters/bandit/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+        <state relative-caret-position="330">
+          <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/data/characters/bandit/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="42" column="83" selection-start-line="42" selection-start-column="83" selection-end-line="42" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py">
+    <entry file="file://$PROJECT_DIR$/data/characters/ninja/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="156">
+          <caret line="321" column="0" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+          <folding>
+            <element signature="e#35#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding>
+            <element signature="e#44#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

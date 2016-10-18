@@ -16,7 +16,8 @@ if __name__ == '__main__':
 # [GRAPHICS] Lots of characters animations.
 # [GRAPHICS] Search a itemset with weapons, potions...
 # [GRAPHICS]: Death animation
-# ToDo [GAMING]: Death behaviour
+# [GAMING]: Death behaviour
+# ToDo [GRAPHICS]: Death animation with fading out
 # ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
 #   - Arch weapon animations
 #   - ToDo: Arrow behavior

@@ -20,8 +20,11 @@ animation_names = ['_'.join(i) for i in itertools.product(
     ['standing', 'walking', 'running', 'hitting', 'jumping', 'shooting', 'throwing'],
     ['front', 'right', 'back'],
     ['unarmed', 'knife', 'sword', 'axe'])]
-animation_names = animation_names + ['_'.join(i) for i in itertools.product(
-    ['slash'], ['front', 'right', 'back'], ['knife', 'sword', 'axe'])]
+animation_names += ['_'.join(i) for i in itertools.product(
+    ['slash'],
+    ['front', 'right', 'back'],
+    ['knife', 'sword', 'axe'])]
+animation_names += ['death']
 
 # Loading animations
 animations = {
@@ -42,7 +45,7 @@ animations = {**animations, **__animations_left}
 
 # Setting hitting animations to non-loop animations
 for name, animation in animations.items():
-    if 'hitting' in name or 'slash' in name or 'jumping' in name:
+    if 'hitting' in name or 'slash' in name or 'jumping' in name or 'death' in name:
         animation.loop = False
 
 
@@ -163,9 +166,6 @@ class NinjaCharacter(Character):
 
 
     def jump(self):
-        # You can't move if you are hitting
-        # if self.action_locked and not self.animation.state == pyganim.STOPPED: return
-
         # You can't jump if you are tired
         if ('jumping' in self.animation_name and not self.animation.state == pyganim.STOPPED):
             return
@@ -177,9 +177,20 @@ class NinjaCharacter(Character):
         self.stamina = max(0, self.stamina - 50)
         self.action_locked = True
 
-
         # Choosing animation
         self.animation_name = 'jumping_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
+        self.animation.play()
+
+
+    def death(self):
+        # You can't do anything else when you are dying
+        self.action_locked = True
+        if self.animation_name=='death' and self.animation.state==pyganim.STOPPED:
+            self.kill()
+
+        # Choosing animation
+        self.animation_name = 'death'
         self.animation = self.animations[self.animation_name]
         self.animation.play()
 
@@ -191,35 +202,37 @@ class NinjaCharacter(Character):
         '''
         super(NinjaCharacter, self).update()
 
-        # Jumping movement
-        if 'jumping' in self.animation_name:
-            self.move(self.dir, 1)
-
-        # Hitting zones
-        if self.animation.currentFrameNum > (self.animation.numFrames // 3):
-            if self.attacked == False:
-                if 'hit' in self.animation_name:
-                    self.attacked = True
-                    Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
-                           strength=10, damage=1, type='blunt')
-
-                if 'slash' in self.animation_name:
-                    self.attacked = True
-                    if self.weapon == 'knife':
-                        Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
-                               strength=5, damage=2, type='penetrating')
-                    elif self.weapon == 'sword':
-                        Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=20, tarjet=self.tarjet,
-                               strength=10, damage=4, type='cutting')
-                    elif self.weapon == 'axe':
-                        Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=30, tarjet=self.tarjet,
-                               strength=20, damage=8, type='cutting')
-        else:
-            self.attacked = False
-
         # Life
         if self.life <= 0:
-            self.kill()
+            self.death()
+
+        else:
+            # Jumping movement
+            if 'jumping' in self.animation_name:
+                self.move(self.dir, 1)
+
+            # Hitting zones
+            if self.animation.currentFrameNum > (self.animation.numFrames // 3):
+                if self.attacked == False:
+                    if 'hit' in self.animation_name:
+                        self.attacked = True
+                        Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
+                               strength=10, damage=1, type='blunt')
+
+                    if 'slash' in self.animation_name:
+                        self.attacked = True
+                        if self.weapon == 'knife':
+                            Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
+                                   strength=5, damage=2, type='penetrating')
+                        elif self.weapon == 'sword':
+                            Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=20, tarjet=self.tarjet,
+                                   strength=10, damage=4, type='cutting')
+                        elif self.weapon == 'axe':
+                            Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=30, tarjet=self.tarjet,
+                                   strength=20, damage=8, type='cutting')
+            else:
+                self.attacked = False
+
 
     def hitted(self, hitbox):
         if ((self.faction==ENEMY and hitbox.tarjet==ENEMY)
@@ -251,9 +264,14 @@ class NinjaEnemy(NinjaCharacter):
 
         self.thinking_time -= 1
 
-        tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
+        if len(game.players) == 2:
+            tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
+        elif len(game.players) == 1:
+            tarjet = game.players[0]
+        else:
+            tarjet = None
 
-        if self.distance_to(tarjet) < 40:
+        if tarjet is not None and self.distance_to(tarjet) < 40:
 
             if self.action_locked==False:
                 self.dir = self.direction_to(tarjet)  # np.sign(self.diference_to(tarjet))
@@ -266,7 +284,7 @@ class NinjaEnemy(NinjaCharacter):
                     self.thinking_time = 100
                 else:
                     self.slash()
-                    self.thinking_time = 0#random.randint(100, 200)
+                    self.thinking_time = random.randint(100, 200)
 
         elif self.state is 'waiting':
             if self.thinking_time > 0:
@@ -301,6 +319,12 @@ class NinjaPlayer(NinjaCharacter):
         self.keymap = keymap
         self.tarjet = ENEMY
         self.faction = PLAYER
+
+
+    def kill(self):
+        super(NinjaPlayer, self).kill()
+        game.players.remove(self)
+
 
     def update(self):
         '''Makes this character playable.'''

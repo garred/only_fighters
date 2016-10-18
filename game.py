@@ -70,12 +70,14 @@ def draw():
     app.screen.fill((0, 0, 0))
 
     # center the map/screen on our Heroes
-    if players[0] is not None and players[1] is not None:
+    if len(players)>1:
         center = ((players[0].rect.centerx + players[1].rect.centerx)*0.5,
                   (players[0].rect.centery+players[1].rect.centery)*0.5)
         render_group.center(center)
-    else:
+    elif len(players)==1:
         render_group.center(players[0].rect.center)
+    else:
+        render_group.center((0,0))
 
 
     # draw the map and all sprites
@@ -105,13 +107,14 @@ def draw_players_info():
     render_group.center((0,0))
 
     # Player 1 info
-    pygame.draw.rect(app.screen, (  0,  0,  0), (20, 20, 200, 20))
-    if players[0].life > 0: pygame.draw.rect(app.screen, (255,  0,  0), (23, 23, 194*max(0,players[0].life)/players[0].max_life, 14))
-    pygame.draw.rect(app.screen, (  0,  0,  0), (20, 40, 200, 20))
-    pygame.draw.rect(app.screen, (255,255,255), (23, 43, 194*max(0,players[0].stamina)/players[0].max_stamina, 14))
+    if len(players)>0:
+        pygame.draw.rect(app.screen, (  0,  0,  0), (20, 20, 200, 20))
+        if players[0].life > 0: pygame.draw.rect(app.screen, (255,  0,  0), (23, 23, 194*max(0,players[0].life)/players[0].max_life, 14))
+        pygame.draw.rect(app.screen, (  0,  0,  0), (20, 40, 200, 20))
+        pygame.draw.rect(app.screen, (255,255,255), (23, 43, 194*max(0,players[0].stamina)/players[0].max_stamina, 14))
 
     # Player 2 info
-    if players[1] is not None:
+    if len(players)>1:
         pygame.draw.rect(app.screen, (  0,  0,  0), (app.screen_width-20-200, 20, 200, 20))
         if players[1].life > 0: pygame.draw.rect(app.screen, (255,  0,  0), (app.screen_width-17-200, 23, 194*players[1].life/players[1].max_life, 14))
         pygame.draw.rect(app.screen, (  0,  0,  0), (app.screen_width-20-200, 40, 200, 20))
