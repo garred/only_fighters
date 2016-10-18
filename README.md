@@ -104,3 +104,35 @@ Levels are grouped by a common element added. The first level of the group is ve
 In the firsts missions some message box to guide the player how to move it are allowed: First a message tell to the player how to move the character, later how to attack a dummy objective, after the player is told to dodge attacks from a dumb enemy, how to throw objects and pick up new ones, etc. 
 
 In this missions, there is some neutral and allies units. Give orders to them is as simply as approaching them and clicking the emerging button. This is very intuitive and most players will try it as soon as they see it. If not, a message box can recomend the player doing that.
+
+
+## CREDITS
+
+Things from other people that I've used so far:
+
+### Graphics:
+
+- Particles: http://opengameart.org/content/sparks-fire-ice-blood
+- Potions: Bonsaiheldin | http://bonsaiheld.org
+
+### Sounds:
+
+- Axe swings: qubodup/Iwan Gabovitch - qubodup.net - qubodup@gmail.com
+- Some of these sword swings:
+    - afterguard - unionsword 1865 (CC-BY 3.0 -- http://www.freesound.org/people/afterguard/sounds/44660/)
+    - black-snow - sword slice 23 (CC-BY 3.0 -- http://www.freesound.org/people/Black%20Snow/sounds/109432/)
+    - erdie - sword04 (CC-BY 3.0 -- http://www.freesound.org/people/Erdie/sounds/27858/)
+    - jobro - sword pulled 2 (CC-BY 3.0 -- http://www.freesound.org/people/jobro/sounds/74832/)
+    - kibibu - sword_4 (CC0 -- http://www.freesound.org/people/kibibu/sounds/22428/)
+    - qat - sheath sword (CC0 -- http://www.freesound.org/people/Qat/sounds/107590/)
+    - qat - unsheath sword (CC0 -- http://www.freesound.org/people/Qat/sounds/107589/)
+    - qubodup - swosh sword swing (CC0 -- http://www.freesound.org/people/qubodup/sounds/59992/)
+    - robkinsons - sworddraw (CC-BY 3.0 -- http://www.freesound.org/people/Robkinsons/sounds/103128/)
+- "Arg!" sounds:
+    - 0: Helmut Scream, http://freesound.org/people/creativeheroes/sounds/84353/, http://creativecommons.org/licenses/by/3.0/
+    - 1, 2: Male_Thijs_loud_scream, http://freesound.org/people/thanvannispen/sounds/9432/, http://creativecommons.org/licenses/by/3.0/
+    - 3-7: human male scream multi, http://freesound.org/people/JohnsonBrandEditing/sounds/173944/, http://creativecommons.org/publicdomain/zero/1.0/
+
+### Music:
+
+- nene, posted in OpenGameArt.org

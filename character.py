@@ -5,6 +5,7 @@ import math
 import random
 import app
 
+ALL, PLAYER, ENEMY = range(3)
 
 class Character(pygame.sprite.Sprite):
 
@@ -37,6 +38,9 @@ class Character(pygame.sprite.Sprite):
         self.being_hitted_direction = (0,0)
 
         self.life = -1
+        self.max_life = -1
+        self.stamina = -1
+        self.max_stamina = -1
 
 
     def kill(self):
@@ -126,19 +130,17 @@ class Character(pygame.sprite.Sprite):
         dis = np.sqrt(dir.dot(dir))
         if dis == 0:
             mov = random.choice([[0,1],[1,0],[1,1]])
+            self.move((-mov[0],-mov[1]))
+            other.move(mov)
 
-            new_pos = (self.rect[0] + mov[0], self.rect[1] + mov[1])
-            self.position = new_pos
-            new_pos = (other.rect[0] - mov[0], other.rect[1] - mov[1])
-            other.position = new_pos
         elif dis < (self.radius + other.radius):
             dir = dir / dis
 
-            new_pos = (self.rect[0] + dir[0]*self.bounceness, self.rect[1] + dir[1]*self.bounceness)
-            self.position = new_pos
+            mov = (dir[0]*self.bounceness, dir[1]*self.bounceness)
+            self.move(mov)
 
-            new_pos = (other.rect[0] - dir[0] * other.bounceness, other.rect[1] - dir[1] * other.bounceness)
-            other.position = new_pos
+            mov = (-dir[0]*other.bounceness, -dir[1]*other.bounceness)
+            other.move(mov)
 
 
     def diference_to(self, other):
@@ -174,17 +176,16 @@ class Character(pygame.sprite.Sprite):
 
 
 class Hitbox(pygame.Rect):
-    ALL, PLAYER, ENEMIES = range(3)
-
-    def __init__(self, pos, size, dir, distance, tarjet=ALL, strength=1):
+    def __init__(self, pos, size, dir, distance, tarjet=ALL, strength=1, damage=1, type='cutting'):
         pos = (pos[0] + dir[0]*distance, pos[1] + dir[1]*distance)
         self.rect = (pos[0]-size*0.5, pos[1]-size*0.5, size, size)
         super(Hitbox, self).__init__(self.rect)
         self.tarjet = tarjet
         self.strength = strength
+        self.damage = damage
         self.direction = dir
+        self.type = type
 
         game.hitboxes.append(self)
-
 
 

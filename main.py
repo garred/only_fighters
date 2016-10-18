@@ -6,26 +6,33 @@ if __name__ == '__main__':
     app.run()
 
 
-# Basic engine:
-#
-# Character mechanics 1: walking, running.
-# Character mechanics 2: jumping.
-# Character mechanics 3: hitting.
-# Character mechanics 4: Define 'hitting zones'.
-# Easy load of character animations, preferibly loading characters as a whole (not as different animations).
-# TODO: BUG: Dissapearing characters after hit.
+# [BASIC] Character mechanics 1: walking, running.
+# [BASIC] Character mechanics 2: jumping.
+# [BASIC] Character mechanics 3: hitting.
+# [BASIC] Character mechanics 4: Define 'hitting zones'.
+# [BASIC] Easy load of character animations, preferibly loading characters as a whole (not as different animations).
+# [AI] Wandering enemies.
+# [GAMING] Life and stamina visualization
+# [GRAPHICS] Lots of characters animations.
+# [GRAPHICS] Search a itemset with weapons, potions...
+# [GAMING]: Death animation
+# ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
+# - Arch weapon animations
+# - ToDo: Arrow behavior
+# ToDo [GAMING]: Potions and items to pick up
+# ToDo [GAMING]: Loading characters and objects from maps
+# ToDo [AI]: Basic following, combat, flee behaviour
+# ToDo [AI]: Patroling enemies
+# ToDo [GRAPHICS]: Effects
+#   - ToDo: Sword sparks
+#   - ToDo: Blood splash
+# ToDo [SOUNDS]: basic sounds for action
+#   - ToDo: Swings and punchs
+#   - ToDo: Hits and fail-hits
+#   - ToDo: Death screams
+# ToDo [MUSIC]: Music
 
-# Artificial intelligence
-#
-# Wandering enemies.
-# TODO: Basic following behaviour.
-# TODO: Basic combat behaviour.
-# TODO: Flee behaviour
 
-# Graphics
-# TODO: Lots of characters animations.
-# TODO: Search a itemset with weapons, potions...
-# TODO: Search fire, explosions, blood, hits effects...
 
-# Sounds
-# TODO: basic sounds for action
+# Other ToDos:
+# ToDo [BASIC] [BUG]: Dissapearing characters after hit.

@@ -1,5 +1,6 @@
 
-from data.ninja.character import *
-from data.dummy.character import *
-from data.archer.character import *
-from data.bandit.character import *
+path = 'data/characters/'
+#from data.characters.dummy.character import *
+from data.characters.ninja.character import *
+from data.characters.archer.character import *
+from data.characters.bandit.character import *

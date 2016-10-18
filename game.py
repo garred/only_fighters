@@ -67,18 +67,26 @@ def update_collisions_between_sprites():
 def draw():
     '''Draws all the entities and the background.'''
 
-    global player, hitboxes
     app.screen.fill((0, 0, 0))
 
-    # center the map/screen on our Hero
-    render_group.center(players[0].rect.center)
+    # center the map/screen on our Heroes
+    if players[0] is not None and players[1] is not None:
+        center = ((players[0].rect.centerx + players[1].rect.centerx)*0.5,
+                  (players[0].rect.centery+players[1].rect.centery)*0.5)
+        render_group.center(center)
+    else:
+        render_group.center(players[0].rect.center)
+
 
     # draw the map and all sprites
     render_group._spritelist.sort(key=lambda x: x.feet_rect.centery) #Sorting sprites by depth.
     render_group.draw(app.screen)
 
 
-    # # TODO: CLEAN THIS CODE
+    # Draw information about players' life, stamina, etc.
+    draw_players_info()
+
+    # # TODO: CLEAN THIS CODE WHEN DEBUGGING CHARACTERS IS NO LONGER NEEDED
     # # Raw way of rendering things for debuging
     # camx = -player1.rect.centerx+app.screen_width*0.5
     # camy = -player1.rect.centery+app.screen_height*0.5
@@ -93,6 +101,23 @@ def draw():
     #     pygame.draw.rect(app.screen, (0, 255, 0), rect)
 
 
+def draw_players_info():
+    render_group.center((0,0))
+
+    # Player 1 info
+    pygame.draw.rect(app.screen, (  0,  0,  0), (20, 20, 200, 20))
+    if players[0].life > 0: pygame.draw.rect(app.screen, (255,  0,  0), (23, 23, 194*max(0,players[0].life)/players[0].max_life, 14))
+    pygame.draw.rect(app.screen, (  0,  0,  0), (20, 40, 200, 20))
+    pygame.draw.rect(app.screen, (255,255,255), (23, 43, 194*max(0,players[0].stamina)/players[0].max_stamina, 14))
+
+    # Player 2 info
+    if players[1] is not None:
+        pygame.draw.rect(app.screen, (  0,  0,  0), (app.screen_width-20-200, 20, 200, 20))
+        if players[1].life > 0: pygame.draw.rect(app.screen, (255,  0,  0), (app.screen_width-17-200, 23, 194*players[1].life/players[1].max_life, 14))
+        pygame.draw.rect(app.screen, (  0,  0,  0), (app.screen_width-20-200, 40, 200, 20))
+        pygame.draw.rect(app.screen, (255,255,255), (app.screen_width-17-200, 43, 194*max(0, players[1].stamina)/players[1].max_stamina, 14))
+
+
 
 # Global objects
 
@@ -102,7 +127,7 @@ active = False
 visible = True
 
 # Main map.
-map = pytmx.util_pygame.load_pygame('data/map/grasslands.tmx')
+map = pytmx.util_pygame.load_pygame('data/maps/map1/grasslands.tmx')
 
 # "Camera" of the game: it renders objects.'''
 renderer = pyscroll.BufferedRenderer(pyscroll.data.TiledMapData(map), app.screen.get_size())
@@ -140,5 +165,5 @@ players = [player1, player2]
 
 for i in range(10):
     n = BanditEnemy()
-    n.move((random.randint(-100,100), random.randint(-100,100)))
+    n.move((random.randint(-100,100), random.randint(100,200)))
     n.weapon = random.choice(['unarmed', 'knife', 'sword', 'axe'])
