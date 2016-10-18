@@ -1,8 +1,6 @@
-import itertools
-from glob import glob
 import others_src.pyganim.pyganim as pyganim
 from character import Character, Hitbox, ALL, PLAYER, ENEMY
-from characters import path
+from characters import load_animations
 import game
 import random
 import numpy as np
@@ -13,41 +11,10 @@ from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s,
 
 # Loading all the animation files
 
+animations = load_animations('data/characters/ninja/')
 
-# Choosing files to load.
 
-animation_names = ['_'.join(i) for i in itertools.product(
-    ['standing', 'walking', 'running', 'hitting', 'jumping', 'shooting', 'throwing'],
-    ['front', 'right', 'back'],
-    ['unarmed', 'knife', 'sword', 'axe'])]
-animation_names += ['_'.join(i) for i in itertools.product(
-    ['slash'],
-    ['front', 'right', 'back'],
-    ['knife', 'sword', 'axe'])]
-animation_names += ['death']
-
-# Loading animations
-animations = {
-    name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob(path + 'ninja/maps/*' + name + '*.png'))])
-    for name in animation_names
-    }
-
-# Copying right animations and fliping them to create left animations
-animation_names_right = [name for name in animation_names if 'right' in name]
-__animations_left = {
-    name.replace('right', 'left'):
-        pyganim.PygAnimation([(file, 0.1) for file in sorted(glob(path + 'ninja/maps/*' + name + '*.png'))]).flip(True,False)
-    for name in animation_names_right
-    }
-
-# Merging all animations
-animations = {**animations, **__animations_left}
-
-# Setting hitting animations to non-loop animations
-for name, animation in animations.items():
-    if 'hitting' in name or 'slash' in name or 'jumping' in name or 'death' in name:
-        animation.loop = False
-
+# Loading sounds
 
 # Ninja class
 
@@ -208,7 +175,7 @@ class NinjaCharacter(Character):
 
         else:
             # Jumping movement
-            if 'jumping' in self.animation_name:
+            if 'jump' in self.animation_name:
                 self.move(self.dir, 1)
 
             # Hitting zones
@@ -241,8 +208,12 @@ class NinjaCharacter(Character):
             self.being_hitted = hitbox.strength
             self.being_hitted_direction = hitbox.direction
 
-            if (hitbox.direction[0]*self.dir[0] + hitbox.direction[1]*self.dir[1] > 0
-                or not ('slash' in self.animation_name or 'hit' in self.animation_name)):
+            # Conditions to avoid the damage
+            if (((hitbox.direction[0]*self.dir[0] + hitbox.direction[1]*self.dir[1]) < 0
+                 and ('slash' in self.animation_name or 'hit' in self.animation_name))
+                or 'jump' in self.animation_name):
+                return
+            else:
                 self.life -= hitbox.damage
 
 

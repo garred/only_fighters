@@ -124,6 +124,10 @@ def draw_players_info():
 
 # Global objects
 
+# Load music and start playing it
+pygame.mixer.music.load('data/music/Long Away Home.ogg') #pygame.mixer.music.load('data/music/Endless Pain of Nightmares.ogg')
+pygame.mixer.music.play(-1)
+
 # The game mechanics is updating.
 active = False
 # The game graphics are visible.

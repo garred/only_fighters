@@ -23,6 +23,7 @@ running = True
 
 # Global objects
 
+pygame.mixer.init(44100, -16, 2, 2048) # setup mixer to avoid sound lag
 from menu import menu
 import game
 

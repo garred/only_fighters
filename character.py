@@ -1,11 +1,11 @@
 import pygame
 import game
 import numpy as np
-import math
 import random
-import app
+
 
 ALL, PLAYER, ENEMY = range(3)
+
 
 class Character(pygame.sprite.Sprite):
 
