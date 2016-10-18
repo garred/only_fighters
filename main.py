@@ -15,10 +15,11 @@ if __name__ == '__main__':
 # [GAMING] Life and stamina visualization
 # [GRAPHICS] Lots of characters animations.
 # [GRAPHICS] Search a itemset with weapons, potions...
-# [GAMING]: Death animation
+# [GRAPHICS]: Death animation
+# ToDo [GAMING]: Death behaviour
 # ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
-# - Arch weapon animations
-# - ToDo: Arrow behavior
+#   - Arch weapon animations
+#   - ToDo: Arrow behavior
 # ToDo [GAMING]: Potions and items to pick up
 # ToDo [GAMING]: Loading characters and objects from maps
 # ToDo [AI]: Basic following, combat, flee behaviour
