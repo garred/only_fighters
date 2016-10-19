@@ -1,5 +1,5 @@
 import others_src.pyganim.pyganim as pyganim
-from character import Character, Hitbox, ALL, PLAYER, ENEMY
+from characters import Character, Hitbox, ALL, PLAYER, ENEMY
 from characters import load_animations, fast_swing_sounds, slow_swing_sounds, aargh_sounds, fail_hits_sounds, hits_sounds
 import game
 import random

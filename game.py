@@ -7,7 +7,7 @@ import pytmx
 import pyscroll
 import app
 from pygame.constants import K_1, K_2
-from character import Hitbox
+from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
 
 keys_pressed = {}
 
@@ -23,7 +23,7 @@ def update():
 
     # Updating things in the game
     render_group.update() #Updating the relative position of the entities to the camera.
-    update_collisions_between_sprites()
+    update_collisions()
     update_objects()
     update_hitboxes()
 
@@ -43,7 +43,6 @@ def update_objects():
         o.update()
 
 
-
 def process_inputs():
     '''Input processing related to the game as a whole.'''
     global keys_pressed
@@ -54,7 +53,7 @@ def process_inputs():
         renderer.zoom /= 1.05
 
 
-def update_collisions_between_sprites():
+def update_collisions():
     '''Updates collisions between sprites, in a completly unefficient way.'''
 
     for a in collisionable_sprites:
@@ -62,6 +61,10 @@ def update_collisions_between_sprites():
             if a is b: continue
             a.bounce(b)
             b.bounce(a)
+
+    for a in collisionable_sprites:
+        for b in touchable_objects:
+            b.touched_by(a)
 
 
 def draw():
@@ -136,35 +139,37 @@ active = False
 # The game graphics are visible.
 visible = True
 
-# Main map.
+
+
+
+# Loading main map
+
 map = pytmx.util_pygame.load_pygame('data/maps/map1/map.tmx')
-
-# "Camera" of the game: it renders objects.'''
-renderer = pyscroll.BufferedRenderer(pyscroll.data.TiledMapData(map), app.screen.get_size())
-renderer.zoom = 1
-
-# This defines the group of renderizable sprites.
-render_group = pyscroll.group.PyscrollGroup(map_layer=renderer, default_layer=2)
-
-# Holds everything that needs to be updated by PygAnim.
-animated_objects = list()
-
-# Rectangle of the map.
 map_rect = (0, 0, map.width*map.tilewidth, map.height*map.tileheight)
 
-# This contains the walls of the map
-collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layernames['walls']]
 
-# Sprites that can collide between them
-collisionable_sprites = list()
+# Creating global containers
 
-# Hitbox objects
-hitboxes = list()
+renderer = pyscroll.BufferedRenderer(pyscroll.data.TiledMapData(map), app.screen.get_size()) # "Camera" of the game: it renders objects.'''
+renderer.zoom = 1.5
 
-# Importing characters used in the game.
-from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
+render_group = pyscroll.group.PyscrollGroup(map_layer=renderer, default_layer=2) # This defines the group of renderizable sprites.
 
-# Creating characters in the map
+animated_objects = list() # Holds everything that needs to be updated by PygAnim.
+collisionable_sprites = list() # Sprites that can collide between them
+hitboxes = list() # Hitbox objects
+touchable_objects = list()
+
+
+# Creating objects of the map
+
+# Walls
+
+collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layernames['walls']] # This contains the walls of the map
+
+
+# Characters
+
 players = []
 for map_object in map.layernames['characters']:
 
@@ -226,3 +231,5 @@ for map_object in map.layernames['characters']:
                 new_character.path.append((p[0], p[1]))
             new_character.position = (new_character.path[0][0]-50, new_character.path[0][1]-45)
 
+
+# Creating items

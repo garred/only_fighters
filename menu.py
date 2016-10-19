@@ -10,7 +10,7 @@ class Menu(gui.App):
         super(Menu, self).__init__(theme=gui.Theme('data/themes/clean'))
 
         self.active = True
-        self.veil = pygame.Surface((1000, 750), pygame.SRCALPHA)
+        self.veil = pygame.Surface((app.screen_width, app.screen_height), pygame.SRCALPHA)
         self.veil.fill((0, 0, 0, 128))
 
         # Some basic elements

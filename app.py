@@ -10,9 +10,9 @@ from pygame.constants import QUIT, K_ESCAPE
 
 fps = 60
 '''Frames per second of the application.'''
-screen_width = 800
+screen_width = 1024
 '''Screen width.'''
-screen_height = 600
+screen_height = 768
 '''Screen height.'''
 screen = pygame.display.set_mode((screen_width, screen_height))
 '''Main display where things are drawn.'''
