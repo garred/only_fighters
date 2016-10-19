@@ -1,6 +1,6 @@
 import others_src.pyganim.pyganim as pyganim
 from character import Character, Hitbox, ALL, PLAYER, ENEMY
-from characters import load_animations
+from characters import load_animations, fast_swing_sounds, slow_swing_sounds, aargh_sounds, fail_hits_sounds, hits_sounds
 import game
 import random
 import numpy as np
@@ -14,7 +14,6 @@ from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s,
 animations = load_animations('data/characters/ninja/')
 
 
-# Loading sounds
 
 # Ninja class
 
@@ -171,6 +170,8 @@ class NinjaCharacter(Character):
 
         # Life
         if self.life <= 0:
+            if not 'death' in self.animation_name:
+                random.choice(aargh_sounds).play()
             self.death()
 
         else:
@@ -185,18 +186,22 @@ class NinjaCharacter(Character):
                         self.attacked = True
                         Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
                                strength=10, damage=1, type='blunt')
+                        random.choice(fast_swing_sounds).play()
 
                     if 'slash' in self.animation_name:
                         self.attacked = True
                         if self.weapon == 'knife':
                             Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
                                    strength=5, damage=2, type='penetrating')
+                            random.choice(fast_swing_sounds).play()
                         elif self.weapon == 'sword':
                             Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=20, tarjet=self.tarjet,
                                    strength=10, damage=4, type='cutting')
+                            random.choice(fast_swing_sounds).play()
                         elif self.weapon == 'axe':
                             Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=30, tarjet=self.tarjet,
                                    strength=20, damage=8, type='cutting')
+                            random.choice(slow_swing_sounds).play()
             else:
                 self.attacked = False
 
@@ -209,11 +214,12 @@ class NinjaCharacter(Character):
             self.being_hitted_direction = hitbox.direction
 
             # Conditions to avoid the damage
-            if (((hitbox.direction[0]*self.dir[0] + hitbox.direction[1]*self.dir[1]) < 0
-                 and ('slash' in self.animation_name or 'hit' in self.animation_name))
-                or 'jump' in self.animation_name):
-                return
+            if ((hitbox.direction[0]*self.dir[0] + hitbox.direction[1]*self.dir[1]) < 0 and ('slash' in self.animation_name or 'hit' in self.animation_name)):
+                random.choice(fail_hits_sounds).play()
+            elif 'jump' in self.animation_name:
+                random.choice(fast_swing_sounds).play()
             else:
+                random.choice(hits_sounds).play()
                 self.life -= hitbox.damage
 
 

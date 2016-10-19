@@ -28,11 +28,11 @@ if __name__ == '__main__':
 # ToDo [GRAPHICS]: Effects
 #   - ToDo: Sword sparks
 #   - ToDo: Blood splash
-# ToDo [SOUNDS]: basic sounds for action
-#   - ToDo: Swings and punchs
-#   - ToDo: Hits and fail-hits
-#   - ToDo: Death screams
-# ToDo [MUSIC]: Music
+# [SOUNDS]: basic sounds for action
+#   - Swings and punchs
+#   - Hits and fail-hits
+#   - Death screams
+# [MUSIC]: Music
 
 
 
