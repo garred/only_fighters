@@ -1,7 +1,7 @@
 import pygame
 import game
-import numpy as np
 import random
+from math import sqrt
 
 
 ALL, PLAYER, ENEMY = range(3)
@@ -124,17 +124,17 @@ class Character(pygame.sprite.Sprite):
 
 
     def bounce(self, other):
-        a = np.array(self.feet_rect.center)
-        b = np.array(other.feet_rect.center)
-        dir = a - b
-        dis = np.sqrt(dir.dot(dir))
+        dir = [self.feet_rect.center[0]-other.feet_rect.center[0], self.feet_rect.center[1]-other.feet_rect.center[1]]
+        dis = sqrt(dir[0]*dir[0] + dir[1]*dir[1])
+
         if dis == 0:
             mov = random.choice([[0,1],[1,0],[1,1]])
             self.move((-mov[0],-mov[1]))
             other.move(mov)
 
         elif dis < (self.radius + other.radius):
-            dir = dir / dis
+            dis = 1.0 / dis
+            dir = [dir[0]*dis, dir[1]*dis]
 
             mov = (dir[0]*self.bounceness, dir[1]*self.bounceness)
             self.move(mov)
@@ -144,18 +144,19 @@ class Character(pygame.sprite.Sprite):
 
 
     def diference_to(self, other):
-        a = np.array([self.feet_rect[0], self.feet_rect[1]])
-        b = np.array([other.feet_rect[0], other.feet_rect[1]])
-        return b-a
+        return [other.feet_rect[0]-self.feet_rect[0], other.feet_rect[1]-self.feet_rect[1]]
 
 
     def distance_to(self, other):
         dir = self.diference_to(other)
-        return np.sqrt(dir.dot(dir))
+        return sqrt(dir[0]*dir[0] + dir[1]*dir[1])
 
 
     def direction_to(self, other):
-        return self.diference_to(other) / self.distance_to(other)
+        dif = self.diference_to(other)
+        dis = 1.0 / self.distance_to(other)
+        dir = [dif[0]*dis, dif[1]*dis]
+        return dir
 
 
     def is_looking_right(self):

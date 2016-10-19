@@ -137,7 +137,7 @@ active = False
 visible = True
 
 # Main map.
-map = pytmx.util_pygame.load_pygame('data/maps/map1/grasslands.tmx')
+map = pytmx.util_pygame.load_pygame('data/maps/map1/map.tmx')
 
 # "Camera" of the game: it renders objects.'''
 renderer = pyscroll.BufferedRenderer(pyscroll.data.TiledMapData(map), app.screen.get_size())
@@ -161,19 +161,36 @@ collisionable_sprites = list()
 # Hitbox objects
 hitboxes = list()
 
-
 # Importing characters used in the game.
-from characters import NinjaPlayer, ArcherPlayer, BanditEnemy, keymap1, keymap2
+from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
 
+# Creating characters in the map
+players = []
+for o in map.layernames['characters']:
+    key = keymap1 if len(players) == 0 else keymap2
 
-# Creating some characters
-player1 = NinjaPlayer(keymap1)
-player1.weapon = 'knife'
-player2 = ArcherPlayer(keymap2)
-player2.weapon = 'axe'
-players = [player1, player2]
+    if 'ninja' in o.name:
+        if 'player' in o.name:
+            c = NinjaPlayer(key)
+            players.append(c)
+        else:
+            c = NinjaEnemy()
+    elif 'archer' in o.name:
+        if 'player' in o.name:
+            c = ArcherPlayer(key)
+            players.append(c)
+        else:
+            c = ArcherEnemy()
+    elif 'bandit' in o.name:
+        if 'player' in o.name:
+            c = BanditPlayer(key)
+            players.append(c)
+        else:
+            c = BanditEnemy()
 
-for i in range(10):
-    n = BanditEnemy()
-    n.move((random.randint(-100,100), random.randint(100,200)))
-    n.weapon = random.choice(['unarmed', 'knife', 'sword', 'axe'])
+    c.position = (o.x-50, o.y-45)
+
+    if   'knife' in o.name: c.weapon = 'knife'
+    elif 'sword' in o.name: c.weapon = 'sword'
+    elif   'axe' in o.name: c.weapon = 'axe'
+    else: c.weapon = 'unarmed'

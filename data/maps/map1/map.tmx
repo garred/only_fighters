@@ -1,53 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="42">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="141">
  <tileset firstgid="1" name="Revolution_Grasslands" tilewidth="32" tileheight="32" tilecount="190" columns="10">
   <image source="revolution_grasslands.png" trans="a349a4" width="320" height="608"/>
-  <terraintypes>
-   <terrain name="hierba" tile="-1"/>
-   <terrain name="musgo" tile="-1"/>
-  </terraintypes>
-  <tile id="0" terrain="0,0,0,0"/>
-  <tile id="1" terrain="0,0,0,0"/>
-  <tile id="2" terrain="0,0,0,0"/>
-  <tile id="3" terrain="0,0,0,0"/>
-  <tile id="4" terrain="0,0,0,0"/>
-  <tile id="5" terrain="0,0,0,0">
+  <tile id="5">
    <properties>
     <property name="ranomd" value="tile"/>
    </properties>
   </tile>
-  <tile id="15" terrain="1,1,1,1"/>
-  <tile id="24" terrain="0,0,0,1"/>
-  <tile id="25" terrain="0,0,1,0"/>
-  <tile id="26" terrain="0,0,1,1"/>
-  <tile id="27" terrain="1,0,1,0"/>
-  <tile id="34" terrain="0,1,0,0"/>
-  <tile id="35" terrain="1,0,0,0"/>
-  <tile id="36" terrain="1,1,0,0"/>
-  <tile id="37" terrain="0,1,0,1"/>
  </tileset>
  <tileset firstgid="191" name="revolution_snow" tilewidth="32" tileheight="32" tilecount="154" columns="11">
   <image source="revolution_snow.png" trans="a349a4" width="352" height="448"/>
-  <terraintypes>
-   <terrain name="nieve" tile="-1"/>
-   <terrain name="hierva_nieve" tile="-1"/>
-  </terraintypes>
-  <tile id="0" terrain="0,0,0,0"/>
-  <tile id="5" terrain="0,0,0,0"/>
-  <tile id="6" terrain="0,0,0,0"/>
-  <tile id="7" terrain="0,0,0,0"/>
-  <tile id="8" terrain="0,0,0,0"/>
-  <tile id="9" terrain="0,0,0,0"/>
-  <tile id="11" terrain="1,0,0,0"/>
-  <tile id="13" terrain="1,1,1,1"/>
-  <tile id="22" terrain="0,0,0,1"/>
-  <tile id="23" terrain="0,0,1,0"/>
-  <tile id="24" terrain="0,0,1,1"/>
-  <tile id="25" terrain="1,0,1,0"/>
-  <tile id="33" terrain="0,1,0,0"/>
-  <tile id="34" terrain="1,0,0,0"/>
-  <tile id="35" terrain="1,1,0,0"/>
-  <tile id="36" terrain="0,1,0,1"/>
  </tileset>
  <tileset firstgid="345" name="revolution_town" tilewidth="32" tileheight="32" tilecount="275" columns="11">
   <image source="revolution_town.png" trans="a349a4" width="352" height="831"/>
@@ -55,7 +17,7 @@
  <tileset firstgid="620" source="water.tsx"/>
  <layer name="under0" width="50" height="50">
   <data encoding="base64" compression="gzip">
-   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
+   H4sIAAAAAAAAA92XS24UQQyGq6e6a4HCY8GKbaScIMoSljzWLJG4Frdhk8DcgKNEYcVEtMU337hmJpoGRUSyJt1VZfsv27/dt6WU2/9AVsOu3J2o82dZTtex8nT4LRfDn/+fJ9heJe968uKAriUxft0jZ0OOL+T8wPqzYVfXOX4vEowPuafYe3cknvWJ64fkLLkDY7X08uYUPw7JsTi/LCB/E8exshSOU/PjseAI+f5A+w/d/xjyaqmaz7AviWO9x84p8di3J9b+VTxuTrj/6yPi9zdx9Pz0++sE5/qADu9fAse3Wah/LZs3HX+zvfvWrqUn1pfA8eMRyGoBHKtZNq29TPPv0tJgI+T+eZxlWADH641cbeRylsyPS8kpmEb9H/hOxfFuIx9mPA+RK8SPvsUzJcMTedBb70n4na29nfFYPs2/n5O1DPvH5N0b+F2Bc0I87qV14jbNaxPOx/4R7xr28eyIsyNs1vk3sAfWEGK+X3sPGw36HYvAEzGu2Mv9q84a72HEc53/r8BC261s12rsXWmNdzdgz76cI95adjHbJvFRL3kr8NKvSb8RT8Yv7qyWbezcwxwYZHuCNJyvshl6VtIdMR50Nu7Ud8/7ce5X6MlygXgYMz437Oe9MI/oj3UxVmGbevmeMWAeNTxXnGllO/dYP7xfi2s93vEeWQ/kkowvMz3Mh9axSz+Z9xXPxDpgfZJd9m/mDLmrav1JIqyVUfboZ4U4V7KcpD+sndDR60NxjjzuunqZyKD9rWzfJ3OM8Z5kj3fgO2Xe7euXU9m+L9aF+Yv4XCe1bMcy4kTeYw4554mFdjJf/Y52iGMlu9n/U+nHv+mM+wT5qsdTjBcxTB3hfupkXXmG4h6+I0fYF8ead8B6ynwkv9MWc89zyVB2c5f3R8y0k/EddbH3uH7YQ+KvJcKcy3xh7Bgj3xdnCvf6bK5j7yO3s9eM0u3catJFv7Kebu7hM2OT1TmxmL+4N5tnjMF9gPOBucL9nDEid3L+ynKVcSYv8b45P7HuWXPmbd6LOZC4uJfvsj7CHMrmOuozFs/hrlPPdZwfzKdcc09gX8r6T9M6uSrjdOMx5znfzPnMc+Jkz47/PcNMevZs5XsIG8wp1uyhWiV+90f+uoaY7+abWGdsmSvUxVnZM+qkZ3/LMJc81/I7gDwx6Jm1Qb+4Vjt2/N68x37gnp/1c/rsbxTGg/XDPCefm0s5j7hWG/Szx9Ef97uMz5zjnlUyHmL+m8/JT6wnfgfYLmvS3OWacvyoZ9Aexow5wti4DlyPrA1/w9hnzqPszfwWYj/kmnuXZwnaZT75ruizZ7Cms+ZuznvsGfRnTPSRD+gnexJr3POIuZi5R5vst+5P2TnfsWd74mOumhdco9TF2PBbhr67trg+lO38pw72PXMF63Hs7COfm7/5LTTKlu8m497Mxlh279S9J3DZd+efc5mc6H7iGc48aX+YA+4j5D9/TzLHAwvjmc2k9sszoONIv1z3zC3WbxbrwO5vBJ/3d585l3zfm0Oy3kgedB3V5Cxz13MPZynyBGuF75mftG3ecj/L8tQzgcUzGH2hbsaVHEVO92xETJ43yWnUT34dddY9xHWccb1nhpBfn6GElBAnAAA=
   </data>
  </layer>
  <layer name="under1" width="50" height="50">
@@ -73,7 +35,7 @@
    H4sIAAAAAAAAA+2YN04EMRSGZ/c4xIpYEQ8CiLyIDCLDDQgloSRU9PRcgFASSsIl+ChAW4x3/BxmvCt/0tewlnnPY/8eTZJEIpFatJaSpA3bS0VXYkc39fdgb0YfTeUkacaWsvn/8rlmg8w5hMMZc3dQfyd2WfShu2Y+6aP+fhyw6EN3zUyxed4hnS+b5x3CXvmj+nlL19f3XjElpPW1IdT1jUQikUZjCqdxxtP8I+T4KI6l5PkDf3vEJ3y2zPslXMYVu2mMeKH2V3zDd40+xnECJ1N+28Yd3HVaoR7SPuZxARd9Fybkg9o/8Qu/NfrYwE3c8l1Y5J9aZyAPXOVeXmfgln18hMd4UrWnXeVeXmfgjtrP8BwvqvooMvd+ke6He0UfRSPdD5fUfoXXeKPZR6073RVF74eIHw4VOaZClXsqZrGCc4b16d5Lp8Lzr8o9Fau4huvZQ1PRvZekfUhzbw/38SB7aCq695I0x0xyLxIJAduMCwXbjAsFk4yT3oPS8XkhvT+k412R9X5fL31kvd/Xyz0Y3+/dUfS3FFeE+j1RSqN+T/wBld2zzxAnAAA=
   </data>
  </layer>
- <objectgroup name="walls">
+ <objectgroup name="walls" visible="0">
   <object id="1" x="1056" y="128" width="544" height="480"/>
   <object id="2" x="32" y="576" width="416" height="32"/>
   <object id="3" x="448" y="608" width="352" height="32"/>
@@ -123,5 +85,28 @@
   <object id="39" x="1216" y="1120" width="64" height="64"/>
   <object id="40" x="1312" y="1024" width="64" height="64"/>
   <object id="41" x="1312" y="864" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="characters">
+  <object id="59" name="enemy unnarmed bandit" x="752" y="688"/>
+  <object id="62" name="enemy unnarmed bandit" x="680" y="736"/>
+  <object id="63" name="enemy unnarmed bandit" x="880" y="552"/>
+  <object id="64" name="enemy unnarmed bandit" x="912" y="512"/>
+  <object id="66" name="player ninja" x="208" y="208"/>
+  <object id="68" name="player knife archer" x="176" y="272"/>
+  <object id="69" name="enemy unnarmed bandit" x="992" y="600"/>
+  <object id="70" name="enemy unnarmed bandit" x="984" y="544"/>
+  <object id="71" name="enemy unnarmed bandit" x="912" y="584"/>
+  <object id="72" name="enemy unnarmed bandit" x="824" y="608"/>
+  <object id="73" name="enemy unnarmed bandit" x="840" y="504"/>
+  <object id="74" name="enemy unnarmed bandit" x="928" y="472"/>
+  <object id="75" name="enemy unnarmed bandit" x="1000" y="488"/>
+  <object id="76" name="enemy unnarmed bandit" x="992" y="552"/>
+  <object id="77" name="enemy unnarmed bandit" x="960" y="624"/>
+  <object id="78" name="enemy unnarmed bandit" x="904" y="672"/>
+  <object id="79" name="enemy unnarmed bandit" x="848" y="648"/>
+  <object id="80" name="enemy unnarmed bandit" x="896" y="576"/>
+  <object id="81" name="enemy unnarmed bandit" x="968" y="576"/>
+  <object id="82" name="enemy unnarmed bandit" x="1016" y="520"/>
+  <object id="83" name="enemy unnarmed bandit" x="1008" y="480"/>
  </objectgroup>
 </map>
