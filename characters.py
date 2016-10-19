@@ -16,6 +16,10 @@ def load_animations(path):
         ['front', 'right', 'back'],
         ['unarmed', 'knife', 'sword', 'axe'])]
     animation_names += ['_'.join(i) for i in itertools.product(
+        ['hitting', 'jumping', 'running', 'standing', 'throwing', 'walking'],
+        ['front', 'right', 'back'],
+        ['bow'])]
+    animation_names += ['_'.join(i) for i in itertools.product(
         ['slash'],
         ['front', 'right', 'back'],
         ['knife', 'sword', 'axe'])]
@@ -41,7 +45,10 @@ def load_animations(path):
 
     # Setting hitting animations to non-loop animations
     for name, animation in animations.items():
-        if 'hitting' in name or 'slash' in name or 'jumping' in name or 'death' in name:
+        if ('hitting' in name
+            or 'slash' in name
+            or 'jumping' in name
+            or 'death' in name):
             animation.loop = False
 
     return animations

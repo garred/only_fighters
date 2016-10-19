@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="141">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="166">
  <tileset firstgid="1" name="Revolution_Grasslands" tilewidth="32" tileheight="32" tilecount="190" columns="10">
   <image source="revolution_grasslands.png" trans="a349a4" width="320" height="608"/>
   <tile id="5">
@@ -35,7 +35,7 @@
    H4sIAAAAAAAAA+2YN04EMRSGZ/c4xIpYEQ8CiLyIDCLDDQgloSRU9PRcgFASSsIl+ChAW4x3/BxmvCt/0tewlnnPY/8eTZJEIpFatJaSpA3bS0VXYkc39fdgb0YfTeUkacaWsvn/8rlmg8w5hMMZc3dQfyd2WfShu2Y+6aP+fhyw6EN3zUyxed4hnS+b5x3CXvmj+nlL19f3XjElpPW1IdT1jUQikUZjCqdxxtP8I+T4KI6l5PkDf3vEJ3y2zPslXMYVu2mMeKH2V3zDd40+xnECJ1N+28Yd3HVaoR7SPuZxARd9Fybkg9o/8Qu/NfrYwE3c8l1Y5J9aZyAPXOVeXmfgln18hMd4UrWnXeVeXmfgjtrP8BwvqvooMvd+ke6He0UfRSPdD5fUfoXXeKPZR6073RVF74eIHw4VOaZClXsqZrGCc4b16d5Lp8Lzr8o9Fau4huvZQ1PRvZekfUhzbw/38SB7aCq695I0x0xyLxIJAduMCwXbjAsFk4yT3oPS8XkhvT+k412R9X5fL31kvd/Xyz0Y3+/dUfS3FFeE+j1RSqN+T/wBld2zzxAnAAA=
   </data>
  </layer>
- <objectgroup name="walls" visible="0">
+ <objectgroup name="walls">
   <object id="1" x="1056" y="128" width="544" height="480"/>
   <object id="2" x="32" y="576" width="416" height="32"/>
   <object id="3" x="448" y="608" width="352" height="32"/>
@@ -62,12 +62,6 @@
   <object id="24" x="1472" y="1088" width="32" height="32"/>
   <object id="25" x="1504" y="1536" width="32" height="32"/>
   <object id="26" x="1504" y="704" width="32" height="32"/>
-  <object id="27" x="896" y="960">
-   <polyline points="0,0 0,32"/>
-  </object>
-  <object id="28" x="992" y="960">
-   <polyline points="0,0 0,32"/>
-  </object>
   <object id="29" x="864" y="640">
    <polyline points="0,0 0,32"/>
   </object>
@@ -85,28 +79,22 @@
   <object id="39" x="1216" y="1120" width="64" height="64"/>
   <object id="40" x="1312" y="1024" width="64" height="64"/>
   <object id="41" x="1312" y="864" width="64" height="64"/>
+  <object id="145" x="980.909" y="959.818" width="15.2727" height="29.0909"/>
+  <object id="146" x="891.818" y="960.182" width="15.6364" height="29.0909"/>
  </objectgroup>
  <objectgroup name="characters">
-  <object id="59" name="enemy unnarmed bandit" x="752" y="688"/>
-  <object id="62" name="enemy unnarmed bandit" x="680" y="736"/>
-  <object id="63" name="enemy unnarmed bandit" x="880" y="552"/>
-  <object id="64" name="enemy unnarmed bandit" x="912" y="512"/>
-  <object id="66" name="player ninja" x="208" y="208"/>
-  <object id="68" name="player knife archer" x="176" y="272"/>
-  <object id="69" name="enemy unnarmed bandit" x="992" y="600"/>
-  <object id="70" name="enemy unnarmed bandit" x="984" y="544"/>
-  <object id="71" name="enemy unnarmed bandit" x="912" y="584"/>
-  <object id="72" name="enemy unnarmed bandit" x="824" y="608"/>
-  <object id="73" name="enemy unnarmed bandit" x="840" y="504"/>
-  <object id="74" name="enemy unnarmed bandit" x="928" y="472"/>
-  <object id="75" name="enemy unnarmed bandit" x="1000" y="488"/>
-  <object id="76" name="enemy unnarmed bandit" x="992" y="552"/>
-  <object id="77" name="enemy unnarmed bandit" x="960" y="624"/>
-  <object id="78" name="enemy unnarmed bandit" x="904" y="672"/>
-  <object id="79" name="enemy unnarmed bandit" x="848" y="648"/>
-  <object id="80" name="enemy unnarmed bandit" x="896" y="576"/>
-  <object id="81" name="enemy unnarmed bandit" x="968" y="576"/>
-  <object id="82" name="enemy unnarmed bandit" x="1016" y="520"/>
-  <object id="83" name="enemy unnarmed bandit" x="1008" y="480"/>
+  <object id="165" name="Hero 1" type="player" x="912" y="1040">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="false"/>
+    <property name="class_ninja" type="bool" value="true"/>
+    <property name="is_player" type="bool" value="true"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="true"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

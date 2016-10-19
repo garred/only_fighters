@@ -17,22 +17,28 @@ if __name__ == '__main__':
 # [GRAPHICS] Search a itemset with weapons, potions...
 # [GRAPHICS]: Death animation
 # [GAMING]: Death behaviour
-# ToDo [GRAPHICS]: Death animation with fading out
-# ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
-#   - Arch weapon animations
-#   - ToDo: Arrow behavior
-# ToDo [GAMING]: Potions and items to pick up
-# ToDo [GAMING]: Loading characters and objects from maps
-# ToDo [AI]: Basic following, combat, flee behaviour
-# ToDo [AI]: Patroling enemies
-# ToDo [GRAPHICS]: Effects
-#   - ToDo: Sword sparks
-#   - ToDo: Blood splash
 # [SOUNDS]: basic sounds for action
 #   - Swings and punchs
 #   - Hits and fail-hits
 #   - Death screams
 # [MUSIC]: Music
+# [GAMING]: Loading characters and objects from maps
+# [GRAPHICS]: Death animation with fading out
+# ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
+#   - Arch weapon animations
+#   - ToDo: Arrow behavior
+# ToDo [GAMING]: Potions and items to pick up
+# ToDo [AI]: Basic following, combat, flee behaviour
+# ToDo [AI]: Patroling enemies
+# ToDo [GRAPHICS]: Effects
+#   - ToDo: Sword sparks
+#   - ToDo: Blood splash
+# ToDo [UI]: Messages and text
+# ToDo [UI]: Menu interface
+#   - ToDo: Sound settings
+#   - ToDo: Keyboard settings
+#   - ToDo: Saving and loading
+#   - ToDo: Different game modes
 
 
 

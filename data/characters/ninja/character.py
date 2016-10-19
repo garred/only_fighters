@@ -121,12 +121,25 @@ class NinjaCharacter(Character):
             self.hit()
             return
 
+        if self.weapon == 'bow':
+            self.shooting()
+            return
+
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state == pyganim.STOPPED: return
         self.action_locked = True
 
         # Choosing animation
         self.animation_name = 'slash_' + self.get_direction_name() + self.weapon
+        self.animation = self.animations[self.animation_name]
+        self.animation.play()
+
+    def shooting(self):
+        # You can't move if you are hitting
+        if self.action_locked and not self.animation.state == pyganim.STOPPED: return
+
+        # Choosing animation
+        self.animation_name = 'shooting_' + self.get_direction_name() + 'unarmed'
         self.animation = self.animations[self.animation_name]
         self.animation.play()
 
@@ -241,6 +254,7 @@ class NinjaEnemy(NinjaCharacter):
 
         self.thinking_time -= 1
 
+        # Choosing tarjet
         if len(game.players) == 2:
             tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(game.players[1]) else game.players[1]
         elif len(game.players) == 1:
@@ -248,7 +262,12 @@ class NinjaEnemy(NinjaCharacter):
         else:
             tarjet = None
 
-        if tarjet is not None and self.distance_to(tarjet) < 40:
+        # If you have a bow, and tarjet is not very far, use the bow
+        if tarjet is not None and self.weapon == 'bow' and self.distance_to(tarjet) < 200:
+
+
+        # If tarjet is close, reacts
+        elif tarjet is not None and self.distance_to(tarjet) < 40:
 
             if self.action_locked==False:
                 self.dir = self.direction_to(tarjet)  # np.sign(self.diference_to(tarjet))

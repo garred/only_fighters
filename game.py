@@ -166,31 +166,39 @@ from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, Bandi
 
 # Creating characters in the map
 players = []
-for o in map.layernames['characters']:
+for map_object in map.layernames['characters']:
+
     key = keymap1 if len(players) == 0 else keymap2
 
-    if 'ninja' in o.name:
-        if 'player' in o.name:
-            c = NinjaPlayer(key)
-            players.append(c)
+    if map_object.class_ninja == 'true':
+        if map_object.is_player == 'true':
+            new_character = NinjaPlayer(key)
+            players.append(new_character)
         else:
-            c = NinjaEnemy()
-    elif 'archer' in o.name:
-        if 'player' in o.name:
-            c = ArcherPlayer(key)
-            players.append(c)
+            new_character = NinjaEnemy()
+    elif map_object.class_archer == 'true':
+        if map_object.is_player == 'true':
+            new_character = ArcherPlayer(key)
+            players.append(new_character)
         else:
-            c = ArcherEnemy()
-    elif 'bandit' in o.name:
-        if 'player' in o.name:
-            c = BanditPlayer(key)
-            players.append(c)
+            new_character = ArcherEnemy()
+    elif map_object.class_bandit == 'true':
+        if map_object.is_player == 'true':
+            new_character = BanditPlayer(key)
+            players.append(new_character)
         else:
-            c = BanditEnemy()
+            new_character = BanditEnemy()
 
-    c.position = (o.x-50, o.y-45)
+    new_character.position = (map_object.x - 50, map_object.y - 45)
 
-    if   'knife' in o.name: c.weapon = 'knife'
-    elif 'sword' in o.name: c.weapon = 'sword'
-    elif   'axe' in o.name: c.weapon = 'axe'
-    else: c.weapon = 'unarmed'
+    weapon_list = []
+    if map_object.weapon_unarmed == 'true': weapon_list.append('unarmed')
+    if map_object.weapon_knife == 'true': weapon_list.append('knife')
+    if map_object.weapon_sword == 'true': weapon_list.append('sword')
+    if map_object.weapon_axe == 'true': weapon_list.append('axe')
+    if map_object.weapon_bow == 'true': weapon_list.append('bow')
+
+    if len(weapon_list)>0:
+        new_character.weapon = random.choice(weapon_list)
+    else:
+        new_character.weapon = 'unarmed'
