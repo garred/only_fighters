@@ -8,7 +8,7 @@ import pyscroll
 import app
 from pygame.constants import K_1, K_2
 from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
-from items import LifePotionSmall
+from items import LifePotionSmall, Axe, Bow, Knife, Sword
 
 keys_pressed = {}
 
@@ -176,11 +176,6 @@ collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layer
 players = []
 for map_object in map.layernames['characters']:
 
-    print(map_object)
-    if 'points' in dir(map_object):
-        print(map_object.points)
-    print(dir(map_object))
-
     # Selecting keyboard
     key = keymap1 if len(players) == 0 else keymap2
 
@@ -237,4 +232,15 @@ for map_object in map.layernames['characters']:
 
 # Creating items
 
-p = LifePotionSmall(players[0].position)
+for map_object in map.layernames['items']:
+
+    # Creating the object
+    item_classes = list()
+
+    if map_object.class_life_small == 'true': item_classes.append(LifePotionSmall)
+    if map_object.class_axe == 'true': item_classes.append(Axe)
+    if map_object.class_bow == 'true': item_classes.append(Bow)
+    if map_object.class_knife == 'true': item_classes.append(Knife)
+    if map_object.class_sword == 'true': item_classes.append(Sword)
+
+    if len(item_classes)>0: random.choice(item_classes)((map_object.x - 35, map_object.y - 25))

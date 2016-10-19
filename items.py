@@ -52,7 +52,7 @@ class Item(pygame.sprite.Sprite):
 
     def touched_by(self, character):
         dis = self.distance_to(character)
-        if dis < 30:
+        if dis < 20:
             self.set_animation('touch')
 
 

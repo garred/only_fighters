@@ -25,8 +25,8 @@ if __name__ == '__main__':
 # [GAMING]: Loading characters and objects from maps
 # [GRAPHICS]: Death animation with fading out
 # [AI]: Dodging behaviour
-# ToDo [GAMING]: Potions and items to pick up
-#   - ToDo: Weapons with pop-ups messages
+# [GAMING]: Potions and items to pick up
+#   - : Weapons with pop-ups messages
 # ToDo [GRAPHICS]: Enemy exclamations when spot player
 # ToDo [UI]: Menu interface
 #   - ToDo: Multiplayer

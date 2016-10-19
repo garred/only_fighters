@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="255">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="263">
  <tileset firstgid="1" name="Revolution_Grasslands" tilewidth="32" tileheight="32" tilecount="190" columns="10">
   <image source="revolution_grasslands.png" trans="a349a4" width="320" height="608"/>
   <tile id="5">
@@ -279,6 +279,71 @@
     <property name="weapon_unarmed" type="bool" value="false"/>
    </properties>
    <polyline points="0,0 -248,-8 -192,-208 -264,-576 -64,-592 -72,-160"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="items">
+  <object id="255" name="item" x="936" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="false"/>
+    <property name="class_bow" type="bool" value="false"/>
+    <property name="class_knife" type="bool" value="false"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="257" name="item" x="904" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="true"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="258" name="item" x="872" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="true"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="259" name="item" x="968" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="true"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="260" name="item" x="1000" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="true"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="261" name="item" x="1032" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="true"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="262" name="item" x="840" y="1000" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="true"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="true"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
   </object>
  </objectgroup>
 </map>

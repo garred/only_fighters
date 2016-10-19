@@ -37,6 +37,8 @@ class NinjaCharacter(Character):
 
         self.set_animation('standing')
 
+        self.is_death = False
+
 
 
     def get_direction_name(self):
@@ -143,12 +145,23 @@ class NinjaCharacter(Character):
 
 
     def death(self):
+
+        if not self.is_death:
+            if random.randint(1,4)==1:
+                LifePotionSmall(self.position)
+            else:
+                if self.weapon == 'knife': Knife(self.position)
+                if self.weapon == 'sword': Sword(self.position)
+                if self.weapon == 'axe': Axe(self.position)
+                if self.weapon == 'bow': Bow(self.position)
+
+            self.is_death = True
+
         # You can't do anything else when you are dying
         self.action_locked = True
         if self.animation_name=='death' and self.animation.state==pyganim.STOPPED:
             self.kill()
         elif self.animation_name != 'death':
-            LifePotionSmall(self.position)
             self.set_animation('death')
 
 
