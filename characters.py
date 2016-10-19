@@ -1,7 +1,8 @@
 import pygame
-import game
-import random
 from math import sqrt
+from glob import glob
+import others_src.pyganim.pyganim as pyganim
+import itertools
 
 
 ALL, PLAYER, ENEMY = range(3)
@@ -63,6 +64,23 @@ class Character(pygame.sprite.Sprite):
         centerx = self.rect.width*0.5 - self.animation.getRect().centerx
         centery = self.rect.height*0.5 - self.animation.getRect().centery
         self.animation.blit(self.image, (centerx, centery))
+
+
+    def set_animation(self, name):
+        if 'shoot' in name:
+            weapon = 'unarmed'
+            direction = self.get_direction_name()
+            self.animation_name = name + '_' + direction + '_' + weapon
+        elif 'death' in name:
+            self.animation_name = name
+        else:
+            weapon = self.weapon
+            direction = self.get_direction_name()
+            self.animation_name = name + '_' + direction + '_' + weapon
+
+        self.animation = self.animations[self.animation_name]
+        self.animation.play()
+
 
 
 
@@ -157,7 +175,10 @@ class Character(pygame.sprite.Sprite):
 
     def direction_to(self, other):
         dif = self.diference_to(other)
-        dis = 1.0 / self.distance_to(other)
+        try:
+            dis = 1.0 / self.distance_to(other)
+        except ZeroDivisionError:
+            dis = 0
         dir = [dif[0]*dis, dif[1]*dis]
         return dir
 
@@ -179,6 +200,7 @@ class Character(pygame.sprite.Sprite):
         self.being_hitted_direction = hitbox.direction
 
 
+
 class Hitbox(pygame.Rect):
     def __init__(self, pos, size, dir, distance, tarjet=ALL, strength=1, damage=1, type='cutting'):
         pos = (pos[0] + dir[0]*distance, pos[1] + dir[1]*distance)
@@ -193,10 +215,6 @@ class Hitbox(pygame.Rect):
         game.hitboxes.append(self)
 
 
-
-from glob import glob
-import others_src.pyganim.pyganim as pyganim
-import itertools
 
 
 # Animations loading helper

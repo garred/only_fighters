@@ -1,12 +1,15 @@
 import pygame
 import game
 from math import sqrt
+import others_src.pyganim.pyganim as pyganim
+from glob import glob
+
 
 
 
 class Item(pygame.sprite.Sprite):
 
-    def __init__(self):
+    def __init__(self, pos):
         super(Item, self).__init__()
 
         self.image = pygame.Surface((64,64)).convert_alpha()
@@ -15,8 +18,10 @@ class Item(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.feet_rect = pygame.Rect(0,0,10,10)
         self._position = [0.0, 0.0]
-        self.position = game.renderer.map_rect.center
+        self.position = pos if pos is not None else game.renderer.map_rect.center
+
         self.dir = [0,1]
+        self.taken = False
 
         # Here you should put your animations
         self.animations = {}
@@ -43,6 +48,19 @@ class Item(pygame.sprite.Sprite):
         centerx = self.rect.width*0.5 - self.animation.getRect().centerx
         centery = self.rect.height*0.5 - self.animation.getRect().centery
         self.animation.blit(self.image, (centerx, centery))
+
+
+    def touched_by(self, character):
+        dis = self.distance_to(character)
+        if dis < 30:
+            self.set_animation('touch')
+
+
+    def set_animation(self, name):
+        self.animation_name = name
+        self.animation = self.animations[self.animation_name]
+        self.animation.play()
+
 
 
     @property
@@ -86,7 +104,10 @@ class Item(pygame.sprite.Sprite):
 
     def direction_to(self, other):
         dif = self.diference_to(other)
-        dis = 1.0 / self.distance_to(other)
+        try:
+            dis = 1.0 / self.distance_to(other)
+        except ZeroDivisionError:
+            dis = 0
         dir = [dif[0]*dis, dif[1]*dis]
         return dir
 
@@ -103,6 +124,27 @@ class Item(pygame.sprite.Sprite):
     def is_looking_up(self):
         return abs(self.dir[0]) + self.dir[1] <= 0
 
-    def hitted(self, hitbox):
-        self.being_hitted = 20
-        self.being_hitted_direction = hitbox.direction
+
+
+def load_animations(path, item_name):
+    '''Loads all the animations of an item from a file path. Returns a dict with the animations.'''
+
+    # Names of the animations of any character
+
+    animation_names = ['stand', 'touch']
+
+    # Loading animations
+    animations = {
+        name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob(path + 'maps/*' + item_name + '*' + name + '*.png'))])
+        for name in animation_names
+        }
+
+    return animations
+
+
+
+from data.items.life_small.item import *
+from data.items.axe.item import *
+from data.items.bow.item import *
+from data.items.knife.item import *
+from data.items.sword.item import *

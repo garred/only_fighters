@@ -8,6 +8,7 @@ import pyscroll
 import app
 from pygame.constants import K_1, K_2
 from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
+from items import LifePotionSmall
 
 keys_pressed = {}
 
@@ -29,9 +30,9 @@ def update():
 
 
 def update_hitboxes():
-    global hitboxes, animated_objects
+    global hitboxes, collisionable_sprites
     for h in hitboxes:
-        for o in animated_objects:
+        for o in collisionable_sprites:
             if h.colliderect(o.feet_rect):
                 o.hitted(h)
     # TODO: Restore this
@@ -62,6 +63,8 @@ def update_collisions():
             a.bounce(b)
             b.bounce(a)
 
+    for b in touchable_objects:
+        b.set_animation('stand')
     for a in collisionable_sprites:
         for b in touchable_objects:
             b.touched_by(a)
@@ -233,3 +236,5 @@ for map_object in map.layernames['characters']:
 
 
 # Creating items
+
+p = LifePotionSmall(players[0].position)

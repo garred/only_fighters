@@ -4,6 +4,7 @@ from characters import load_animations, fast_swing_sounds, slow_swing_sounds, aa
 import game
 import random
 import numpy as np
+from items import LifePotionSmall, Axe, Bow, Knife, Sword
 
 
 from pygame.constants import K_LEFT, K_RIGHT, K_UP, K_DOWN, K_m, K_n,  K_a, K_s, K_w, K_d, K_z, K_x, K_SPACE, K_LSHIFT, K_COMMA, K_c
@@ -25,32 +26,30 @@ class NinjaCharacter(Character):
         # Things about ninja behaviour
         self.action_locked = False    #Are you hitting, jumping or slashing?
         self.weapon = 'unarmed'
-        self.animation_name = 'standing_front_unarmed'
         self.attacked = False   #Record if the current attack action has been done (with a hitbox)
         self.tarjet_type = ALL
+        self.life = self.max_life = 10
+        self.stamina = self.max_stamina = 100
+        self.faction = None
 
         # Creating animations (well, copying them from a centralized source)
         self.animations = {name: animation.getCopy() for name, animation in animations.items()}
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
 
-        self.life = self.max_life = 10
-        self.stamina = self.max_stamina = 100
+        self.set_animation('standing')
 
-        self.faction = None
 
 
     def get_direction_name(self):
         if self.is_looking_down():
-            return 'front_'
+            return 'front'
         elif self.is_looking_up():
-            return 'back_'
+            return 'back'
         elif self.is_looking_right():
-            return 'right_'
+            return 'right'
         elif self.is_looking_left():
-            return 'left_'
+            return 'left'
         else:
-            return 'front_'
+            return 'front'
 
 
     def walk(self):
@@ -61,10 +60,7 @@ class NinjaCharacter(Character):
         # The character inprove his stamina a bit
         self.stamina = min(self.max_stamina, self.stamina+3)
 
-        # Choosing animation
-        self.animation_name = 'walking_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('walking')
 
         # Moving character
         self.move(self.dir, 0.5)
@@ -82,10 +78,7 @@ class NinjaCharacter(Character):
             self.stamina = 0
             return
 
-        # Choosing animation
-        self.animation_name = 'running_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('running')
 
         # Moving character
         self.move(self.dir, 1)
@@ -99,10 +92,7 @@ class NinjaCharacter(Character):
         # Character inproves stamina
         self.stamina = min(self.max_stamina, self.stamina+2)
 
-        # Choosing animation
-        self.animation_name = 'standing_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('standing')
 
 
     def hit(self):
@@ -110,10 +100,7 @@ class NinjaCharacter(Character):
         if self.action_locked and not self.animation.state==pyganim.STOPPED: return
         self.action_locked = True
 
-        # Choosing animation
-        self.animation_name = 'hitting_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('hitting')
 
 
     def slash(self):
@@ -129,19 +116,14 @@ class NinjaCharacter(Character):
         if self.action_locked and not self.animation.state == pyganim.STOPPED: return
         self.action_locked = True
 
-        # Choosing animation
-        self.animation_name = 'slash_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('slash')
+
 
     def shooting(self):
         # You can't move if you are hitting
         if self.action_locked and not self.animation.state == pyganim.STOPPED: return
 
-        # Choosing animation
-        self.animation_name = 'shooting_' + self.get_direction_name() + 'unarmed'
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('shooting')
 
 
     def jump(self):
@@ -157,9 +139,7 @@ class NinjaCharacter(Character):
         self.action_locked = True
 
         # Choosing animation
-        self.animation_name = 'jumping_' + self.get_direction_name() + self.weapon
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        self.set_animation('jumping')
 
 
     def death(self):
@@ -167,11 +147,9 @@ class NinjaCharacter(Character):
         self.action_locked = True
         if self.animation_name=='death' and self.animation.state==pyganim.STOPPED:
             self.kill()
-
-        # Choosing animation
-        self.animation_name = 'death'
-        self.animation = self.animations[self.animation_name]
-        self.animation.play()
+        elif self.animation_name != 'death':
+            LifePotionSmall(self.position)
+            self.set_animation('death')
 
 
     def update(self):
