@@ -168,8 +168,15 @@ from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, Bandi
 players = []
 for map_object in map.layernames['characters']:
 
+    print(map_object)
+    if 'points' in dir(map_object):
+        print(map_object.points)
+    print(dir(map_object))
+
+    # Selecting keyboard
     key = keymap1 if len(players) == 0 else keymap2
 
+    # Creating the object
     if map_object.class_ninja == 'true':
         if map_object.is_player == 'true':
             new_character = NinjaPlayer(key)
@@ -189,8 +196,12 @@ for map_object in map.layernames['characters']:
         else:
             new_character = BanditEnemy()
 
+    # Setting attributes
+
+    # Position
     new_character.position = (map_object.x - 50, map_object.y - 45)
 
+    # Weapons
     weapon_list = []
     if map_object.weapon_unarmed == 'true': weapon_list.append('unarmed')
     if map_object.weapon_knife == 'true': weapon_list.append('knife')
@@ -202,3 +213,16 @@ for map_object in map.layernames['characters']:
         new_character.weapon = random.choice(weapon_list)
     else:
         new_character.weapon = 'unarmed'
+
+    # Things for NPCs:
+    if map_object.is_player == 'false':
+        # Wandering zones
+        new_character.territory_radius = float(map_object.territory_radius) * map.tilewidth
+
+        # Patroling zones (for NPCs):
+        if hasattr(map_object, 'points'):
+            new_character.path = list()
+            for p in map_object.points:
+                new_character.path.append((p[0], p[1]))
+            new_character.position = (new_character.path[0][0]-50, new_character.path[0][1]-45)
+

@@ -24,21 +24,28 @@ if __name__ == '__main__':
 # [MUSIC]: Music
 # [GAMING]: Loading characters and objects from maps
 # [GRAPHICS]: Death animation with fading out
-# ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
-#   - Arch weapon animations
-#   - ToDo: Arrow behavior
+# [AI]: Dodging behaviour
 # ToDo [GAMING]: Potions and items to pick up
-# ToDo [AI]: Basic following, combat, flee behaviour
-# ToDo [AI]: Patroling enemies
-# ToDo [GRAPHICS]: Effects
-#   - ToDo: Sword sparks
-#   - ToDo: Blood splash
-# ToDo [UI]: Messages and text
+#   - ToDo: Weapons with pop-ups messages
+# ToDo [GRAPHICS]: Enemy exclamations when spot player
 # ToDo [UI]: Menu interface
+#   - ToDo: Multiplayer
+#   - ToDo: Locked options
 #   - ToDo: Sound settings
 #   - ToDo: Keyboard settings
 #   - ToDo: Saving and loading
 #   - ToDo: Different game modes
+# ToDo [MAP]: Create maps
+# ToDo [GRAPHICS]: Allow zooming
+# ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
+#   - Arch weapon animations
+#   - ToDo: Arrow behavior
+# [AI]: Basic following, combat, flee behaviour
+# [AI]: Patroling enemies
+# ToDo [UI]: Messages and text
+# ToDo [GRAPHICS]: Effects
+#   - ToDo: Sword sparks
+#   - ToDo: Blood splash
 
 
 

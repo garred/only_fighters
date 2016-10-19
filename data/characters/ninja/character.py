@@ -27,7 +27,7 @@ class NinjaCharacter(Character):
         self.weapon = 'unarmed'
         self.animation_name = 'standing_front_unarmed'
         self.attacked = False   #Record if the current attack action has been done (with a hitbox)
-        self.tarjet = ALL
+        self.tarjet_type = ALL
 
         # Creating animations (well, copying them from a centralized source)
         self.animations = {name: animation.getCopy() for name, animation in animations.items()}
@@ -197,22 +197,22 @@ class NinjaCharacter(Character):
                 if self.attacked == False:
                     if 'hit' in self.animation_name:
                         self.attacked = True
-                        Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
+                        Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet_type,
                                strength=10, damage=1, type='blunt')
                         random.choice(fast_swing_sounds).play()
 
                     if 'slash' in self.animation_name:
                         self.attacked = True
                         if self.weapon == 'knife':
-                            Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet,
+                            Hitbox(pos=self.feet_rect.center, size=20, dir=self.dir, distance=20, tarjet=self.tarjet_type,
                                    strength=5, damage=2, type='penetrating')
                             random.choice(fast_swing_sounds).play()
                         elif self.weapon == 'sword':
-                            Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=20, tarjet=self.tarjet,
+                            Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=20, tarjet=self.tarjet_type,
                                    strength=10, damage=4, type='cutting')
                             random.choice(fast_swing_sounds).play()
                         elif self.weapon == 'axe':
-                            Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=30, tarjet=self.tarjet,
+                            Hitbox(pos=self.feet_rect.center, size=30, dir=self.dir, distance=30, tarjet=self.tarjet_type,
                                    strength=20, damage=8, type='cutting')
                             random.choice(slow_swing_sounds).play()
             else:
@@ -237,20 +237,199 @@ class NinjaCharacter(Character):
 
 
 
+DECISION, WAIT, CHASE, WANDER, PATROL, COMBAT, FLEE = range(7)
+
 class NinjaEnemy(NinjaCharacter):
 
     def __init__(self):
         super(NinjaEnemy, self).__init__()
-        self.state = 'waiting'
-        self.thinking_time = random.randint(10,200)
-        self.tarjet = PLAYER
+        self.tarjet_type = PLAYER
         self.faction = ENEMY
+
+        self.state = WAIT
+        self.thinking_time = random.randint(10,200)
+        self.tarjet = None
+        self.path = None
+        self.next_point = -1
+        self.origin = None
+        self.territory_radius = 200
 
 
     def update(self):
         '''Updates the character with artificial intelligence.'''
 
         super(NinjaEnemy, self).update()
+
+        if self.origin is None: self.origin = self.position
+
+
+        # Behaviour parameters based on weapon used.
+
+        attack_range = 0
+        flee_range = -1
+        spot_range = 200
+        if self.weapon == 'unnarmed' or self.weapon == 'knife':
+            attack_range = 30
+        elif self.weapon == 'sword':
+            attack_range = 40
+        elif self.weapon == 'axe':
+            attack_range = 50
+        elif self.weapon == 'bow':
+            attack_range = 200
+            flee_range = 100
+            spot_range = 300
+
+
+
+
+        self.thinking_time -= 1
+
+        # Choosing tarjet again
+        if self.thinking_time <= 0:
+            if len(game.players) == 2:
+                self.tarjet = game.players[0] if self.distance_to(game.players[0]) < self.distance_to(
+                    game.players[1]) else game.players[1]
+            elif len(game.players) == 1:
+                self.tarjet = game.players[0]
+            else:
+                self.tarjet = None
+
+
+        # State machine changes that can happen anytime
+
+        # Yep. It's the enemy really close?
+        if self.tarjet is not None and self.distance_to(self.tarjet) < attack_range:
+            if self.thinking_time%100 == 0:
+                self.dir = self.direction_to(self.tarjet)
+
+            if self.thinking_time <= 0:
+                self.slash()
+                self.state = COMBAT
+                self.thinking_time = random.randint(10, 200)
+
+
+        # Slower state machine changes
+
+        # Waiting
+        if self.state == WAIT:
+
+            self.stand()
+
+            if self.thinking_time%100==0:
+                self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
+
+                # It's the enemy close?
+                if self.tarjet is not None and self.distance_to(self.tarjet) < spot_range:
+                    self.state = CHASE
+                    self.thinking_time = random.randint(10, 100)
+                    self.dir = self.direction_to(self.tarjet)
+
+            if self.thinking_time <= 0:
+                self.thinking_time = random.randint(10, 200)
+                self.state = DECISION
+
+        # Making decisions with your life
+        elif self.state == DECISION:
+            self.stand()
+
+            if self.thinking_time <= 0:
+                self.thinking_time = random.randint(10, 200)
+
+                # Tarjet too close?
+                if self.tarjet is not None and self.distance_to(self.tarjet) < flee_range:
+                    self.state = FLEE
+
+                # No. Tarjet spoted?
+                elif self.tarjet is not None and self.distance_to(self.tarjet) < spot_range:
+                    self.state = CHASE
+                    self.thinking_time = random.randint(10, 50)
+                    self.dir = self.direction_to(self.tarjet)
+
+                # No. Have patrol points?
+                elif self.path is not None:
+                    self.state = PATROL
+                    self.thinking_time = random.randint(200, 500)
+
+                # No. Nothing to do. Just wander around.
+                else:
+                    self.state = WANDER
+                    self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
+
+        # Chase that motherfucker
+        elif self.state == CHASE:
+            if self.tarjet is None:
+                self.thinking_time = random.randint(0,5)
+                self.state = DECISION
+
+            else:
+                if self.tarjet.distance_to(self.origin) > self.territory_radius*3:
+                    self.stand()
+                elif self.tarjet.distance_to(self.origin) > self.territory_radius*2:
+                    self.walk()
+                else:
+                    self.run()
+
+                if self.thinking_time <= 0 or self.distance_to(self.tarjet) > spot_range:
+                    self.thinking_time = random.randint(10, 200)
+                    self.dir = self.direction_to(self.tarjet)
+                    self.state = WAIT
+
+        elif self.state == WANDER:
+            self.walk()
+            if self.distance_to(self.origin) > self.territory_radius:
+                self.dir = self.direction_to(self.origin)
+
+            if self.thinking_time <= 0:
+                self.thinking_time = random.randint(10, 200)
+                self.state = WAIT
+
+        elif self.state == PATROL:
+            # Are we close to the next point? go to the next
+            if self.distance_to(self.path[self.next_point]) < 20:
+                self.next_point = (self.next_point+1) % len(self.path)
+                self.origin = self.path[self.next_point]
+
+            # Nop. Do we have to decide next action?
+            elif self.thinking_time <=0:
+
+                # Yep. It's the enemy close?
+                if self.tarjet is not None and self.distance_to(self.tarjet) < spot_range:
+                    self.state = CHASE
+                    self.thinking_time = random.randint(10, 200)
+                    self.dir = self.direction_to(self.tarjet)
+
+                # Nop. Let's wait
+                else:
+                    self.thinking_time = random.randint(10, 200)
+                    self.state = WAIT
+
+            # Nop. Let's walk.
+            else:
+                self.dir = self.direction_to(self.path[self.next_point])
+                self.walk()
+
+
+        elif self.state == COMBAT:
+            self.stand()
+            if self.thinking_time <= 0:
+                if self.tarjet is not None and 'slash' in self.tarjet.animation_name and not self.action_locked:
+                    self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
+                    self.jump()
+                else:
+                    self.thinking_time = random.randint(100,200)
+                    self.state = random.choice([WAIT, WANDER])
+                    self.dir = random.choice([(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)])
+
+
+        elif self.state == FLEE:
+            pass
+
+
+
+
+
+
+    def __update(self):
 
         self.thinking_time -= 1
 
@@ -264,7 +443,7 @@ class NinjaEnemy(NinjaCharacter):
 
         # If you have a bow, and tarjet is not very far, use the bow
         if tarjet is not None and self.weapon == 'bow' and self.distance_to(tarjet) < 200:
-
+            pass #TODO
 
         # If tarjet is close, reacts
         elif tarjet is not None and self.distance_to(tarjet) < 40:

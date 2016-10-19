@@ -144,7 +144,10 @@ class Character(pygame.sprite.Sprite):
 
 
     def diference_to(self, other):
-        return [other.feet_rect[0]-self.feet_rect[0], other.feet_rect[1]-self.feet_rect[1]]
+        try:
+            return [other.feet_rect[0]-self.feet_rect[0], other.feet_rect[1]-self.feet_rect[1]]
+        except AttributeError:
+            return [other[0] - self.feet_rect[0], other[1] - self.feet_rect[1]]
 
 
     def distance_to(self, other):

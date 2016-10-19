@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="166">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="255">
  <tileset firstgid="1" name="Revolution_Grasslands" tilewidth="32" tileheight="32" tilecount="190" columns="10">
   <image source="revolution_grasslands.png" trans="a349a4" width="320" height="608"/>
   <tile id="5">
@@ -35,7 +35,7 @@
    H4sIAAAAAAAAA+2YN04EMRSGZ/c4xIpYEQ8CiLyIDCLDDQgloSRU9PRcgFASSsIl+ChAW4x3/BxmvCt/0tewlnnPY/8eTZJEIpFatJaSpA3bS0VXYkc39fdgb0YfTeUkacaWsvn/8rlmg8w5hMMZc3dQfyd2WfShu2Y+6aP+fhyw6EN3zUyxed4hnS+b5x3CXvmj+nlL19f3XjElpPW1IdT1jUQikUZjCqdxxtP8I+T4KI6l5PkDf3vEJ3y2zPslXMYVu2mMeKH2V3zDd40+xnECJ1N+28Yd3HVaoR7SPuZxARd9Fybkg9o/8Qu/NfrYwE3c8l1Y5J9aZyAPXOVeXmfgln18hMd4UrWnXeVeXmfgjtrP8BwvqvooMvd+ke6He0UfRSPdD5fUfoXXeKPZR6073RVF74eIHw4VOaZClXsqZrGCc4b16d5Lp8Lzr8o9Fau4huvZQ1PRvZekfUhzbw/38SB7aCq695I0x0xyLxIJAduMCwXbjAsFk4yT3oPS8XkhvT+k412R9X5fL31kvd/Xyz0Y3+/dUfS3FFeE+j1RSqN+T/wBld2zzxAnAAA=
   </data>
  </layer>
- <objectgroup name="walls">
+ <objectgroup name="walls" visible="0">
   <object id="1" x="1056" y="128" width="544" height="480"/>
   <object id="2" x="32" y="576" width="416" height="32"/>
   <object id="3" x="448" y="608" width="352" height="32"/>
@@ -83,18 +83,202 @@
   <object id="146" x="891.818" y="960.182" width="15.6364" height="29.0909"/>
  </objectgroup>
  <objectgroup name="characters">
-  <object id="165" name="Hero 1" type="player" x="912" y="1040">
+  <object id="165" name="Hero 1" type="player" x="912" y="1072">
    <properties>
     <property name="class_archer" type="bool" value="false"/>
     <property name="class_bandit" type="bool" value="false"/>
     <property name="class_ninja" type="bool" value="true"/>
     <property name="is_player" type="bool" value="true"/>
     <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="208" name="Bandit patroling" x="1048" y="872">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+   <polyline points="0,0 0,-133.76 -152,-160 -264,-112 -256,40 -96,72"/>
+  </object>
+  <object id="209" name="Hero 2" type="player" x="992" y="1072">
+   <properties>
+    <property name="class_archer" type="bool" value="true"/>
+    <property name="class_bandit" type="bool" value="false"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="true"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="239" name="Bandit" type="enemy" x="912" y="792">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="240" name="Bandit" type="enemy" x="968" y="800">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
     <property name="weapon_bow" type="bool" value="true"/>
     <property name="weapon_knife" type="bool" value="false"/>
     <property name="weapon_sword" type="bool" value="false"/>
     <property name="weapon_unarmed" type="bool" value="false"/>
    </properties>
+  </object>
+  <object id="241" name="Bandit" type="enemy" x="872" y="816">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="242" name="Bandit" type="enemy" x="576" y="1240">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="true"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="243" name="Bandit" type="enemy" x="520" y="1232">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="244" name="Bandit" type="enemy" x="480" y="1256">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="245" name="Bandit patroling" x="656" y="1312">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+   <polyline points="0,0 -32,-120 -152,-160 -264,-112 -256,40 -96,72"/>
+  </object>
+  <object id="246" name="Bandit" type="enemy" x="1416" y="1288">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="true"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="247" name="Bandit" type="enemy" x="1360" y="1280">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="248" name="Bandit" type="enemy" x="1320" y="1304">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="249" name="Bandit patroling" x="1496" y="1360">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="5"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+   <polyline points="0,0 -248,-8 -192,-208 -264,-576 -64,-592 -72,-160"/>
   </object>
  </objectgroup>
 </map>

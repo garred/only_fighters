@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="053d321e-55ba-45d5-90cc-0902ec1d03a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_000.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_000.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_001.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_002.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_003.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_004.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_005.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_006.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_007.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_008.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_009.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_010.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_011.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_012.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_013.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_014.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_015.png" afterPath="$PROJECT_DIR$/data/characters/archer/maps/archer__death_015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_000.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_000.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_001.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_002.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_003.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_004.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_005.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_006.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_007.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_008.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_009.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_010.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_011.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_012.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_013.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_014.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_015.png" afterPath="$PROJECT_DIR$/data/characters/bandit/maps/bandit__death_015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_000.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_000.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_001.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_001.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_002.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_002.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_003.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_003.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_004.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_004.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_005.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_005.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_006.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_006.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_007.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_007.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_008.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_008.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_009.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_009.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_010.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_010.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_011.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_011.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_012.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_012.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_013.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_013.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_014.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_014.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_015.png" afterPath="$PROJECT_DIR$/data/characters/ninja/maps/ninja__death_015.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/characters.py" afterPath="$PROJECT_DIR$/characters.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/character.py" afterPath="$PROJECT_DIR$/character.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/characters/ninja/character.py" afterPath="$PROJECT_DIR$/data/characters/ninja/character.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/maps/map1/map.tmx" afterPath="$PROJECT_DIR$/data/maps/map1/map.tmx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.py" afterPath="$PROJECT_DIR$/game.py" />
@@ -80,7 +31,7 @@
     <SUITE FILE_PATH="coverage/only_fighters$gui15.coverage" NAME="gui15 Coverage Results" MODIFIED="1474643308454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pgu/examples" />
     <SUITE FILE_PATH="coverage/only_fighters$tilevid5.coverage" NAME="tilevid5 Coverage Results" MODIFIED="1474644181084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pgu/examples" />
     <SUITE FILE_PATH="coverage/only_fighters$quest.coverage" NAME="quest Coverage Results" MODIFIED="1476656337791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pyscroll/example" />
-    <SUITE FILE_PATH="coverage/only_fighters$main.coverage" NAME="main Coverage Results" MODIFIED="1476880050365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/only_fighters$main.coverage" NAME="main Coverage Results" MODIFIED="1476894150270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/only_fighters$test3_pyganim.coverage" NAME="test3_pyganim Coverage Results" MODIFIED="1476821735097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pyganim" />
     <SUITE FILE_PATH="coverage/only_fighters$gui17.coverage" NAME="gui17 Coverage Results" MODIFIED="1474643320163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/others_src/pgu/examples" />
     <SUITE FILE_PATH="coverage/only_fighters$pgu02.coverage" NAME="pgu02 Coverage Results" MODIFIED="1474913187397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
@@ -122,11 +73,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state relative-caret-position="165">
+              <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -159,8 +110,8 @@
       <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="225" column="47" selection-start-line="225" selection-start-column="47" selection-end-line="225" selection-end-column="47" />
               <folding>
                 <element signature="e#35#53#0" expanded="true" />
               </folding>
@@ -171,8 +122,8 @@
       <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="321">
+              <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -180,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="character.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/characters/ninja/character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-99">
-              <caret line="254" column="21" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="21" />
+            <state relative-caret-position="255">
+              <caret line="414" column="93" selection-start-line="414" selection-start-column="93" selection-end-line="414" selection-end-column="93" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -259,17 +210,17 @@
         <option value="$PROJECT_DIR$/data/ninja/character.py" />
         <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/data/ninja/character.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/data/characters/ninja/character.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/data/characters/bandit/character.py" />
         <option value="$PROJECT_DIR$/data/characters/archer/character.py" />
         <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/game.py" />
-        <option value="$PROJECT_DIR$/character.py" />
         <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/characters.py" />
+        <option value="$PROJECT_DIR$/character.py" />
+        <option value="$USER_HOME$/Dropbox/Proyectos/only_fighters/data/characters/ninja/character.py" />
+        <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/data/characters/ninja/character.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -732,7 +683,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35034484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35034484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19084461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1031,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/characters/ninja/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="286" column="41" selection-start-line="286" selection-start-column="41" selection-end-line="286" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/collisions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1073,34 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/character.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1127,6 +1043,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Dropbox/Proyectos/only_fighters/data/characters/ninja/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="405" column="54" selection-start-line="405" selection-start-column="54" selection-end-line="405" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="225" column="47" selection-start-line="225" selection-start-column="47" selection-end-line="225" selection-end-column="47" />
+          <folding>
+            <element signature="e#35#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/characters/ninja/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="414" column="93" selection-start-line="414" selection-start-column="93" selection-end-line="414" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/characters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1137,33 +1111,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
-          <folding>
-            <element signature="e#35#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/characters/ninja/character.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="254" column="21" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
