@@ -35,7 +35,7 @@
    H4sIAAAAAAAAA+2YN04EMRSGZ/c4xIpYEQ8CiLyIDCLDDQgloSRU9PRcgFASSsIl+ChAW4x3/BxmvCt/0tewlnnPY/8eTZJEIpFatJaSpA3bS0VXYkc39fdgb0YfTeUkacaWsvn/8rlmg8w5hMMZc3dQfyd2WfShu2Y+6aP+fhyw6EN3zUyxed4hnS+b5x3CXvmj+nlL19f3XjElpPW1IdT1jUQikUZjCqdxxtP8I+T4KI6l5PkDf3vEJ3y2zPslXMYVu2mMeKH2V3zDd40+xnECJ1N+28Yd3HVaoR7SPuZxARd9Fybkg9o/8Qu/NfrYwE3c8l1Y5J9aZyAPXOVeXmfgln18hMd4UrWnXeVeXmfgjtrP8BwvqvooMvd+ke6He0UfRSPdD5fUfoXXeKPZR6073RVF74eIHw4VOaZClXsqZrGCc4b16d5Lp8Lzr8o9Fau4huvZQ1PRvZekfUhzbw/38SB7aCq695I0x0xyLxIJAduMCwXbjAsFk4yT3oPS8XkhvT+k412R9X5fL31kvd/Xyz0Y3+/dUfS3FFeE+j1RSqN+T/wBld2zzxAnAAA=
   </data>
  </layer>
- <objectgroup name="walls" visible="0">
+ <objectgroup name="walls">
   <object id="1" x="1056" y="128" width="544" height="480"/>
   <object id="2" x="32" y="576" width="416" height="32"/>
   <object id="3" x="448" y="608" width="352" height="32"/>
@@ -346,4 +346,5 @@
    </properties>
   </object>
  </objectgroup>
+ <objectgroup name="portals"/>
 </map>

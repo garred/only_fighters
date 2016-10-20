@@ -147,7 +147,7 @@ class NinjaCharacter(Character):
     def death(self):
 
         if not self.is_death:
-            if random.randint(1,4)==1:
+            if random.randint(1,8)==1:
                 LifePotionSmall(self.position)
             else:
                 if self.weapon == 'knife': Knife(self.position)
@@ -259,7 +259,7 @@ class NinjaEnemy(NinjaCharacter):
         attack_range = 0
         flee_range = -1
         spot_range = 200
-        if self.weapon == 'unnarmed' or self.weapon == 'knife':
+        if self.weapon == 'unarmed' or self.weapon == 'knife':
             attack_range = 30
         elif self.weapon == 'sword':
             attack_range = 40

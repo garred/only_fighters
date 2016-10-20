@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="50" tilewidth="32" tileheight="32" nextobjectid="441">
+ <properties>
+  <property name="music" value="boss_battle_2.ogg"/>
+ </properties>
+ <tileset firstgid="1" name="Revolution_Grasslands" tilewidth="32" tileheight="32" tilecount="190" columns="10">
+  <image source="../map02/revolution_grasslands.png" trans="a349a4" width="320" height="608"/>
+  <tile id="5">
+   <properties>
+    <property name="ranomd" value="tile"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="191" name="revolution_snow" tilewidth="32" tileheight="32" tilecount="154" columns="11">
+  <image source="../map02/revolution_snow.png" trans="a349a4" width="352" height="448"/>
+ </tileset>
+ <tileset firstgid="345" name="revolution_town" tilewidth="32" tileheight="32" tilecount="275" columns="11">
+  <image source="../map02/revolution_town.png" trans="a349a4" width="352" height="831"/>
+ </tileset>
+ <tileset firstgid="620" source="../map02/water.tsx"/>
+ <layer name="under0" width="40" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA82YW27UQBREu/0SinhECCIxIIGUMGthiewmP0FhAxA+gSwigi9spUs5rtz2eDL5IFJpPGP7dnXdZ+cmpXTzH6PJ9/HnQJt/0+PZepZvsc131y8CzpvgtxqOd9jah/t5gKc55i2c7rj/PN/Zuh7RV0Dutf1H/ISvC/fW3Be/pvDxTyHav/a9y/4afBtxVfDd+E/8uhHDiLbC9fMCHoPfxCEX/AjuDYVLG3DNK/it8dMSfo74XfCrwr0rfFpwlX/X6ne5J681zys/xE86O99D/fvQXLkuHDL8Sn+L7y5+sr+Phmv1G8BP19Tv6ED9vjxAT/JrCp+ucKO/J36v9uRX0+Uy4HVR4V/Tj9wUj/vEX02XiNcuHVX/Iv0Yj2v0W8trTezxnYnflSHiW+MX+edihd8iRO/Iv6wtOeD4GPG3Ri/6/hzrs+55DVzi92lhLe5v+mRPWsqNS9hyftSvWbjv8DXogzcjNgXqSdE7kZYNbKkea98NoBx3nQc8o9zX+uKyHXE84t3Cc0s2hjSvzT3WJ/8G77HnkPOA+8p/8vN9dXhP/m/TfW062KVfGUM5zTn1sBfVJ12fjvg44gx75Kfqruvuer4ecVLW0zW1zAs22nRfc+6F8SOtjgJ0WFM+kL7vR3wo93ndpbnGPb5zpuUzPv9wJmffdNCfijnZbipgfHZpHs+Mi0iPnOZxE8VzlA8NPvUufapracTYlQ3mQa7oseTH6HdpTLv6TT6lr6MaOwTfXWvv346l/ZCf/Bzpy/xv05wbtRdq/mUNy7Ym7Q527bEnn7qvyZHrMLaWdIp4ux+ifPdaGOVvlLdRLnlO0x81fqzVQ5rHtsce62UUmzzPEfSD9zvl5a488H7jtrRv7p35qnX0x/jgjO21YUk/9h/62GsD7ymOujTnxWe9X+t+U+Ex/R7Fpd5VnMuGzwLKpdr/YHwWoO8ZxzUe7Buc/2RHcc5cox/ZM+Vj8WKP8T2Ir8cs66Cf96NeTv5Rr+HvzCXv+5ylPUeiukj/U3/np3vO02tANAMyJtknXUv/n432wj2xBrGOMtZrMe71lpo2wXoeo6xlPguzBnAmpb787rMkfepzCmdb5he5ez+q9anW3mc9ow6ui4MzFLX3fTMPGZPcM2dA1yaq6VF+s345Z87CnPtYu3kecHuMZc9lj9loLuD6noeMaa1FLZk7rdnxnKAfWcOoUW/3pjPp23R7JvWzZJ9ibcjdzwe+zx5r+8zP3uxzhdbapvmZlDWLZ+oovqbfnhR43Y9md+rlMeOaigPPfOzJsrst3MVNffKkPEt+PmeyHjdmn3HsZ2Gfh3j2Yrxn8NMz7JM9+LkGXIdx65wYB4o1YgNOXg8b8OOZi3t6WRDN1f7/gAG/+XyZ4UviLM3z2XU/Lc84L58FfEbzmdLn5NqMGc1WDp9hOnuX/ZN5HNUbasS4cd/7LB7V2ShevAc5fO7x84yfLZwr5wrOHvSTz86dves10GeL6fs/zTUYX0AfAAA=
+  </data>
+ </layer>
+ <layer name="under1" width="40" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+2Yy04UQRSGayaibpWVe9/BxB3qjgCueQadDTslYQMxMVFASZSEGcFJBIVJgHDded0plwfAlSa6ZYeJiX+FPqEozqmuqqmeQeVPvsx0dV3+OnW6u7qVOtOZ/m89Ao8FilTFcWz+f+bRV1+peT+cbI+cfPwVISleFAsqS+Wvu6xUP+gp+7f52+LH+fX110wOSm1d8Uu9viGqKPn6tctj/KW6nveVHMN2xo/0W/H331GjTrv96fGfW0xm5yvqdPtTyu3vAvLsgCn/lZ0jrpSOH3NtQv3pdR/N8XcZY51jroWO0uE54qp1zLWR/M2Alxb1rLwunCe0zlux0VzMGZ9rw6H7mUf9BYuGOiynX/s8oXXJio2mM8cf14ZD93PdI87tlOnvDvzeBZWC9ksxShm/4YR9kf6F9b2H4/sZgy1e+9Mcv2vglke9B8L/okRjdIFeo5xb3ynsx6ugBl6AaTATsEePkY7bTeUXuzl4eQ3egHmwABoF+9Nx61HHYydpBV5WwQ/wE2yAzRb4G2DG4Nb3Leq9A9/Ad/ARfCrzefgwwEMv+ujLuG150f6GPGPwGfW+gC2wDXbAbgHx03l+Qx3lnU+eS3vrvQL85eW57YX2ftLeNfV9hvJ8DawzeW57mczxl1qU5+/BByPPSfY+tO7hz/VtywfzPSwvz+19aIPxTL6H0W6kzPsPgd4jYuck7a3H4G08kb/QPkLmlMKf6/2GQ8o7jhT+XO83HFLecaTw56Mn4CmYyI5959Qqf1OgCmqe9UmhucPlkiTzu1Wsv9Dc4XKJ9NXxzHT5i3338Pl2bMr1vIyNnyRXLPK8cHoFZsFcpB9JoTE0Zc5hESyB5cA+mn3+aiZO9Bov24++v1SbpJZwnrafVP6K6ucPE7HQBEAfAAA=
+  </data>
+ </layer>
+ <layer name="under2" width="40" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3WwQkAIQxFwWy6XAuyTGvxYAeLrEFmIPcH/5IIAAAAuMubES1PVwCV9Od0AbDTyHXUV32r6n189+eu/gy4ywQ4Bm3SQB8AAA==
+  </data>
+ </layer>
+ <layer name="over0" width="40" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+2YR04DMRSGTW4QjkHfUFfUHXAHQKGj0FHo3ICyhLCkrNiz5wKUJYEl5RL8ljKSZWxi+40nRvInfdKM4hn/evbMPIWxSMSdfANjjRpNacXYNthucU0a5A1z9mBML+yrMbYpx1gzbMm5Z3KpxRDGDsORGtd0IlcX7CbkM62FC/3INQAHCflMayFD2YNZ7F9K3X2uWYJYd9t6uK6ZK1nUg0LW9YhEIuHSUe8AFkzgnTUJp6R31yPOn+AzfNG81wpwGs74DqngFZkq8A2+a/IV4TJcyTJYFVW+BWlMCW7DHY85dOv7gfNP+AW/q79teMxhA6/TIlySjg88zWe7j3mdNuGWdFzwku7vfaxaX16nQ3gkHReJOe4wxwk8hWfCfGnt4xLx+ntkuoBleJlyL5bsQ5FZOAfnDe/x4JBP9/zKJPtQZBWuwXXDfFeY4xrewFti/cTnlpPsQ5FduAf3aVM5IT63HNX61hPxueWo1jcNRuEYHCfeR7W+oSF/f0MjlO+vDl/f38hvKoT/1HzCcyX64ljTZ5iQRb5zQp8Rej5TbHsfkTT7DF0W297HJ6oscu9DqScVkz4spHqqqGcvGfk//ADi0VBnQB8AAA==
+  </data>
+ </layer>
+ <objectgroup name="walls">
+  <object id="1" x="1056" y="128" width="544" height="480"/>
+  <object id="2" x="32" y="592" width="192" height="48"/>
+  <object id="3" x="448" y="592" width="352" height="48"/>
+  <object id="7" x="0" y="64" width="992" height="32"/>
+  <object id="8" x="160" y="96" width="544" height="32"/>
+  <object id="9" x="768" y="96" width="224" height="32"/>
+  <object id="10" x="992" y="96" width="64" height="64"/>
+  <object id="16" x="480" y="896" width="128" height="96"/>
+  <object id="17" x="128" y="704" width="32" height="32"/>
+  <object id="18" x="128" y="960" width="32" height="32"/>
+  <object id="22" x="704" y="832" width="32" height="24"/>
+  <object id="31" x="64" y="192" width="32" height="32"/>
+  <object id="32" x="96" y="320" width="32" height="32"/>
+  <object id="33" x="192" y="384" width="32" height="32"/>
+  <object id="34" x="352" y="224" width="96" height="64"/>
+  <object id="35" x="576" y="320" width="32" height="32"/>
+  <object id="36" x="928" y="224" width="32" height="32"/>
+  <object id="38" x="712" y="928" width="56" height="64"/>
+  <object id="266" x="0" y="1128" width="536" height="272"/>
+  <object id="278" x="456" y="1160" width="328" height="112"/>
+  <object id="342" x="648" y="1024" width="128" height="136"/>
+  <object id="350" x="640" y="992" width="96" height="32"/>
+  <object id="354" x="776" y="832" width="24" height="96"/>
+  <object id="355" x="712" y="880" width="88" height="48"/>
+  <object id="358" x="800" y="576" width="32" height="288"/>
+  <object id="359" x="800" y="432" width="184" height="168"/>
+  <object id="372" x="352" y="536" width="112" height="40"/>
+  <object id="373" x="0" y="536" width="48" height="56"/>
+  <object id="374" x="208" y="536" width="112" height="40"/>
+  <object id="375" x="208" y="536" width="16" height="56"/>
+  <object id="376" x="448" y="536" width="16" height="56"/>
+  <object id="399" x="992" y="232" width="32" height="24"/>
+  <object id="400" x="992" y="328" width="32" height="24"/>
+  <object id="401" x="992" y="392" width="32" height="24"/>
+  <object id="402" x="1024" y="456" width="32" height="24"/>
+  <object id="403" x="984" y="520" width="72" height="72"/>
+  <object id="404" x="928" y="360" width="32" height="24"/>
+  <object id="405" x="864" y="360" width="32" height="24"/>
+  <object id="406" x="800" y="392" width="32" height="24"/>
+  <object id="408" x="704" y="360" width="32" height="24"/>
+  <object id="409" x="832" y="296" width="32" height="24"/>
+  <object id="410" x="896" y="296" width="32" height="24"/>
+  <object id="411" x="832" y="232" width="32" height="24"/>
+  <object id="413" x="864" y="168" width="32" height="24"/>
+  <object id="414" x="960" y="168" width="32" height="24"/>
+  <object id="429" x="768" y="320" width="32" height="32"/>
+  <object id="431" x="768" y="384" width="32" height="48"/>
+  <object id="432" x="768" y="256" width="32" height="32"/>
+  <object id="433" x="768" y="192" width="32" height="32"/>
+  <object id="434" x="736" y="160" width="32" height="32"/>
+  <object id="435" x="736" y="224" width="32" height="32"/>
+  <object id="436" x="736" y="288" width="32" height="32"/>
+  <object id="437" x="736" y="352" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="characters">
+  <object id="165" name="Hero 1" type="player" x="752" y="144">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="false"/>
+    <property name="class_ninja" type="bool" value="true"/>
+    <property name="is_player" type="bool" value="true"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="380" name="Bandit" type="enemy" x="256" y="800">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="388" name="Bandit" type="enemy" x="328" y="808">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="389" name="Bandit" type="enemy" x="368" y="832">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="true"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="390" name="Bandit" type="enemy" x="288" y="832">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="391" name="Bandit" type="enemy" x="296" y="784">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="392" name="Bandit" type="enemy" x="336" y="840">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="false"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="true"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="393" name="Bandit" type="enemy" x="248" y="888">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="394" name="Bandit" type="enemy" x="296" y="864">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="395" name="Bandit" type="enemy" x="376" y="872">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="396" name="Bandit" type="enemy" x="424" y="832">
+   <properties>
+    <property name="class_archer" type="bool" value="false"/>
+    <property name="class_bandit" type="bool" value="true"/>
+    <property name="class_ninja" type="bool" value="false"/>
+    <property name="is_player" type="bool" value="false"/>
+    <property name="territory_radius" type="int" value="4"/>
+    <property name="weapon_axe" type="bool" value="true"/>
+    <property name="weapon_bow" type="bool" value="false"/>
+    <property name="weapon_knife" type="bool" value="false"/>
+    <property name="weapon_sword" type="bool" value="false"/>
+    <property name="weapon_unarmed" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="items">
+  <object id="438" name="item" x="600" y="184" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="true"/>
+    <property name="class_bow" type="bool" value="false"/>
+    <property name="class_knife" type="bool" value="false"/>
+    <property name="class_life_small" type="bool" value="false"/>
+    <property name="class_sword" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="439" name="item" x="584" y="216" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="false"/>
+    <property name="class_bow" type="bool" value="false"/>
+    <property name="class_knife" type="bool" value="true"/>
+    <property name="class_life_small" type="bool" value="false"/>
+    <property name="class_sword" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="440" name="item" x="616" y="216" width="16" height="16">
+   <properties>
+    <property name="class_axe" type="bool" value="false"/>
+    <property name="class_bow" type="bool" value="false"/>
+    <property name="class_knife" type="bool" value="false"/>
+    <property name="class_life_small" type="bool" value="false"/>
+    <property name="class_sword" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="portals"/>
+</map>

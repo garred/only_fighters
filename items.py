@@ -148,3 +148,26 @@ from data.items.axe.item import *
 from data.items.bow.item import *
 from data.items.knife.item import *
 from data.items.sword.item import *
+
+
+
+class Portal(Item):
+
+    animations = {
+        name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob('data/items/portal/*.png'))])
+        for name in ['stand','touch']
+        }
+
+    def __init__(self, pos):
+        super(Portal, self).__init__(pos)
+        self.animations = {name: animation.getCopy() for name, animation in Portal.animations.items()}
+        self.animation = None
+        self.set_animation('stand')
+
+
+    def touched_by(self, character):
+        super(Portal, self).touched_by(character)
+
+        dis = self.distance_to(character)
+        if not self.taken and dis < 50:
+            game.load_map('data/maps/'+self.to_map)

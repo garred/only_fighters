@@ -8,9 +8,26 @@ import pyscroll
 import app
 from pygame.constants import K_1, K_2
 from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
-from items import LifePotionSmall, Axe, Bow, Knife, Sword
+from items import LifePotionSmall, Axe, Bow, Knife, Sword, Portal
+
+
+
+# Global objects
 
 keys_pressed = {}
+
+
+# The game mechanics is updating.
+active = False
+# The game graphics are visible.
+visible = True
+
+
+# Map related objects
+map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = \
+    collisionable_walls = players = None
+
+
 
 
 def update():
@@ -56,6 +73,8 @@ def process_inputs():
 
 def update_collisions():
     '''Updates collisions between sprites, in a completly unefficient way.'''
+
+
 
     for a in collisionable_sprites:
         for b in collisionable_sprites:
@@ -128,119 +147,135 @@ def draw_players_info():
 
 
 
-# Global objects
-
-# Load music and start playing it
-#pygame.mixer.music.load('data/music/Long Away Home.ogg')
-pygame.mixer.music.load('data/music/Endless Pain of Nightmares.ogg')
-pygame.mixer.music.play(-1)
-
-
-
-# The game mechanics is updating.
-active = False
-# The game graphics are visible.
-visible = True
-
-
-
 
 # Loading main map
 
-map = pytmx.util_pygame.load_pygame('data/maps/map1/map.tmx')
-map_rect = (0, 0, map.width*map.tilewidth, map.height*map.tileheight)
+def load_map(path):
+
+    global map, map_rect, renderer
+    global render_group, animated_objects, collisionable_sprites, hitboxes, touchable_objects, collisionable_walls, players
+
+    # Clear everything
+
+    map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = \
+        collisionable_walls = players = None
 
 
-# Creating global containers
+    # Load the map
 
-renderer = pyscroll.BufferedRenderer(pyscroll.data.TiledMapData(map), app.screen.get_size()) # "Camera" of the game: it renders objects.'''
-renderer.zoom = 1.5
-
-render_group = pyscroll.group.PyscrollGroup(map_layer=renderer, default_layer=2) # This defines the group of renderizable sprites.
-
-animated_objects = list() # Holds everything that needs to be updated by PygAnim.
-collisionable_sprites = list() # Sprites that can collide between them
-hitboxes = list() # Hitbox objects
-touchable_objects = list()
+    map = pytmx.util_pygame.load_pygame(path)
+    map_rect = (0, 0, map.width*map.tilewidth, map.height*map.tileheight)
 
 
-# Creating objects of the map
-
-# Walls
-
-collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layernames['walls']] # This contains the walls of the map
-
-
-# Characters
-
-players = []
-for map_object in map.layernames['characters']:
-
-    # Selecting keyboard
-    key = keymap1 if len(players) == 0 else keymap2
-
-    # Creating the object
-    if map_object.class_ninja == 'true':
-        if map_object.is_player == 'true':
-            new_character = NinjaPlayer(key)
-            players.append(new_character)
-        else:
-            new_character = NinjaEnemy()
-    elif map_object.class_archer == 'true':
-        if map_object.is_player == 'true':
-            new_character = ArcherPlayer(key)
-            players.append(new_character)
-        else:
-            new_character = ArcherEnemy()
-    elif map_object.class_bandit == 'true':
-        if map_object.is_player == 'true':
-            new_character = BanditPlayer(key)
-            players.append(new_character)
-        else:
-            new_character = BanditEnemy()
-
-    # Setting attributes
-
-    # Position
-    new_character.position = (map_object.x - 50, map_object.y - 45)
-
-    # Weapons
-    weapon_list = []
-    if map_object.weapon_unarmed == 'true': weapon_list.append('unarmed')
-    if map_object.weapon_knife == 'true': weapon_list.append('knife')
-    if map_object.weapon_sword == 'true': weapon_list.append('sword')
-    if map_object.weapon_axe == 'true': weapon_list.append('axe')
-    if map_object.weapon_bow == 'true': weapon_list.append('bow')
-
-    if len(weapon_list)>0:
-        new_character.weapon = random.choice(weapon_list)
+    # Load music and start playing it
+    if hasattr(map, 'music'):
+        pygame.mixer.music.load('data/music/' + map.music)
+        pygame.mixer.music.play(-1)
     else:
-        new_character.weapon = 'unarmed'
+        pygame.mixer.music.stop()
 
-    # Things for NPCs:
-    if map_object.is_player == 'false':
-        # Wandering zones
-        new_character.territory_radius = float(map_object.territory_radius) * map.tilewidth
+    # Creating global containers
 
-        # Patroling zones (for NPCs):
-        if hasattr(map_object, 'points'):
-            new_character.path = list()
-            for p in map_object.points:
-                new_character.path.append((p[0], p[1]))
-            new_character.position = (new_character.path[0][0]-50, new_character.path[0][1]-45)
+    renderer = pyscroll.BufferedRenderer(pyscroll.data.TiledMapData(map), app.screen.get_size()) # "Camera" of the game: it renders objects.'''
+    renderer.zoom = 1.5
+
+    render_group = pyscroll.group.PyscrollGroup(map_layer=renderer, default_layer=2) # This defines the group of renderizable sprites.
+
+    animated_objects = list() # Holds everything that needs to be updated by PygAnim.
+    collisionable_sprites = list() # Sprites that can collide between them
+    hitboxes = list() # Hitbox objects
+    touchable_objects = list()
 
 
-# Creating items
+    # Creating objects of the map
 
-for map_object in map.layernames['items']:
+    # Walls
 
-    # Creating the object
-    item_classes = list()
+    collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layernames['walls']] # This contains the walls of the map
 
-    if map_object.class_life_small == 'true': item_classes.append(LifePotionSmall)
-    if map_object.class_axe == 'true': item_classes.append(Axe)
-    if map_object.class_bow == 'true': item_classes.append(Bow)
-    if map_object.class_knife == 'true': item_classes.append(Knife)
-    if map_object.class_sword == 'true': item_classes.append(Sword)
 
-    if len(item_classes)>0: random.choice(item_classes)((map_object.x - 35, map_object.y - 25))
+    # Characters
+
+    players = []
+    for map_object in map.layernames['characters']:
+
+        # Selecting keyboard
+        key = keymap1 if len(players) == 0 else keymap2
+
+        # Creating the object
+        if map_object.class_ninja == 'true':
+            if map_object.is_player == 'true':
+                new_character = NinjaPlayer(key)
+                players.append(new_character)
+            else:
+                new_character = NinjaEnemy()
+        elif map_object.class_archer == 'true':
+            if map_object.is_player == 'true':
+                new_character = ArcherPlayer(key)
+                players.append(new_character)
+            else:
+                new_character = ArcherEnemy()
+        elif map_object.class_bandit == 'true':
+            if map_object.is_player == 'true':
+                new_character = BanditPlayer(key)
+                players.append(new_character)
+            else:
+                new_character = BanditEnemy()
+
+        # Setting attributes
+
+        # Position
+        new_character.position = (map_object.x - 50, map_object.y - 45)
+
+        # Weapons
+        weapon_list = []
+        if map_object.weapon_unarmed == 'true': weapon_list.append('unarmed')
+        if map_object.weapon_knife == 'true': weapon_list.append('knife')
+        if map_object.weapon_sword == 'true': weapon_list.append('sword')
+        if map_object.weapon_axe == 'true': weapon_list.append('axe')
+        if map_object.weapon_bow == 'true': weapon_list.append('bow')
+
+        if len(weapon_list)>0:
+            new_character.weapon = random.choice(weapon_list)
+        else:
+            new_character.weapon = 'unarmed'
+
+        # Things for NPCs:
+        if map_object.is_player == 'false':
+            # Wandering zones
+            new_character.territory_radius = float(map_object.territory_radius) * map.tilewidth
+
+            # Patroling zones (for NPCs):
+            if hasattr(map_object, 'points'):
+                new_character.path = list()
+                for p in map_object.points:
+                    new_character.path.append((p[0], p[1]))
+                new_character.position = (new_character.path[0][0]-50, new_character.path[0][1]-45)
+
+
+    # Creating items
+
+    for map_object in map.layernames['items']:
+
+        # Creating the object
+        item_classes = list()
+
+        if map_object.class_life_small == 'true': item_classes.append(LifePotionSmall)
+        if map_object.class_axe == 'true': item_classes.append(Axe)
+        if map_object.class_bow == 'true': item_classes.append(Bow)
+        if map_object.class_knife == 'true': item_classes.append(Knife)
+        if map_object.class_sword == 'true': item_classes.append(Sword)
+
+        if len(item_classes)>0: random.choice(item_classes)((map_object.x - 35, map_object.y - 25))
+
+
+    # Creating portals
+
+    for map_object in map.layernames['portals']:
+
+        p = Portal((map_object.x - 35, map_object.y - 25))
+        p.to_map = map_object.to_map
+
+
+
+load_map('data/maps/map01/map.tmx')
