@@ -3,6 +3,7 @@ import game
 from math import sqrt
 import others_src.pyganim.pyganim as pyganim
 from glob import glob
+from characters import PLAYER
 
 
 
@@ -166,8 +167,6 @@ class Portal(Item):
 
 
     def touched_by(self, character):
-        super(Portal, self).touched_by(character)
-
         dis = self.distance_to(character)
-        if not self.taken and dis < 50:
+        if character.faction == PLAYER and dis < 50:
             game.load_map('data/maps/'+self.to_map)

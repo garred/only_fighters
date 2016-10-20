@@ -157,8 +157,7 @@ def load_map(path):
 
     # Clear everything
 
-    map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = \
-        collisionable_walls = players = None
+    #map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = collisionable_walls = players = None
 
 
     # Load the map

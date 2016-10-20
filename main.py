@@ -27,6 +27,7 @@ if __name__ == '__main__':
 # [AI]: Dodging behaviour
 # [GAMING]: Potions and items to pick up
 #   - : Weapons with pop-ups messages
+# [BUG] Random map change.
 # ToDo [GRAPHICS]: Enemy exclamations when spot player
 # ToDo [UI]: Menu interface
 #   - ToDo: Multiplayer
