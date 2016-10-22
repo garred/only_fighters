@@ -2,12 +2,35 @@
 
 A simple game made in Pygame for the subject _TDDD23 Design and Programming of Computer Games_.
 
+_Only Fighters_ is a 2D top-down action-tactical game, where you control a fighter that kills waves of enemies with different weapons.
+
+The game is still undone and lacks basic functionalities, but it is playable. For now there is no more than three tiny levels, and nothing happens when you finish. You could make your own maps with _Tiled_ map editor (http://www.mapeditor.org/), and changing the line in `app.py` where map is loaded to run your map. You can use the existing maps as example. 
+
+
+## Requirements
+
+Python 3 and pygame. Maybe something more.
+
+
+## Installation
+
+Just launch `python main.py`.
+
+
+## Controls
+
+Players can move, punch, slash, roll and pickup things. First player uses arrows, space, and `n`, `m` and `,` keys. Second player uses `w`, `a`, `s`, `d` for direction and shift, `z`, `x`, `c`.
+
 
 ## TDDD23 Game Project Plan "Only fighters"
+
+This game is made as a project for "Design and Programming of Computer Games" course in Linköping University. This section is an early planning of the game, and the game suffered a lot of changes since them.
+
 
 ### Game Idea
 
 The main character (a soldier) fights waves of enemies, with weapons obtained from them, and managing an increasing party of allies. 
+
 
 #### Game style
 
@@ -16,6 +39,7 @@ A 2D top-down action-tactical game, where you control a fighter that kills waves
 Sometimes there are allies that aren't controlled directly by the player but he can give them general orders like "protect a zone", "come with me", "attack". Their specific behaviour depends on their abilities and equipment. Depending the level and points stored you can choose more members and/or different allies in your party.
 
 There is emphasis in close-combat, where timing is important to hit the enemy and avoid be hitted. Lose a weapon is common, and the characters must fight with their fists or with any reachable weapon.
+
 
 #### Fun
 

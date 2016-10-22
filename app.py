@@ -26,7 +26,7 @@ running = True
 pygame.mixer.init(44100, -16, 2, 2048) # setup mixer to avoid sound lag
 from menu import menu
 import game
-
+game.load_map('data/maps/map01/map.tmx')
 
 
 

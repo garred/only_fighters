@@ -12,24 +12,6 @@ from collisions import get_collision_grid, get_positions_in_grid, get_objects_in
 
 
 
-# Global objects
-
-keys_pressed = {}
-
-
-# The game mechanics is updating.
-active = False
-# The game graphics are visible.
-visible = True
-
-
-# Map related objects
-map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = \
-    collisionable_walls = grid_collisionable_walls = players = None
-
-
-
-
 def update():
     '''Makes the game seems alive and responsive.'''
     global keys_pressed
@@ -43,6 +25,9 @@ def update():
     render_group.update() #Updating the relative position of the entities to the camera.
     update_collisions()
     update_objects()
+
+    # If all players died, re-run last map
+    if len(players)==0: load_map(last_map_loaded)
 
 
 def update_objects():
@@ -161,10 +146,9 @@ def load_map(path):
 
     global map, map_rect, renderer
     global render_group, animated_objects, collisionable_sprites, hitboxes, touchable_objects, collisionable_walls, players, grid_collisionable_walls
+    global last_map_loaded
 
-    # Clear everything
-
-    #map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = collisionable_walls = players = None
+    last_map_loaded = path
 
 
     # Load the map
@@ -286,4 +270,20 @@ def load_map(path):
 
 
 
-load_map('data/maps/map1/map.tmx')
+
+# Global objects
+
+keys_pressed = {}
+
+
+# The game mechanics is updating.
+active = False
+# The game graphics are visible.
+visible = True
+
+
+# Map related objects
+map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = \
+    collisionable_walls = grid_collisionable_walls = players = last_map_loaded = None
+
+
