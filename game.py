@@ -9,6 +9,7 @@ import app
 from pygame.constants import K_1, K_2
 from characters import NinjaPlayer, NinjaEnemy, ArcherPlayer, ArcherEnemy, BanditPlayer, BanditEnemy, keymap1, keymap2
 from items import LifePotionSmall, Axe, Bow, Knife, Sword, Portal
+from collisions import get_collision_grid, get_positions_in_grid, get_objects_in_range
 
 
 
@@ -25,7 +26,7 @@ visible = True
 
 # Map related objects
 map = map_rect = renderer = render_group = animated_objects = collisionable_sprites = hitboxes = touchable_objects = \
-    collisionable_walls = players = None
+    collisionable_walls = grid_collisionable_walls = players = None
 
 
 
@@ -43,17 +44,6 @@ def update():
     render_group.update() #Updating the relative position of the entities to the camera.
     update_collisions()
     update_objects()
-    update_hitboxes()
-
-
-def update_hitboxes():
-    global hitboxes, collisionable_sprites
-    for h in hitboxes:
-        for o in collisionable_sprites:
-            if h.colliderect(o.feet_rect):
-                o.hitted(h)
-    # TODO: Restore this
-    hitboxes = list()
 
 
 def update_objects():
@@ -74,19 +64,37 @@ def process_inputs():
 def update_collisions():
     '''Updates collisions between sprites, in a completly unefficient way.'''
 
+    global hitboxes, collisionable_sprites
 
+    # Update collisions between characters
 
+    grid = get_collision_grid(collisionable_sprites, map)
     for a in collisionable_sprites:
-        for b in collisionable_sprites:
+        for b in get_objects_in_range(a, grid, map):
             if a is b: continue
             a.bounce(b)
             b.bounce(a)
 
+    # Update hitboxes
+
+    for h in hitboxes:
+        for o in get_objects_in_range(h, grid, map):
+            if h.colliderect(o.feet_rect):
+                o.hitted(h)
+    # TODO: Restore this
+    hitboxes = list()
+
+    # Update collisions between characters and items
+
     for b in touchable_objects:
         b.set_animation('stand')
+    grid = get_collision_grid(touchable_objects, map)
     for a in collisionable_sprites:
-        for b in touchable_objects:
+        for b in get_objects_in_range(a, grid, map):
             b.touched_by(a)
+
+
+
 
 
 def draw():
@@ -153,7 +161,7 @@ def draw_players_info():
 def load_map(path):
 
     global map, map_rect, renderer
-    global render_group, animated_objects, collisionable_sprites, hitboxes, touchable_objects, collisionable_walls, players
+    global render_group, animated_objects, collisionable_sprites, hitboxes, touchable_objects, collisionable_walls, players, grid_collisionable_walls
 
     # Clear everything
 
@@ -191,6 +199,7 @@ def load_map(path):
     # Walls
 
     collisionable_walls = [pygame.Rect(o.x,o.y, o.width,o.height) for o in map.layernames['walls']] # This contains the walls of the map
+    grid_collisionable_walls = get_collision_grid(collisionable_walls, map, size=10) #Used for optimization
 
 
     # Characters
@@ -270,10 +279,11 @@ def load_map(path):
 
     # Creating portals
 
-    for map_object in map.layernames['portals']:
+    if 'portals' in map.layernames:
+        for map_object in map.layernames['portals']:
 
-        p = Portal((map_object.x - 35, map_object.y - 25))
-        p.to_map = map_object.to_map
+            p = Portal((map_object.x - 35, map_object.y - 25))
+            p.to_map = map_object.to_map
 
 
 

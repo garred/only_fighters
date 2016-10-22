@@ -3,6 +3,7 @@ from math import sqrt
 from glob import glob
 import others_src.pyganim.pyganim as pyganim
 import itertools
+from collisions import get_objects_in_range
 
 
 ALL, PLAYER, ENEMY = range(3)
@@ -119,8 +120,7 @@ class Character(pygame.sprite.Sprite):
     def __move_single_axis(self, dir):
         self.position = (self._position[0] + dir[0], self._position[1] + dir[1])
 
-        # We set a maximum number of collision checkings
-        for wall_rect in game.collisionable_walls:
+        for wall_rect in get_objects_in_range(self, game.grid_collisionable_walls, game.map):
             if self.feet_rect.colliderect(wall_rect):
                 if dir[0] > 0:  # Moving right; Hit the left side of the wall
                     self.feet_rect.right = wall_rect.left
@@ -202,6 +202,7 @@ class Character(pygame.sprite.Sprite):
 
 
 class Hitbox(pygame.Rect):
+
     def __init__(self, pos, size, dir, distance, tarjet=ALL, strength=1, damage=1, type='cutting'):
         pos = (pos[0] + dir[0]*distance, pos[1] + dir[1]*distance)
         self.rect = (pos[0]-size*0.5, pos[1]-size*0.5, size, size)
@@ -213,6 +214,10 @@ class Hitbox(pygame.Rect):
         self.type = type
 
         game.hitboxes.append(self)
+
+    @property
+    def position(self):
+        return (self.rect[0], self.rect[1])
 
 
 
@@ -238,9 +243,13 @@ def load_animations(path):
         ['knife', 'sword', 'axe'])]
     animation_names += ['death']
 
+    vel = {name: (0.075 if 'jump' in name else 0.1) for name in animation_names}
+
+
     # Loading animations
     animations = {
-        name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob(path + 'maps/*' + name + '*.png'))])
+        #name: pyganim.PygAnimation([(file, 0.1) for file in sorted(glob(path + 'maps/*' + name + '*.png'))])
+        name: pyganim.PygAnimation([(file, vel[name]) for file in sorted(glob(path + 'maps/*' + name + '*.png'))])
         for name in animation_names
         }
 
@@ -248,7 +257,7 @@ def load_animations(path):
     animation_names_right = [name for name in animation_names if 'right' in name]
     __animations_left = {
         name.replace('right', 'left'):
-            pyganim.PygAnimation([(file, 0.1) for file in sorted(glob(path + 'maps/*' + name + '*.png'))]).flip(
+            pyganim.PygAnimation([(file, vel[name]) for file in sorted(glob(path + 'maps/*' + name + '*.png'))]).flip(
                 True, False)
         for name in animation_names_right
         }
