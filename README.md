@@ -22,17 +22,17 @@ Just launch `python main.py`.
 Players can move, punch, slash, roll and pickup things. First player uses arrows, space, and `n`, `m` and `,` keys. Second player uses `w`, `a`, `s`, `d` for direction and shift, `z`, `x`, `c`.
 
 
-## TDDD23 Game Project Plan "Only fighters"
+# TDDD23 Game Project Plan "Only fighters"
 
 This game is made as a project for "Design and Programming of Computer Games" course in Linköping University. This section is an early planning of the game, and the game suffered a lot of changes since them.
 
 
-### Game Idea
+## Game Idea
 
 The main character (a soldier) fights waves of enemies, with weapons obtained from them, and managing an increasing party of allies. 
 
 
-#### Game style
+### Game style
 
 A 2D top-down action-tactical game, where you control a fighter that kills waves of enemies with different weapons. The weapons are changed frequently (when they are wasted or you lost them while fighting). 
 
@@ -41,12 +41,12 @@ Sometimes there are allies that aren't controlled directly by the player but he 
 There is emphasis in close-combat, where timing is important to hit the enemy and avoid be hitted. Lose a weapon is common, and the characters must fight with their fists or with any reachable weapon.
 
 
-#### Fun
+### Fun
 
 The fun comes mainly from the mechanic of the fight, that involves a micro and a macro level. Micro level is the control of the main character and beating enemies with his various abilities. Macro level consists in managing the strategy and tactics of the party (at a coarse level). Macro level doesn't require as much attention as micro level, and esporadic orders for changing situations may be enough.
 
 
-#### Combat mechanics
+### Combat mechanics
 
 Basic combat mechanics are simple, heavily based on the game **Only one**: when you hit, you are unprotected and can't attack again for a little while (like half a second), so you have to be sensible when attacking. You can cancel another character's attack attacking as well (with some exceptions of type paper-scissors-rock). You can use a shield by do nothing, and if you do anything or are looking to a different direction the shield doesn't work and you are hitted.
 
@@ -62,17 +62,17 @@ Another important thing are the environment. It has physical simulated objects t
 There are some final bosses and they can be attacked in nearly the same way, with exceptions depending the boss.
 
 
-#### Giving orders
+### Giving orders
 
 To give an order to an ally, you approach him and a talk button appear. Pushing it, some options are shown and the game pauses. 
 
 
-#### Weapons
+### Weapons
 
 To start I think this would be enough: Fists, knife, sword, hammer, bow, spear, shield, gun. Maybe grenade bombs.
 
 
-#### Inspirational games
+### Inspirational games
 
 For game mechanics:
 
@@ -97,12 +97,12 @@ Things to avoid:
 - **Milford Heaven**: [link](http://store.steampowered.com/app/485570/). It is ugly too.
 
 
-### Game Tech 
+## Game Tech 
 
 KivEnt, a Python framework based on Kivy and Chipmunk2d.
 
 
-### Progression in the Game
+## Progression in the Game
 
 The game evolve modifing this factors:
 
@@ -121,7 +121,7 @@ The expected progression is:
 - Some levels after we can allow the player to choose the combination of characters in his party, before start the level. At the begining of any level there is some info about the probable enemies.
 
 
-### In-game tutoring approach
+## In-game tutoring approach
 
 Levels are grouped by a common element added. The first level of the group is very simple and mainly shows how the new element works. Next levels uses the new element in different contexts. All groups are ordered by the difficulty of the element (simple weapons first, harder next).
 
@@ -130,23 +130,23 @@ In the firsts missions some message box to guide the player how to move it are a
 In this missions, there is some neutral and allies units. Give orders to them is as simply as approaching them and clicking the emerging button. This is very intuitive and most players will try it as soon as they see it. If not, a message box can recomend the player doing that.
 
 
-## CREDITS
+# CREDITS
 
 Things from other people that I've used so far and don't have its own license:
 
-### Code:
+## Code:
 
 - Phil's pyGame Utilities, https://github.com/parogers/pgu  
 - `pyganim`, by Al Sweigart al@inventwithpython.com
 - `pyscroll`, by bitcraft https://github.com/bitcraft/pyscroll
 - Sliding collisions based on code by pymike, http://www.pygame.org/project-Rect+Collision+Response-1061-.html
 
-### Graphics:
+## Graphics:
 
 - Particles: http://opengameart.org/content/sparks-fire-ice-blood
 - Potions: Bonsaiheldin | http://bonsaiheld.org
 
-### Sounds:
+## Sounds:
 
 - Axe swings: qubodup/Iwan Gabovitch - qubodup.net - qubodup@gmail.com
 - Some of these sword swings:
@@ -164,10 +164,10 @@ Things from other people that I've used so far and don't have its own license:
     - 1, 2: Male_Thijs_loud_scream, http://freesound.org/people/thanvannispen/sounds/9432/, http://creativecommons.org/licenses/by/3.0/
     - 3-7: human male scream multi, http://freesound.org/people/JohnsonBrandEditing/sounds/173944/, http://creativecommons.org/publicdomain/zero/1.0/
 
-### Music:
+## Music:
 
 - nene, posted in OpenGameArt.org
 
-### More things
+## More things
 
 Probably I forgot some things, so if you think I'm using something yours without giving you credit, just tell me and I'll fix it.  

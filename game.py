@@ -30,9 +30,11 @@ def update():
     if len(players)==0: load_map(last_map_loaded)
 
 
+
 def update_objects():
     for o in animated_objects:
         o.update()
+
 
 
 def process_inputs():
@@ -43,6 +45,7 @@ def process_inputs():
         renderer.zoom *= 1.05
     if keys_pressed[K_2]:
         renderer.zoom /= 1.05
+
 
 
 def update_collisions():
@@ -76,8 +79,6 @@ def update_collisions():
     for a in collisionable_sprites:
         for b in get_objects_in_range(a, grid, map):
             b.touched_by(a)
-
-
 
 
 
@@ -120,6 +121,7 @@ def draw():
     #     pygame.draw.rect(app.screen, (0, 255, 0), rect)
 
 
+
 def draw_players_info():
     render_group.center((0,0))
 
@@ -136,7 +138,6 @@ def draw_players_info():
         if players[1].life > 0: pygame.draw.rect(app.screen, (255,  0,  0), (app.screen_width-17-200, 23, 194*players[1].life/players[1].max_life, 14))
         pygame.draw.rect(app.screen, (  0,  0,  0), (app.screen_width-20-200, 40, 200, 20))
         pygame.draw.rect(app.screen, (255,255,255), (app.screen_width-17-200, 43, 194*max(0, players[1].stamina)/players[1].max_stamina, 14))
-
 
 
 
