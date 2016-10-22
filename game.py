@@ -1,6 +1,5 @@
 '''Manages the game mechanics.'''
 
-import numpy as np
 import random
 import pygame
 import pytmx
@@ -287,4 +286,4 @@ def load_map(path):
 
 
 
-load_map('data/maps/map01/map.tmx')
+load_map('data/maps/map1/map.tmx')

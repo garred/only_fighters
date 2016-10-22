@@ -5,7 +5,6 @@ import app
 if __name__ == '__main__':
     app.run()
 
-
 # [BASIC] Character mechanics 1: walking, running.
 # [BASIC] Character mechanics 2: jumping.
 # [BASIC] Character mechanics 3: hitting.

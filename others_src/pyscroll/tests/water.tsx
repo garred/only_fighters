@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"; encoding="UTF-8"?>
 <tileset name="water" tilewidth="16" tileheight="16" tilecount="144">
  <image source="water.png" width="192" height="192"/>
  <tile id="0">
@@ -79,4 +79,4 @@
    <frame tileid="143" duration="500"/>
   </animation>
  </tile>
-</tileset>
+</tileset>;

@@ -8,19 +8,29 @@ def get_positions_in_grid(object, grid, map):
     #grid_tile_height = (map.height * map.tileheight) / len(grid)
 
     #diffs = [(x * grid_tile_width, y * grid_tile_height) for x in [-1, 0, 1] for y in [-1, 0, 1]]
-    diffs = [(0,0)]
-    for diff in diffs:
-        try:
-            x = object.position[0]
-            y = object.position[1]
-        except AttributeError:
-            x = object[0]
-            y = object[1]
-        x = (x + diff[0] * 0.5) // (map.width * map.tilewidth)
-        y = (x + diff[1] * 0.5) // (map.height * map.tileheight)
-        x = int(max(0, min(len(grid) - 1, x)))
-        y = int(max(0, min(len(grid) - 1, y)))
-        positions.append((x, y))
+
+    try:
+        x = object.position[0]
+        y = object.position[1]
+    except AttributeError:
+        x = object[0]
+        y = object[1]
+    x = x // (map.width * map.tilewidth)
+    y = y // (map.height * map.tileheight)
+    x = int(max(0, min(len(grid) - 1, x)))
+    y = int(max(0, min(len(grid) - 1, y)))
+
+    positions.append((x, y))
+    # if y > 0: positions.append((x, y - 1))
+    # if y < len(grid): positions.append((x, y + 1))
+    # if x>0:
+    #     positions.append((x-1, y))
+    #     if y>0: positions.append((x-1, y-1))
+    #     if y<len(grid): positions.append((x-1, y+1))
+    # if x<len(grid):
+    #     positions.append((x+1, y))
+    #     if y > 0: positions.append((x+1, y-1))
+    #     if y < len(grid): positions.append((x+1, y+1))
 
     return positions
 

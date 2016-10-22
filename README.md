@@ -108,7 +108,14 @@ In this missions, there is some neutral and allies units. Give orders to them is
 
 ## CREDITS
 
-Things from other people that I've used so far:
+Things from other people that I've used so far and don't have its own license:
+
+### Code:
+
+- Phil's pyGame Utilities, https://github.com/parogers/pgu  
+- `pyganim`, by Al Sweigart al@inventwithpython.com
+- `pyscroll`, by bitcraft https://github.com/bitcraft/pyscroll
+- Sliding collisions based on code by pymike, http://www.pygame.org/project-Rect+Collision+Response-1061-.html
 
 ### Graphics:
 
@@ -136,3 +143,7 @@ Things from other people that I've used so far:
 ### Music:
 
 - nene, posted in OpenGameArt.org
+
+### More things
+
+Probably I forgot some things, so if you think I'm using something yours without giving you credit, just tell me and I'll fix it.  
