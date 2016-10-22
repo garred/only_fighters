@@ -27,6 +27,8 @@ if __name__ == '__main__':
 # [GAMING]: Potions and items to pick up
 #   - : Weapons with pop-ups messages
 # [BUG] Random map change.
+# [GAMING]: Only hit once per keystroke, not continuous hitting
+# [GAMING]: When map changes, don't change life or weapon of the main characters.
 # ToDo [GRAPHICS]: Enemy exclamations when spot player
 # ToDo [UI]: Menu interface
 #   - ToDo: Multiplayer

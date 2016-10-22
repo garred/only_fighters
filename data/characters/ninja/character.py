@@ -485,6 +485,7 @@ class NinjaPlayer(NinjaCharacter):
         self.keymap = keymap
         self.tarjet = ENEMY
         self.faction = PLAYER
+        self.released_keys_after_attack = True #Needed to don't allow the player to attack forever without release the keys.
 
 
     def kill(self):
@@ -498,7 +499,6 @@ class NinjaPlayer(NinjaCharacter):
         super(NinjaPlayer, self).update()
 
         if self.action_locked and self.animation.state == pyganim.STOPPED: self.action_locked = False
-
 
         keymap = self.keymap
         keys = game.keys_pressed
@@ -516,9 +516,9 @@ class NinjaPlayer(NinjaCharacter):
 
         if not self.action_locked: self.dir = dir
 
-        if keys[keymap['hit']]:
+        if keys[keymap['hit']] and self.released_keys_after_attack:
             self.hit()
-        elif keys[keymap['slash']]:
+        elif keys[keymap['slash']] and self.released_keys_after_attack:
             self.slash()
         elif keys[keymap['jump']]:
             if not 'jumping' in self.animation_name: self.dir = dir
@@ -530,6 +530,8 @@ class NinjaPlayer(NinjaCharacter):
                 self.walk()
         else:
             self.stand()
+
+        self.released_keys_after_attack = not (keys[keymap['hit']] or keys[keymap['slash']])
 
 
 

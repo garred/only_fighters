@@ -52,7 +52,7 @@
   <object id="37" x="448" y="864" width="128" height="128"/>
   <object id="38" x="72" y="928" width="56" height="64"/>
   <object id="39" x="584" y="1136" width="40" height="40"/>
-  <object id="40" x="672" y="1032" width="56" height="48"/>
+  <object id="40" x="680" y="1040" width="40" height="32"/>
   <object id="41" x="680" y="880" width="40" height="40"/>
   <object id="145" x="725.511" y="571.704" width="12.0227" height="36.0909"/>
   <object id="146" x="637.67" y="573.318" width="12.1364" height="34.3409"/>
@@ -68,7 +68,6 @@
   <object id="307" x="608" y="1024" width="32" height="24"/>
   <object id="308" x="704" y="960" width="32" height="24"/>
   <object id="309" x="608" y="928" width="32" height="24"/>
-  <object id="310" x="480" y="984" width="32" height="32"/>
   <object id="311" x="736" y="800" width="32" height="24"/>
   <object id="312" x="768" y="704" width="32" height="24"/>
   <object id="313" x="800" y="608" width="32" height="24"/>
@@ -76,7 +75,7 @@
   <object id="315" x="640" y="736" width="32" height="24"/>
   <object id="316" x="544" y="800" width="32" height="24"/>
   <object id="317" x="448" y="800" width="32" height="24"/>
-  <object id="318" x="392" y="1008" width="176" height="184"/>
+  <object id="318" x="392" y="992" width="176" height="200"/>
   <object id="340" x="725.602" y="287.636" width="13.7727" height="30.3409"/>
   <object id="341" x="636.727" y="287.636" width="13.7727" height="30.3409"/>
   <object id="342" x="8" y="1024" width="128" height="136"/>

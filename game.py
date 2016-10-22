@@ -27,7 +27,7 @@ def update():
     update_objects()
 
     # If all players died, re-run last map
-    if len(players)==0: load_map(last_map_loaded)
+    if len(players)==0: load_map(last_map_loaded, reset_players=True)
 
 
 
@@ -143,7 +143,7 @@ def draw_players_info():
 
 # Loading main map
 
-def load_map(path):
+def load_map(path, reset_players=False):
 
     global map, map_rect, renderer
     global render_group, animated_objects, collisionable_sprites, hitboxes, touchable_objects, collisionable_walls, players, grid_collisionable_walls
@@ -187,7 +187,7 @@ def load_map(path):
 
 
     # Characters
-
+    old_players = players if players is not None else []
     players = []
     for map_object in map.layernames['characters']:
 
@@ -243,6 +243,13 @@ def load_map(path):
                 for p in map_object.points:
                     new_character.path.append((p[0], p[1]))
                 new_character.position = (new_character.path[0][0]-50, new_character.path[0][1]-45)
+
+    if not reset_players:
+        for idx, player in enumerate(players):
+            if idx < len(old_players):
+                player.weapon = old_players[idx].weapon
+                player.life = old_players[idx].life
+
 
 
     # Creating items
