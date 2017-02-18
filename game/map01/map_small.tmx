@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="696" columns="24">
+  <image source="tileset.png" width="768" height="928"/>
+  <terraintypes>
+   <terrain name="grass" tile="-1"/>
+   <terrain name="dirty" tile="-1"/>
+   <terrain name="moss" tile="-1"/>
+   <terrain name="shallow_water" tile="-1"/>
+   <terrain name="snow" tile="-1"/>
+   <terrain name="forest" tile="-1"/>
+   <terrain name="no_forest" tile="-1"/>
+  </terraintypes>
+  <tile id="0" terrain="0,0,0,0"/>
+  <tile id="1" terrain="0,0,0,0"/>
+  <tile id="2" terrain="0,0,0,0"/>
+  <tile id="3" terrain="0,0,0,2"/>
+  <tile id="4" terrain="0,0,2,2"/>
+  <tile id="5" terrain="0,0,2,0"/>
+  <tile id="9" terrain="4,4,4,4"/>
+  <tile id="10" terrain="4,4,4,4"/>
+  <tile id="11" terrain="4,4,4,4"/>
+  <tile id="12" terrain="4,4,4,4"/>
+  <tile id="13" terrain="4,4,4,4"/>
+  <tile id="24" terrain="0,0,0,0"/>
+  <tile id="25" terrain="0,0,0,0"/>
+  <tile id="26" terrain="0,0,0,0"/>
+  <tile id="27" terrain="0,2,0,2"/>
+  <tile id="28" terrain="2,2,2,2"/>
+  <tile id="29" terrain="2,0,2,0"/>
+  <tile id="33" terrain="4,4,4,4"/>
+  <tile id="51" terrain="0,2,0,0"/>
+  <tile id="52" terrain="2,2,0,0"/>
+  <tile id="53" terrain="2,0,0,0"/>
+  <tile id="54" terrain="4,4,4,3"/>
+  <tile id="55" terrain="4,4,3,3"/>
+  <tile id="56" terrain="4,4,3,4"/>
+  <tile id="72" terrain="0,0,0,1"/>
+  <tile id="73" terrain="0,0,1,1"/>
+  <tile id="74" terrain="0,0,1,0"/>
+  <tile id="75" terrain="0,0,0,3"/>
+  <tile id="76" terrain="0,0,3,3"/>
+  <tile id="77" terrain="0,0,3,0"/>
+  <tile id="78" terrain="4,3,4,3"/>
+  <tile id="79" terrain="3,3,3,3"/>
+  <tile id="80" terrain="3,4,3,4"/>
+  <tile id="96" terrain="0,1,0,1"/>
+  <tile id="97" terrain="1,1,1,1"/>
+  <tile id="98" terrain="1,0,1,0"/>
+  <tile id="99" terrain="0,3,0,3"/>
+  <tile id="100" terrain="3,3,3,3"/>
+  <tile id="101" terrain="3,0,3,0"/>
+  <tile id="102" terrain="4,3,4,4"/>
+  <tile id="103" terrain="3,3,4,4"/>
+  <tile id="104" terrain="3,4,4,4"/>
+  <tile id="120" terrain="0,1,0,0"/>
+  <tile id="121" terrain="1,1,0,0"/>
+  <tile id="122" terrain="1,0,0,0"/>
+  <tile id="123" terrain="0,3,0,0"/>
+  <tile id="124" terrain="3,3,0,0"/>
+  <tile id="125" terrain="3,0,0,0"/>
+  <tile id="201" terrain="4,4,4,0"/>
+  <tile id="202" terrain="4,4,0,0"/>
+  <tile id="203" terrain="4,4,0,4"/>
+  <tile id="225" terrain="4,0,4,0"/>
+  <tile id="226" terrain="0,0,0,0"/>
+  <tile id="227" terrain="0,4,0,4"/>
+  <tile id="249" terrain="4,0,4,4"/>
+  <tile id="250" terrain="0,0,4,4"/>
+  <tile id="251" terrain="0,4,4,4"/>
+  <tile id="273" terrain="1,0,0,0"/>
+  <tile id="274" terrain="0,1,0,0"/>
+  <tile id="275" terrain="1,1,1,0"/>
+  <tile id="276" terrain="1,1,0,1"/>
+  <tile id="297" terrain="0,0,1,0"/>
+  <tile id="298" terrain="0,0,0,1"/>
+  <tile id="299" terrain="1,0,1,1"/>
+  <tile id="300" terrain="0,1,1,1"/>
+  <tile id="321" terrain="0,0,0,1"/>
+  <tile id="322" terrain="0,0,1,0"/>
+  <tile id="345" terrain="0,1,0,0"/>
+  <tile id="346" terrain="1,0,0,0"/>
+  <tile id="384" terrain="6,6,6,5"/>
+  <tile id="385" terrain="6,6,5,5"/>
+  <tile id="386" terrain="6,6,5,6"/>
+  <tile id="387" terrain="6,5,5,5"/>
+  <tile id="388" terrain="5,6,5,5"/>
+  <tile id="408" terrain="6,5,6,5"/>
+  <tile id="409" terrain="5,5,5,5"/>
+  <tile id="410" terrain="5,6,5,6"/>
+  <tile id="411" terrain="5,5,6,5"/>
+  <tile id="412" terrain="5,5,5,6"/>
+  <tile id="432" terrain="6,5,6,6"/>
+  <tile id="433" terrain="5,5,6,6"/>
+  <tile id="434" terrain="5,6,6,6"/>
+  <tile id="435" terrain="6,5,5,5"/>
+  <tile id="436" terrain="5,6,5,5"/>
+  <tile id="459" terrain="5,5,6,5"/>
+  <tile id="460" terrain="5,5,5,6"/>
+ </tileset>
+ <layer name="under0" width="25" height="25">
+  <data encoding="base64">
+   GQAAAOMAAAADAAAAGgAAAAIAAADjAAAAGQAAAOMAAAABAAAAAQAAAAMAAADjAAAAGQAAAAMAAAAaAAAAWgEAABUBAABiAAAAFAEAABIBAADjAAAAGQAAABoAAAAbAAAAGQAAAOMAAADjAAAAAwAAABoAAAAbAAAA4wAAAAEAAAAEAAAABQAAAAUAAAAFAAAABQAAAAUAAAAGAAAAGwAAAOMAAAB5AAAAFQEAAGMAAAAaAAAAAgAAABsAAAAbAAAAAwAAAAIAAAACAAAAAwAAAOMAAAAbAAAAAwAAAAIAAAAaAAAAHAAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHgAAAAIAAAAZAAAAAQAAAGEAAAAsAQAASwAAAAEAAAADAAAAGgAAAAMAAAABAAAASgAAAEoAAABKAAAASgAAAEoAAABKAAAAKgEAADQAAAA1AAAANQAAADUAAAA1AAAANQAAADYAAAABAAAAGwAAAOMAAABaAQAAFQEAACwBAABLAAAAGwAAAAMAAAAZAAAAGQAAAHoAAAB6AAAAegAAAHoAAAB6AAAAFQEAACwBAABKAAAAQwEAABoAAAACAAAA4wAAAAEAAAACAAAAAgAAABsAAAACAAAAAQAAAFoBAAAVAQAALAEAAEoAAABKAAAAQwEAAAIAAAACAAAAAgAAAAMAAAAaAAAA4wAAAFoBAAB6AAAAFQEAACwBAABKAAAASwAAABkAAAAbAAAAKwEAAEoAAABKAAAASgAAAEoAAABKAAAALQEAAGIAAABiAAAAYgAAACwBAABKAAAABAAAAAUAAAAFAAAABgAAABsAAAAbAAAAAwAAAFoBAAB6AAAAFQEAACwBAABKAAAASgAAAC0BAAAUAQAAegAAAHoAAAB6AAAAegAAAHoAAAB6AAAAegAAAHoAAAAVAQAAYgAAABwAAAAdAAAAHQAAAB4AAAAEAAAABgAAAAIAAAAbAAAA4wAAABMBAAB6AAAAegAAAHoAAAB6AAAAWwEAABsAAAABAAAAAgAAABsAAAACAAAAAQAAABsAAAADAAAAEwEAABUBAAA0AAAANQAAADUAAAA2AAAAHAAAAB4AAAADAAAA4wAAABkAAAAZAAAA4wAAAOMAAAABAAAAAQAAAOMAAAACAAAAAQAAAAEAAAADAAAA4wAAABkAAAAaAAAAAQAAAOMAAABhAAAAGwAAABkAAAAaAAAAAgAAADQAAAA2AAAAGwAAAAIAAAACAAAAAgAAAOMAAAADAAAAAgAAABsAAAAbAAAAAwAAABkAAAAZAAAAGwAAABkAAAAaAAAAAQAAABsAAAADAAAAEwEAABsAAAACAAAAGwAAAAQAAAAFAAAABQAAAAUAAAAFAAAABQAAAAYAAAAZAAAAAQAAABoAAAAbAAAAAgAAABsAAADjAAAAGQAAAAEAAAAZAAAA4wAAAAMAAAADAAAA4wAAABoAAAADAAAAAwAAABsAAAAcAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAeAAAAAQAAABsAAADjAAAAGQAAAAIAAAADAAAAAQAAABsAAAAZAAAAGgAAABoAAADjAAAAGQAAABsAAAADAAAAAQAAAOMAAAACAAAANAAAADUAAAA1AAAANQAAADUAAAA1AAAANgAAACsBAABKAAAASwAAABsAAAAEAAAABgAAABsAAAAEAAAABQAAAAYAAADjAAAAAgAAABoAAAACAAAA4wAAABsAAAACAAAAGQAAAOMAAAAbAAAAAQAAAAIAAAAbAAAA4wAAABsAAABhAAAAYgAAACwBAAAqAQAAHAAAAB4AAAAaAAAAHAAAAB0AAAAeAAAAAQAAABkAAABCAQAASgAAACoBAAAZAAAAAgAAAAMAAAAbAAAAAgAAAAQAAAAGAAAAAwAAAEIBAABKAAAALQEAAGIAAABiAAAAYwAAABwAAAAeAAAAGwAAABwAAAAdAAAAHgAAAOMAAABCAQAALQEAAGIAAABjAAAAAgAAABsAAAArAQAASgAAAEMBAAA0AAAANgAAAAIAAABhAAAAYgAAABQBAAB6AAAAegAAAFsBAAA0AAAANgAAAAIAAAAcAAAAHQAAAB4AAAABAAAAYQAAAGIAAAAUAQAAEgEAAAMAAABJAAAALQEAAGIAAABjAAAAAQAAAAIAAAACAAAAeQAAAHoAAABbAQAAAgAAAAEAAAACAAAAGQAAABoAAAAbAAAAHAAAAB0AAAAeAAAAGQAAAFoBAAB6AAAAewAAABoAAABJAAAALQEAAGIAAABiAAAAYwAAAAEAAAAEAAAABQAAAAYAAAABAAAAGQAAABoAAAAaAAAAAQAAAAIAAAABAAAAGgAAADQAAAA1AAAANgAAAAQAAAAFAAAABgAAABsAAAADAAAAYQAAAGIAAABiAAAAFAEAAFsBAAACAAAANAAAADUAAAA2AAAAAwAAABsAAAADAAAA4wAAABsAAAADAAAAGQAAABoAAAAaAAAA4wAAABsAAAAcAAAAHQAAAB4AAAACAAAA4wAAAHkAAAB6AAAAegAAAHsAAAAEAAAABQAAAAUAAAAFAAAABgAAAAEAAAAEAAAABgAAAAIAAAAbAAAA4wAAAOMAAAAaAAAA4wAAAAIAAAADAAAANAAAADUAAAA2AAAAGQAAABsAAAAbAAAABAAAAAUAAAAFAAAAHQAAAB0AAAAdAAAAHQAAAB4AAAADAAAANAAAADYAAADjAAAAAgAAAAMAAAACAAAA4wAAAOMAAAADAAAAAQAAABkAAAADAAAAAwAAABsAAAADAAAA4wAAABwAAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAeAAAAAQAAABsAAABMAAAATQAAAE0AAABNAAAATQAAAE0AAABNAAAATQAAAE0AAABNAAAATQAAAE0AAABNAAAATgAAABsAAAA0AAAANQAAADUAAAA1AAAANQAAADUAAAA1AAAANgAAAAEAAAADAAAAZAAAAFAAAABlAAAAUAAAAFAAAABQAAAAUAAAAFAAAABQAAAAUAAAAFAAAABlAAAAZQAAAGYAAAACAAAA4wAAAAMAAAABAAAAAQAAAAIAAAAbAAAAAgAAABkAAAAbAAAAGwAAAHwAAAB9AAAAfQAAAH0AAAB9AAAAfQAAAH0AAAB9AAAAfQAAAH0AAAB9AAAAfQAAAH0AAAB+AAAAGQAAABkAAAAbAAAA4wAAAOMAAAABAAAA4wAAABkAAAAaAAAAGQAAAAMAAAABAAAAAwAAAAEAAAAbAAAAAgAAABkAAAAZAAAAAwAAAOMAAAAaAAAAGQAAAAIAAAACAAAAAQAAAA==
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.80402, 1 )
+colors = ColorArray( 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0 )
+
+[node name="blood_leak_particles" type="Particles2D"]
+
+visibility/opacity = 0.75
+transform/pos = Vector2( -0.862441, 7.88446 )
+transform/scale = Vector2( 1.5, 1.5 )
+config/amount = 5
+config/lifetime = 1.0
+config/half_extents = Vector2( 4, 4 )
+params/direction = 140.0
+params/spread = 10.0
+params/linear_velocity = 0.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 40.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 7.0
+params/final_size = 3.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/spread = 2.0
+color/color_ramp = SubResource( 1 )
+
+

@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=1]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.100503, 0.462312, 1 )
+colors = ColorArray( 1, 1, 0, 0, 1, 0.959799, 0, 0.501961, 1, 0.632812, 0, 0.501961, 1, 0.660266, 0.0747664, 0 )
+
+[sub_resource type="ColorRamp" id=2]
+
+offsets = FloatArray( 0, 0.180905, 0.522613, 1 )
+colors = ColorArray( 1, 1, 1, 1, 1, 0.948468, 0.528846, 1, 1, 0, 0, 1, 0, 0, 0, 0 )
+
+[sub_resource type="ColorRamp" id=3]
+
+offsets = FloatArray( 0, 0.276382, 0.557789, 1 )
+colors = ColorArray( 0.501961, 0.501961, 0.501961, 0, 0.501961, 0.501961, 0.501961, 0.501961, 0.501961, 0.501961, 0.501961, 0.0488018, 0.501961, 0.501961, 0.501961, 0 )
+
+[node name="fire" type="Particles2D"]
+
+config/amount = 32
+config/lifetime = 1.0
+config/local_space = false
+config/explosiveness = 0.9
+params/direction = 360.0
+params/spread = 20.0
+params/linear_velocity = -35.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 180.0
+params/gravity_strength = 50.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 360.0
+params/initial_size = 8.0
+params/final_size = 16.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/linear_velocity = 1.0
+randomness/gravity_strength = 1.0
+randomness/initial_angle = 360.0
+randomness/hue_variation = 0.05
+color/color_ramp = SubResource( 1 )
+
+[node name="sparks" type="Particles2D" parent="."]
+
+config/amount = 2
+config/lifetime = 1.0
+config/local_space = false
+config/explosiveness = 0.5
+params/direction = 180.0
+params/spread = 90.0
+params/linear_velocity = 40.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 90.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 50.0
+params/initial_angle = 0.0
+params/initial_size = 3.0
+params/final_size = 3.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/linear_velocity = 0.2
+color/color_ramp = SubResource( 2 )
+
+[node name="smoke" type="Particles2D" parent="."]
+
+config/amount = 32
+config/lifetime = 5.0
+config/local_space = false
+config/explosiveness = 0.9
+params/direction = 0.0
+params/spread = 0.0
+params/linear_velocity = -50.0
+params/spin_velocity = 1.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 180.0
+params/gravity_strength = 3.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 8.0
+params/initial_angle = 0.0
+params/initial_size = 15.0
+params/final_size = 30.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spin_velocity = 1.0
+color/color_ramp = SubResource( 3 )
+
+

@@ -1,0 +1,149 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://ui/ui.gd" type="Script" id=1]
+[ext_resource path="res://ui/analog/analog.xml" type="PackedScene" id=2]
+[ext_resource path="res://ui/analog/big_circle.png" type="Texture" id=3]
+[ext_resource path="res://ui/big_circle_pressed.png" type="Texture" id=4]
+
+[node name="controls" type="Control"]
+
+visibility/opacity = 0.5
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+script/script = ExtResource( 1 )
+character_path = null
+
+[node name="left_pad" type="Control" parent="."]
+
+anchor/top = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 250.0
+margin/right = 250.0
+margin/bottom = 75.0
+
+[node name="Analog" parent="left_pad" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 93.4188, 105.994 )
+transform/scale = Vector2( 1.5, 1.5 )
+listenerNodePath = NodePath("../..")
+
+[node name="right_pad" type="Control" parent="."]
+
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 320.0
+margin/top = 320.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="slash_button" type="Control" parent="right_pad"]
+
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 192.0
+margin/top = 192.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="slash" type="TouchScreenButton" parent="right_pad/slash_button"]
+
+transform/scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+bitmask = null
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="shoot_button" type="Control" parent="right_pad"]
+
+anchor/top = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 128.0
+margin/right = 128.0
+margin/bottom = 0.0
+
+[node name="shoot" type="TouchScreenButton" parent="right_pad/shoot_button"]
+
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+bitmask = null
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="jump_button" type="Control" parent="right_pad"]
+
+anchor/left = 1
+anchor/right = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 128.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 128.0
+
+[node name="jump" type="TouchScreenButton" parent="right_pad/jump_button"]
+
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+bitmask = null
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="fps_label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="right_pad/slash_button/slash" to="." method="_on_slash_pressed"]
+
+[connection signal="pressed" from="right_pad/shoot_button/shoot" to="." method="_on_shoot_pressed"]
+
+[connection signal="released" from="right_pad/shoot_button/shoot" to="." method="_on_shoot_released"]
+
+[connection signal="pressed" from="right_pad/jump_button/jump" to="." method="_on_jump_pressed"]
+
+

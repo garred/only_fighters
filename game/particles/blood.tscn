@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.665385, 1 )
+colors = ColorArray( 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0 )
+
+[node name="blood_particles" type="Particles2D"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( -0.862441, 7.88446 )
+transform/scale = Vector2( 1.5, 1.5 )
+z/z = 1
+config/amount = 100
+config/lifetime = 0.7
+config/emit_timeout = 0.1
+config/emitting = false
+config/half_extents = Vector2( 4, 4 )
+config/local_space = false
+params/direction = 140.0
+params/spread = 10.0
+params/linear_velocity = 100.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 300.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 7.0
+params/final_size = 7.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/spread = 2.0
+color/color_ramp = SubResource( 1 )
+
+

@@ -1,0 +1,492 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://ui/ui.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map01/map_small.scn" type="PackedScene" id=2]
+[ext_resource path="res://map01/map.png" type="Texture" id=3]
+[ext_resource path="res://tree/tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://character/character.tscn" type="PackedScene" id=5]
+[ext_resource path="res://character/ai.tscn" type="PackedScene" id=6]
+[ext_resource path="res://music/boss_battle_2.ogg" type="AudioStream" id=7]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = { "points":Vector2Array( 0, 0, 0, 0, -463.616, -552.349, 0, 0, 0, 0, -319.515, -424.439, 0, 0, 0, 0, -126.84, -283.576, 0, 0, 0, 0, 7.54657, -328.911, 0, 0, 0, 0, 114.408, -422.82, 0, 0, 0, 0, 282.796, -474.632, 0, 0, 0, 0, 397.753, -578.255, 0, 0, 0, 0, 567.76, -672.164, 0, 0, 0, 0, 760.435, -694.831, 0, 0, 0, 0, 828.438, -604.161, 0, 0, 0, 0, 834.915, -437.392, 0, 0, 0, 0, 676.241, -393.676, 0, 0, 0, 0, 561.284, -413.105, 0, 0, 0, 0, 375.086, -460.06, 0, 0, 0, 0, 179.173, -413.105, 0, 0, 0, 0, 98.217, -327.292, 0, 0, 0, 0, -91.2195, -256.051, 0, 0, 0, 0, -254.75, -304.625, 0, 0, 0, 0, -385.899, -393.676, 0, 0, 0, 0, -499.237, -450.345, 0, 0, 0, 0, -607.717, -469.774, 0, 0, 0, 0, -601.241, -591.208, 0, 0, 0, 0, -542.953, -644.639, 0, 0, 0, 0, -497.617, -609.018, 0, 0, 0, 0, -463.616, -552.349 ) }
+
+[node name="test_scene" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="controls" parent="CanvasLayer" instance=ExtResource( 1 )]
+
+character_path = NodePath("../../map/characters/player")
+
+[node name="map" parent="." instance=ExtResource( 2 )]
+
+[node name="Sprite" type="Sprite" parent="map"]
+
+transform/pos = Vector2( 0, 1.07422 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 4096, 4096 )
+
+[node name="trees" type="YSort" parent="map"]
+
+editor/display_folded = true
+transform/pos = Vector2( -1600, -1600 )
+transform/scale = Vector2( 2, 2 )
+sort/enabled = true
+
+[node name="tree4 4" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1113.31, 727.282 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree45" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 937.781, 626.448 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree1" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 959.646, 829.802 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 797.991, 690.408 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5 3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1020.15, 617.858 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1073.37, 842.675 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5 4" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 885.423, 702.387 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree4 3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1049.63, 770.519 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1144.35, 899.039 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 948.37, 742.678 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree4 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1183.44, 813.732 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree43" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1015.94, 694.633 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree46" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 753.959, 541.734 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree47" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 822.866, 488.602 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree48" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 912.072, 468.779 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree49" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 845.994, 393.89 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree50" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 761.193, 418.118 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree51" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 583.882, 433.934 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree60" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1442.35, 508.843 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree56" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 426.572, 815.973 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree58" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 219.821, 976.279 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree59" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 40.038, 412.959 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree57" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 624.333, 919.348 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree58 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 417.583, 1079.65 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree583" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 215.834, 491.928 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree52" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 642.251, 254.023 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree60 5" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1500.72, 328.933 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree56 5" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 484.941, 636.062 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 278.191, 796.369 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree568" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 249.725, 215.07 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree569" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1121.67, 89.222 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree566" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 682.703, 739.438 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 6" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 475.952, 899.744 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5677" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 296.169, 336.424 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5680" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1168.12, 210.576 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree53" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 699.519, 312.393 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree60 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1557.98, 387.302 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree56 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 542.209, 694.432 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 335.459, 854.738 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5673" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 306.993, 273.44 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5680 3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1178.94, 147.591 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree563" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 739.971, 797.807 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 7" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 533.22, 958.114 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5678" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 353.437, 394.793 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5680 2" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1225.39, 268.945 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree54" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 601.503, 341.027 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree60 4" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1459.97, 415.936 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree56 4" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 444.193, 723.066 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 237.442, 883.372 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5674" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208.976, 302.074 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5680 4" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1080.92, 176.225 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree565" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 641.954, 826.441 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 4" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 435.204, 986.748 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5675" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 255.42, 423.427 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5680 5" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1127.37, 297.579 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree55" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 493.575, 314.595 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree60 3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1352.04, 389.505 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree56 3" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 336.264, 696.634 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 8" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 129.514, 856.941 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5679" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 101.048, 275.642 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree564" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 534.026, 800.01 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree567 5" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 327.275, 960.316 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="tree5676" parent="map/trees" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 147.492, 396.996 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="characters" type="YSort" parent="map"]
+
+editor/display_folded = true
+sort/enabled = true
+
+[node name="player" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 735.503, -572.043 )
+weapon = "sword"
+type = "archer"
+
+[node name="Camera2D" type="Camera2D" parent="map/characters/player"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -2048
+limit/top = -2048
+limit/right = 2048
+limit/bottom = 2048
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
+
+[node name="enemy1" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 782.06, -501.178 )
+weapon = "sword"
+type = "bandit"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy1" instance=ExtResource( 6 )]
+
+[node name="enemy2" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 934.553, -501.178 )
+weapon = "bow"
+type = "bandit"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy2" instance=ExtResource( 6 )]
+
+[node name="enemy3" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 871.762, -628.554 )
+type = "bandit"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy3" instance=ExtResource( 6 )]
+
+[node name="enemy4" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 670.83, -641.113 )
+weapon = "axe"
+type = "bandit"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy4" instance=ExtResource( 6 )]
+
+[node name="enemy5" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 636.743, -474.267 )
+weapon = "knife"
+type = "bandit"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy5" instance=ExtResource( 6 )]
+
+[node name="enemy6" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -539.51, 169.047 )
+weapon = "knife"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy6" instance=ExtResource( 6 )]
+
+[node name="enemy7" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -442.836, 116.414 )
+weapon = "sword"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy7" instance=ExtResource( 6 )]
+
+[node name="enemy8" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -608.202, 92.7233 )
+weapon = "sword"
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy8" instance=ExtResource( 6 )]
+
+[node name="enemy9" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -629.066, -716.88 )
+weapon = "bow"
+type = "archer"
+patrol_path_path = NodePath("../../../path1")
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy9" instance=ExtResource( 6 )]
+
+[node name="enemy11" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -672.94, -455.546 )
+weapon = "bow"
+type = "archer"
+patrol_path_path = NodePath("../../../path1")
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy11" instance=ExtResource( 6 )]
+
+[node name="enemy13" parent="map/characters" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -680.05, -596.884 )
+weapon = "bow"
+type = "archer"
+patrol_path_path = NodePath("../../../path1")
+
+[node name="basic_artificial_intelligence1" parent="map/characters/enemy13" instance=ExtResource( 6 )]
+
+[node name="path1" type="Path2D" parent="."]
+
+curve = SubResource( 1 )
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 7 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 15.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+
