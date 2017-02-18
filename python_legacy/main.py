@@ -29,7 +29,17 @@ if __name__ == '__main__':
 # [BUG] Random map change.
 # [GAMING]: Only hit once per keystroke, not continuous hitting
 # [GAMING]: When map changes, don't change life or weapon of the main characters.
+# [MAP]: Create maps
+# [AI]: Basic following, combat, flee behaviour
+# [AI]: Patroling enemies
+# [GRAPHICS]: Allow zooming
 # ToDo [GRAPHICS]: Enemy exclamations when spot player
+# ToDo [GRAPHICS] [GAMING]: Functional bow weapon:
+#   - Bow weapon animations
+#   - ToDo: Arrow behavior
+# ToDo [GRAPHICS]: Effects
+#   - ToDo: Sword sparks
+#   - ToDo: Blood splash
 # ToDo [UI]: Menu interface
 #   - ToDo: Multiplayer
 #   - ToDo: Locked options
@@ -37,19 +47,5 @@ if __name__ == '__main__':
 #   - ToDo: Keyboard settings
 #   - ToDo: Saving and loading
 #   - ToDo: Different game modes
-# ToDo [MAP]: Create maps
-# ToDo [GRAPHICS]: Allow zooming
-# ToDo [GRAPHICS] [GAMING]: Functional arch weapon:
-#   - Arch weapon animations
-#   - ToDo: Arrow behavior
-# [AI]: Basic following, combat, flee behaviour
-# [AI]: Patroling enemies
 # ToDo [UI]: Messages and text
-# ToDo [GRAPHICS]: Effects
-#   - ToDo: Sword sparks
-#   - ToDo: Blood splash
-
-
-
-# Other ToDos:
 # ToDo [BASIC] [BUG]: Dissapearing characters after hit.

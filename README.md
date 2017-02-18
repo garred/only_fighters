@@ -1,25 +1,27 @@
 # README
 
-A simple game made in Pygame for the subject _TDDD23 Design and Programming of Computer Games_.
+A simple game first made in Pygame and later in Godot for the subject _TDDD23 Design and Programming of Computer Games_.
 
 _Only Fighters_ is a 2D top-down action-tactical game, where you control a fighter that kills waves of enemies with different weapons.
 
-The game is still undone and lacks basic functionalities, but it is playable. For now there is no more than three tiny levels, and nothing happens when you finish. You could make your own maps with _Tiled_ map editor (http://www.mapeditor.org/), and changing the line in `app.py` where map is loaded to run your map. You can use the existing maps as example. 
+The game is still undone and lacks basic functionalities, but it is playable. For now there is no more than three tiny levels, and nothing happens when you finish. In the Python version you could make your own maps with _Tiled_ map editor (http://www.mapeditor.org/), and changing the line in `app.py` where map is loaded to run your map. You can use the existing maps as example. 
 
 
 ## Requirements
 
-Python 3 and pygame. Maybe something more.
+- The Python versions uses Python 3 and pygame. Maybe something more. 
+- The Godot version doesn't use anything more.
 
 
 ## Installation
 
-Just launch `python main.py`.
+- Python: Just launch `python main.py`.
+- Godot: Just load the project and run it.
 
 
 ## Controls
 
-Players can move, punch, slash, roll and pickup things. First player uses arrows, space, and `n`, `m` and `,` keys. Second player uses `w`, `a`, `s`, `d` for direction and shift, `z`, `x`, `c`.
+Players can move, punch, slash, roll and pickup things. First player uses arrows, space, and `n`, `m` and `,` keys. Second player (only in Python version for now) uses `w`, `a`, `s`, `d` for direction and shift, `z`, `x`, `c`.
 
 
 # TDDD23 Game Project Plan "Only fighters"
@@ -136,7 +138,7 @@ Things from other people that I've used so far and don't have its own license:
 
 ## Code:
 
-- Phil's pyGame Utilities, https://github.com/parogers/pgu  
+- Phil's pyGame Utilities, https://github.com/parogers/pgu
 - `pyganim`, by Al Sweigart al@inventwithpython.com
 - `pyscroll`, by bitcraft https://github.com/bitcraft/pyscroll
 - Sliding collisions based on code by pymike, http://www.pygame.org/project-Rect+Collision+Response-1061-.html
