@@ -9,7 +9,7 @@ The game is still undone and lacks basic functionalities, but it is playable. Fo
 
 ## Requirements
 
-- The Python versions uses Python 3 and pygame. Maybe something more. 
+- The Python versions uses Python 3, pygame, pgu, PyTMX, pyscroll.
 - The Godot version doesn't use anything more.
 
 
