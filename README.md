@@ -4,6 +4,9 @@ A simple game first made in Pygame and later in Godot for the subject _TDDD23 De
 
 _Only Fighters_ is a 2D top-down action-tactical game, where you control a fighter that kills waves of enemies with different weapons.
 
+Old trailer: https://www.youtube.com/watch?v=IxVr-WvZusE
+Android version (pre-alpha): https://play.google.com/store/apps/details?id=org.godotengine.onlyfighters.
+
 The game is still undone and lacks basic functionalities, but it is playable. For now there is no more than three tiny levels, and nothing happens when you finish. In the Python version you could make your own maps with _Tiled_ map editor (http://www.mapeditor.org/), and changing the line in `app.py` where map is loaded to run your map. You can use the existing maps as example. 
 
 
